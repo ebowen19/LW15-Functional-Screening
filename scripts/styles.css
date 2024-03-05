@@ -188,3 +188,8 @@ width: 125px; /* Adjust the width as needed */
 table img {
   cursor: pointer; /* Change cursor to pointer on hover */
 }
+
+td, th {
+  border: 1px solid #ddd !important; /* Making the border thinner and forcing precedence */
+}
+
