@@ -84,6 +84,28 @@ table {
     margin-bottom: 15px; /* Space above the download link */
   }
   
+  img.modal-image {
+    max-width: 100%; /* Ensure the image's width does not exceed the container's width */
+    max-height: 100%; /* Ensure the image's height does not exceed the container's height */
+    object-fit: contain; /* This ensures the image maintains its aspect ratio */
+    height: auto; /* This ensures the height adjusts according to the width while maintaining aspect ratio */
+  }
+  
+  
+
+
+  /* Add Animation */
+  .modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    max-height: 80%; /* Adjust as needed */
+    max-width: 80%; /* Adjust as needed */
+    margin-top: 15px; /* Space below the caption */
+    margin-bottom: 15px; /* Space above the download link */
+  }
+  
   .modal-caption {
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: white; /* White text color */
@@ -160,4 +182,9 @@ width: 125px; /* Adjust the width as needed */
 /* align description column text to the left */
 #functionalScreening td:nth-child(8) {
   text-align: left;
+}
+
+/* Target images that should be clickable */
+table img {
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
