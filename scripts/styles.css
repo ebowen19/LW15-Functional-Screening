@@ -23,8 +23,7 @@ table {
   }
 
   /* Exclude the first and last columns from the centering rule */
-  td:first-child,
-  td:nth-child(7) {
+  td:first-child {
     text-align: left; /* Keep the first and last columns left-aligned */
   }
   /* Exclude the first and last columns from the centering rule */

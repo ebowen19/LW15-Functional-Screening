@@ -8,11 +8,11 @@
   <h2>Analysis Summary Stats</h2>
   <table border="1">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: center;">
       <th></th>
-      <th>All Genes</th>
-      <th>CRISPR-covered</th>
-      <th>cDNA-covered</th>
+      <th style="text-align: center;"># of Genes</th>
+      <th style="text-align: center;"># of CRISPR-covered Genes</th>
+      <th style="text-align: center;"># of cDNA-covered Genes</th>
     </tr>
   </thead>
   <tbody>
@@ -23,17 +23,237 @@
       <td>162</td>
     </tr>
     <tr>
-      <th>Up</th>
+      <th>Upregulated</th>
       <td>280</td>
       <td>244</td>
       <td>142</td>
     </tr>
     <tr>
-      <th>Down</th>
+      <th>Downregulated</th>
       <td>40</td>
       <td>30</td>
       <td>20</td>
     </tr>
   </tbody>
   </table>
+<br>
+<br>
+<h3><p style="color: rgb(0, 115, 128);">Number of Genes in Each Category for Different Gene Subsets:</p></h3>
+
+  <table border="1" >
+    <thead>
+      <tr style="text-align: right;">
+        <th><p style="color: gray">Category</p>
+          </th>
+        <th>All Genes</th>
+        <th>Upregulated</th>
+        <th>Downregulated</th>
+        <th>CRISPR</th>
+        <th>cDNA</th>
+        <th>CRISPR up</th>
+        <th>CRISPR down</th>
+        <th>cDNA up</th>
+        <th>cDNA down</th>
+        <th>No coverage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>None</th>
+        <td>92</td>
+        <td>83</td>
+        <td>9</td>
+        <td>80</td>
+        <td>49</td>
+        <td>75</td>
+        <td>5</td>
+        <td>45</td>
+        <td>4</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <th>Cell Adhesion &amp; Signaling</th>
+        <td>71</td>
+        <td>68</td>
+        <td>3</td>
+        <td>66</td>
+        <td>40</td>
+        <td>63</td>
+        <td>3</td>
+        <td>37</td>
+        <td>3</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th>Metabolism</th>
+        <td>40</td>
+        <td>28</td>
+        <td>12</td>
+        <td>31</td>
+        <td>19</td>
+        <td>20</td>
+        <td>11</td>
+        <td>11</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <th>Gene expression</th>
+        <td>34</td>
+        <td>32</td>
+        <td>2</td>
+        <td>29</td>
+        <td>12</td>
+        <td>28</td>
+        <td>1</td>
+        <td>12</td>
+        <td>0</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <th>Cell Survival/Proliferation</th>
+        <td>17</td>
+        <td>15</td>
+        <td>2</td>
+        <td>13</td>
+        <td>7</td>
+        <td>12</td>
+        <td>1</td>
+        <td>7</td>
+        <td>0</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <th>Cytoskeleton &amp; Microtubules</th>
+        <td>12</td>
+        <td>11</td>
+        <td>1</td>
+        <td>10</td>
+        <td>7</td>
+        <td>9</td>
+        <td>1</td>
+        <td>6</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Inflammation &amp; Immune Modulation</th>
+        <td>12</td>
+        <td>7</td>
+        <td>5</td>
+        <td>8</td>
+        <td>6</td>
+        <td>5</td>
+        <td>3</td>
+        <td>5</td>
+        <td>1</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <th>Apoptosis / Cell Cycle Regulation</th>
+        <td>11</td>
+        <td>11</td>
+        <td>0</td>
+        <td>11</td>
+        <td>8</td>
+        <td>11</td>
+        <td>0</td>
+        <td>8</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>Ubiquitination &amp; Protein Stability</th>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>7</td>
+        <td>4</td>
+        <td>7</td>
+        <td>0</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>Membrane Proteins &amp; Endocytosis</th>
+        <td>8</td>
+        <td>5</td>
+        <td>3</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>Kinases, Transcription Factors, and Protein Degradation</th>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>Autophagy &amp; DNA Repair</th>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>3</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>Cell Adhesion &amp; Signaling (impacts metastasis)</th>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>Kinases, Transcription Factors, and Protein Degradation</th>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>Cell Communication</th>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
+<br>
