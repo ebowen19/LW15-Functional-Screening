@@ -49,3 +49,15 @@ window.addEventListener('scroll', function() {
 var element = document.getElementById('key');
 element.style.right = 10 - window.pageXOffset + 'px';
 });
+
+$(document).ready(function() {
+  $('#functionalScreening').DataTable({
+      "order": [[5, 'desc']], // This line sets the default sort order.
+      "lengthMenu": [10, 25, 50, 75, 100, -1], // This line sets the options in the length menu.
+      "pageLength": 25, // This sets a default length of rows per page.
+      "language": {
+          "lengthMenu": "Display _MENU_ genes per page", // This line changes the text for the length menu.
+      }
+  });
+});
+
