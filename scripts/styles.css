@@ -194,3 +194,10 @@ mark {
   background-color: #ff00ee41; /* Replace #ffcc00 with your desired hex code */
   font-weight: bold;
 }
+.simpleTable, .simpleTable th, .simpleTable td {
+  border: 1px solid #ddd !important; /* Thinner border */
+}
+
+.simpleTable {
+  border-collapse: collapse !important;
+}

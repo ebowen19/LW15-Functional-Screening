@@ -61,3 +61,10 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $('.simpleTable').DataTable({
+    "searching": false,
+    "lengthChange": false,
+    "bInfo": false // This will hide the "Showing 1 to n of n entries" info
+  });
+});
