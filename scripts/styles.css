@@ -27,11 +27,9 @@ table {
   td:nth-child(7) {
     text-align: left; /* Keep the first and last columns left-aligned */
   }
-
-  /* Center images in the 'Picture (thumbnail)' column */
-  td:nth-child(6) img {
-    display: block;
-    margin: 0 auto;
+  /* Exclude the first and last columns from the centering rule */
+  td:first-child {
+    font-weight: bold; /* Keep the first and last columns left-aligned */
   }
 
   .thumbnail {
@@ -193,3 +191,7 @@ td, th {
   border: 1px solid #ddd !important; /* Making the border thinner and forcing precedence */
 }
 
+mark {
+  background-color: #ff00ee41; /* Replace #ffcc00 with your desired hex code */
+  font-weight: bold;
+}
