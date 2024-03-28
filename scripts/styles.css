@@ -201,3 +201,24 @@ mark {
 .simpleTable {
   border-collapse: collapse !important;
 }
+
+/* Hide text within the modal */
+.modal * { 
+  color: transparent !important; 
+}
+
+/* Ensure images within the modal are fully opaque */
+.modal img {
+  opacity: 1.0 !important;
+}
+
+/* Adjust modal background for semi-transparency without affecting content */
+.modal {
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity as needed */
+}
+
+/* Re-apply full opacity to modal content to override semi-transparent background */
+.modal-content {
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 1 !important; /* Full opacity */
+}
