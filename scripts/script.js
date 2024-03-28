@@ -4,7 +4,7 @@ var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var modalImg = document.getElementById("img01");
 
-// Assuming your table has an ID of 'myTable'
+// table has an ID of 'myTable'
 var table = document.getElementById("functionalScreening");
 var imgs = table.getElementsByTagName("img");
 
