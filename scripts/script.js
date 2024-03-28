@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
           'hideGeneID': 4,
           'hideCoverage': [2, 3],
           'hideRegulation': 1,
-          'hideFoundIn': 5
+          'hideFoundIn': 5,
+          'hideCategory': 6
       };
 
       let columnIndexes = columnMap[this.id];
