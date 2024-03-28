@@ -42,6 +42,25 @@
    </a>
   </p>
   <br/>
+  <strong> Hide: </strong>
+  <form>
+    <input type="checkbox" id="hideGeneID" name="hideGeneID">
+    <label for="hideGeneID">Gene ID</label>
+  
+    <input type="checkbox" id="hideCoverage" name="hideCoverage">
+    <label for="hideCoverage">Coverage Information</label>
+  
+    <input type="checkbox" id="hideRegulation" name="hideRegulation">
+    <label for="hideRegulation">Regulation in Sensitive</label>
+  
+    <input type="checkbox" id="hideFoundIn" name="hideFoundIn">
+    <label for="hideFoundIn">Found In</label>
+
+    <input type="checkbox" id="hideCategory" name="hideCategory">
+    <label for="hideCategory">Category</label>
+  </form>
+  
+  <br/>
   <table border="1" id="functionalScreening">
    <thead>
     <tr style="text-align: right;">
@@ -76,7 +95,7 @@
        Survival Curve
      </th>
      <th text="Survival Curve Significant?">
-       Survival Curve Significant?
+       Survival Curve Significance
      </th>
     </tr>
    </thead>
