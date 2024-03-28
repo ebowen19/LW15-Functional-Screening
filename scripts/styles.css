@@ -48,6 +48,8 @@ table {
       align-items: center; /* Center vertically */
       justify-content: center; /* Center horizontally */
       flex-direction: column; /* Arrange children in a vertical stack */
+      padding-top: 150px; /* Add padding at the top inside the modal */
+
     }
 
   .modal-trigger {
@@ -221,4 +223,13 @@ mark {
 .modal-content {
   background-color: rgba(255, 255, 255, 1);
   opacity: 1 !important; /* Full opacity */
+}
+
+#img01 {
+  max-width: 600px; /* Adjust based on your preference */
+  max-height: 400px; /* Adjust based on your preference */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is block-level for correct centering */
+  margin: auto; /* Center the image within the modal */
 }
