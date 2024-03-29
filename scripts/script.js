@@ -5,8 +5,17 @@ $.fn.dataTable.ext.type.order['scientific-pre'] = function(data) {
     return parseFloat(data);
 };
 
+// load in sorted p-value order
+async function fetchSortedGeneList() {
+    const response = await fetch('../TCGA/sorted_genes.csv');
+    const data = await response.text();
+    const geneList = data.split('\n').map(line => line.trim()).filter(line => line.length);
+    return geneList;
+}
 
-document.addEventListener('DOMContentLoaded', function() {
+
+
+document.addEventListener('DOMContentLoaded', async function() {
   // Modal setup
   var modal = document.getElementById("myModal");
   var modalImg = document.getElementById("img01");
@@ -38,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
       keyElement.style.right = 10 - window.pageXOffset + 'px';
   });
 
+  // Fetch the sorted gene list
+  const sortedGenes = await fetchSortedGeneList();
+
+
   // DataTables setup
   var table = $('#functionalScreening').DataTable({
       order: [[5, 'desc']],
@@ -49,12 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
       autoWidth: false,
       scrollX: true,
       "columnDefs": [
-        {
-            "type": "scientific-pre", // Use the custom type defined earlier
-            "targets": -1 // Adjust based on the index of your column
-        }
-    ]
+        { "orderable": true, 
+        "targets": -1 }]
   });
+
 
   // Adjust table width dynamically
   function adjustTableWidth() {
