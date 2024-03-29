@@ -1,3 +1,11 @@
+
+
+$.fn.dataTable.ext.type.order['scientific-pre'] = function(data) {
+    console.log('Sorting data:', data);
+    return parseFloat(data);
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Modal setup
   var modal = document.getElementById("myModal");
@@ -39,7 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
           lengthMenu: "Display _MENU_ genes per page"
       },
       autoWidth: false,
-      scrollX: true
+      scrollX: true,
+      "columnDefs": [
+        {
+            "type": "scientific-pre", // Use the custom type defined earlier
+            "targets": -1 // Adjust based on the index of your column
+        }
+    ]
   });
 
   // Adjust table width dynamically
@@ -89,3 +103,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial call to adjust table width
   adjustTableWidth();
 });
+
