@@ -62,9 +62,13 @@ document.addEventListener('DOMContentLoaded', async function() {
       autoWidth: false,
       scrollX: true,
       "columnDefs": [
-        { "orderable": true, 
-        "targets": -1 }]
+        { "orderable": false, 
+        "targets": [7,8,9,10] }]
   });
+
+  // Hide the 13th column, note: DataTables is 0-indexed
+  table.column(12).visible(false);
+  table.column(13).visible(false);
 
 
   // Adjust table width dynamically
@@ -82,7 +86,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   }
 
   // Adjust width on checkbox change
-  $('input[type="checkbox"]').change(function() {
+  $('input[type="checkbox"].column-visibility-toggle').change(function() {
       const columnMap = {
           'hideGeneID': 4,
           'hideCoverage': [2, 3],
@@ -102,6 +106,35 @@ document.addEventListener('DOMContentLoaded', async function() {
       });
 
       adjustTableWidth();
+  });
+
+  // Custom search function that searches for "same" or "dif" in the 14th column
+  $.fn.dataTable.ext.search.push(
+    function(settings, data, dataIndex) {
+      // Check if "same trend" checkbox is checked
+      var sameTrend = $('#sameTrend').prop('checked');
+      var difTrend = $('#difTrend').prop('checked');
+      var trend = data[13]; // 14th column data (0-indexed)
+      
+      if (sameTrend && trend === 'same') {
+        return true;
+      } else if (difTrend && trend === 'dif') {
+        return true;
+      } else if (!sameTrend && !difTrend) {
+        return true; // No checkbox is checked, show all rows
+      }
+      return false; // Do not show rows that don't match the filter
+    }
+  );
+
+  // Event listener to the "same trend" checkbox
+  $('#sameTrend').on('change', function() {
+    table.draw(); // Redraw table to filter data
+  });
+
+  // Event listener to the "differing trend" checkbox
+  $('#difTrend').on('change', function() {
+    table.draw(); // Redraw table to filter data
   });
 
   // Initialize simpleTable without searching and info display

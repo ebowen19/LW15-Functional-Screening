@@ -43,18 +43,34 @@
 </a>
 </p>
 <br/>
-<strong> Hide: </strong>
+<strong> Hide Columns: </strong>
 <form>
-<input id="hideGeneID" name="hideGeneID" type="checkbox"/>
+<input id="hideGeneID" name="hideGeneID" type="checkbox" class="column-visibility-toggle"/>
 <label for="hideGeneID">Gene ID</label>
-<input id="hideCoverage" name="hideCoverage" type="checkbox"/>
+<input id="hideCoverage" name="hideCoverage" type="checkbox" class="column-visibility-toggle"/>
 <label for="hideCoverage">Coverage Information</label>
-<input id="hideRegulation" name="hideRegulation" type="checkbox"/>
+<input id="hideRegulation" name="hideRegulation" type="checkbox" class="column-visibility-toggle"/>
 <label for="hideRegulation">Regulation in Sensitive</label>
-<input id="hideFoundIn" name="hideFoundIn" type="checkbox"/>
+<input id="hideFoundIn" name="hideFoundIn" type="checkbox" class="column-visibility-toggle"/>
 <label for="hideFoundIn">Found In</label>
-<input id="hideCategory" name="hideCategory" type="checkbox"/>
+<input id="hideCategory" name="hideCategory" type="checkbox" class="column-visibility-toggle"/>
 <label for="hideCategory">Category</label>
+</form>
+<br/>
+<strong> TCGA vs LW15 Comparison: </strong>
+For genes upregulated in sensitive according to LW15 RNA-seq data, we expect to see worse prognosis in TCGA Survival
+curve for higher expression, and the opposite for genes downregulated in sensitive. Filter by genes who show the same or differing trend between the LW15 gene plots and TCGA Survival curves according 
+to this criteria.
+<br/>
+<br/>
+
+Show only genes with significant survival curves with:
+<form>
+<input id="sameTrend" name="sameTrend" type="checkbox"/>
+<label for="sameTrend">Same trend </label>
+<br/>
+<input id="difTrend" name="difTrend" type="checkbox"/>
+<label for="difTrend">Differing trend </label>
 </form>
 <br/>
 <table border="1" id="functionalScreening">
@@ -93,7 +109,11 @@
 <th text="Survival Curve Significant?">
        Survival Curve p-val
      </th>
-<th>pval sorting index</th></tr>
+<th>pval sorting index
+     </th>
+<th>Expression of Higher Survival group
+     </th>
+<th>LW15 vs TCGA</th></tr>
 </thead>
 <tbody>
 <tr>
@@ -128,7 +148,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Caskin1
@@ -161,7 +181,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CASKIN1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CASKIN1.png" width="220"/>
 </td>
 <td>0.1230</td>
-<td>174</td></tr>
+<td>174</td><td></td><td></td></tr>
 <tr>
 <td>
       Scarf2
@@ -194,7 +214,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SCARF2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SCARF2.png" width="220"/>
 </td>
 <td>7.47e-03</td>
-<td>91</td></tr>
+<td>91</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Vps4a
@@ -227,7 +247,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_VPS4A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_VPS4A.png" width="220"/>
 </td>
 <td>0.1548</td>
-<td>184</td></tr>
+<td>184</td><td></td><td></td></tr>
 <tr>
 <td>
       Card10
@@ -260,7 +280,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CARD10.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CARD10.png" width="220"/>
 </td>
 <td>0.5207</td>
-<td>236</td></tr>
+<td>236</td><td></td><td></td></tr>
 <tr>
 <td>
       Thap11
@@ -293,7 +313,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_THAP11.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_THAP11.png" width="220"/>
 </td>
 <td>0.6210</td>
-<td>248</td></tr>
+<td>248</td><td></td><td></td></tr>
 <tr>
 <td>
       Nup50
@@ -326,7 +346,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NUP50.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NUP50.png" width="220"/>
 </td>
 <td>0.8168</td>
-<td>262</td></tr>
+<td>262</td><td></td><td></td></tr>
 <tr>
 <td>
       Rrad
@@ -359,7 +379,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RRAD.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RRAD.png" width="220"/>
 </td>
 <td>0.1363</td>
-<td>178</td></tr>
+<td>178</td><td></td><td></td></tr>
 <tr>
 <td>
       Eps8l2
@@ -392,7 +412,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_EPS8L2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_EPS8L2.png" width="220"/>
 </td>
 <td>0.2517</td>
-<td>207</td></tr>
+<td>207</td><td></td><td></td></tr>
 <tr>
 <td>
       Cited1
@@ -425,7 +445,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Reep6
@@ -458,7 +478,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_REEP6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_REEP6.png" width="220"/>
 </td>
 <td>6.93e-03</td>
-<td>89</td></tr>
+<td>89</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ccdc92
@@ -491,7 +511,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CCDC92.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CCDC92.png" width="220"/>
 </td>
 <td>0.1926</td>
-<td>197</td></tr>
+<td>197</td><td></td><td></td></tr>
 <tr>
 <td>
       Trp53rka
@@ -524,7 +544,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Gfer
@@ -557,7 +577,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GFER.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GFER.png" width="220"/>
 </td>
 <td>0.0116</td>
-<td>103</td></tr>
+<td>103</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Shf
@@ -590,7 +610,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SHF.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SHF.png" width="220"/>
 </td>
 <td>0.3903</td>
-<td>227</td></tr>
+<td>227</td><td></td><td></td></tr>
 <tr>
 <td>
       Stac2
@@ -623,7 +643,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_STAC2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_STAC2.png" width="220"/>
 </td>
 <td>0.3443</td>
-<td>220</td></tr>
+<td>220</td><td></td><td></td></tr>
 <tr>
 <td>
       Zfp395
@@ -656,7 +676,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Sptbn4
@@ -689,7 +709,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SPTBN4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SPTBN4.png" width="220"/>
 </td>
 <td>0.1524</td>
-<td>183</td></tr>
+<td>183</td><td></td><td></td></tr>
 <tr>
 <td>
       B4galt3
@@ -722,7 +742,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_B4GALT3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_B4GALT3.png" width="220"/>
 </td>
 <td>2.13e-03</td>
-<td>69</td></tr>
+<td>69</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Sh3bp1
@@ -755,7 +775,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SH3BP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SH3BP1.png" width="220"/>
 </td>
 <td>2.49e-07</td>
-<td>9</td></tr>
+<td>9</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Rasgrp4
@@ -788,7 +808,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RASGRP4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RASGRP4.png" width="220"/>
 </td>
 <td>0.4287</td>
-<td>232</td></tr>
+<td>232</td><td></td><td></td></tr>
 <tr>
 <td>
       Spata2l
@@ -821,7 +841,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SPATA2L.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SPATA2L.png" width="220"/>
 </td>
 <td>0.7268</td>
-<td>256</td></tr>
+<td>256</td><td></td><td></td></tr>
 <tr>
 <td>
       Arid3c
@@ -854,7 +874,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ARID3C.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ARID3C.png" width="220"/>
 </td>
 <td>1.79e-08</td>
-<td>2</td></tr>
+<td>2</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Vill
@@ -887,7 +907,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_VILL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_VILL.png" width="220"/>
 </td>
 <td>0.1516</td>
-<td>182</td></tr>
+<td>182</td><td></td><td></td></tr>
 <tr>
 <td>
       Rfng
@@ -920,7 +940,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RFNG.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RFNG.png" width="220"/>
 </td>
 <td>0.0170</td>
-<td>115</td></tr>
+<td>115</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Nlgn2
@@ -953,7 +973,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NLGN2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NLGN2.png" width="220"/>
 </td>
 <td>1.02e-04</td>
-<td>38</td></tr>
+<td>38</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Syce2
@@ -986,7 +1006,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SYCE2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SYCE2.png" width="220"/>
 </td>
 <td>2.81e-06</td>
-<td>12</td></tr>
+<td>12</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Prph
@@ -1019,7 +1039,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PRPH.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PRPH.png" width="220"/>
 </td>
 <td>0.3279</td>
-<td>218</td></tr>
+<td>218</td><td></td><td></td></tr>
 <tr>
 <td>
       Mkrn1
@@ -1052,7 +1072,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MKRN1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MKRN1.png" width="220"/>
 </td>
 <td>0.1683</td>
-<td>188</td></tr>
+<td>188</td><td></td><td></td></tr>
 <tr>
 <td>
       Gpr157
@@ -1085,7 +1105,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GPR157.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GPR157.png" width="220"/>
 </td>
 <td>0.8556</td>
-<td>263</td></tr>
+<td>263</td><td></td><td></td></tr>
 <tr>
 <td>
       Foxa3
@@ -1118,7 +1138,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FOXA3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FOXA3.png" width="220"/>
 </td>
 <td>0.0756</td>
-<td>157</td></tr>
+<td>157</td><td></td><td></td></tr>
 <tr>
 <td>
       Zcwpw1
@@ -1151,7 +1171,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ZCWPW1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ZCWPW1.png" width="220"/>
 </td>
 <td>0.0124</td>
-<td>106</td></tr>
+<td>106</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Prrx2
@@ -1184,7 +1204,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PRRX2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PRRX2.png" width="220"/>
 </td>
 <td>1.15e-03</td>
-<td>59</td></tr>
+<td>59</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ldhd
@@ -1217,7 +1237,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LDHD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LDHD.png" width="220"/>
 </td>
 <td>1.66e-06</td>
-<td>11</td></tr>
+<td>11</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Stard10
@@ -1250,7 +1270,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_STARD10.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_STARD10.png" width="220"/>
 </td>
 <td>0.7324</td>
-<td>257</td></tr>
+<td>257</td><td></td><td></td></tr>
 <tr>
 <td>
       Arsi
@@ -1283,7 +1303,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ARSI.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ARSI.png" width="220"/>
 </td>
 <td>7.61e-04</td>
-<td>57</td></tr>
+<td>57</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Plvap
@@ -1316,7 +1336,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PLVAP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PLVAP.png" width="220"/>
 </td>
 <td>4.84e-05</td>
-<td>33</td></tr>
+<td>33</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Prss16
@@ -1349,7 +1369,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PRSS16.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PRSS16.png" width="220"/>
 </td>
 <td>0.9161</td>
-<td>269</td></tr>
+<td>269</td><td></td><td></td></tr>
 <tr>
 <td>
       Fam117a
@@ -1382,7 +1402,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FAM117A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FAM117A.png" width="220"/>
 </td>
 <td>0.5702</td>
-<td>242</td></tr>
+<td>242</td><td></td><td></td></tr>
 <tr>
 <td>
       Trim62
@@ -1415,7 +1435,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TRIM62.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TRIM62.png" width="220"/>
 </td>
 <td>0.0345</td>
-<td>137</td></tr>
+<td>137</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Eva1c
@@ -1448,7 +1468,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_EVA1C.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_EVA1C.png" width="220"/>
 </td>
 <td>0.7817</td>
-<td>259</td></tr>
+<td>259</td><td></td><td></td></tr>
 <tr>
 <td>
       Lrrc73
@@ -1481,7 +1501,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LRRC73.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LRRC73.png" width="220"/>
 </td>
 <td>0.3872</td>
-<td>225</td></tr>
+<td>225</td><td></td><td></td></tr>
 <tr>
 <td>
       Tradd
@@ -1514,7 +1534,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TRADD.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TRADD.png" width="220"/>
 </td>
 <td>0.7171</td>
-<td>255</td></tr>
+<td>255</td><td></td><td></td></tr>
 <tr>
 <td>
       Dact3
@@ -1547,7 +1567,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DACT3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DACT3.png" width="220"/>
 </td>
 <td>0.0644</td>
-<td>153</td></tr>
+<td>153</td><td></td><td></td></tr>
 <tr>
 <td>
       Ptpn6
@@ -1580,7 +1600,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PTPN6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PTPN6.png" width="220"/>
 </td>
 <td>8.39e-04</td>
-<td>58</td></tr>
+<td>58</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Rtraf
@@ -1613,7 +1633,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RTRAF.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RTRAF.png" width="220"/>
 </td>
 <td>0.9664</td>
-<td>273</td></tr>
+<td>273</td><td></td><td></td></tr>
 <tr>
 <td>
       Gm9747
@@ -1646,7 +1666,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Pgf
@@ -1679,7 +1699,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PGF.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PGF.png" width="220"/>
 </td>
 <td>0.0499</td>
-<td>147</td></tr>
+<td>147</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Mypop
@@ -1712,7 +1732,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MYPOP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MYPOP.png" width="220"/>
 </td>
 <td>9.46e-06</td>
-<td>19</td></tr>
+<td>19</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Fbxo17
@@ -1745,7 +1765,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FBXO17.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FBXO17.png" width="220"/>
 </td>
 <td>0.3873</td>
-<td>226</td></tr>
+<td>226</td><td></td><td></td></tr>
 <tr>
 <td>
       Hoxc11
@@ -1778,7 +1798,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HOXC11.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HOXC11.png" width="220"/>
 </td>
 <td>6.11e-04</td>
-<td>55</td></tr>
+<td>55</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Glo1
@@ -1811,7 +1831,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GLO1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GLO1.png" width="220"/>
 </td>
 <td>0.0802</td>
-<td>159</td></tr>
+<td>159</td><td></td><td></td></tr>
 <tr>
 <td>
       Grik5
@@ -1844,7 +1864,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GRIK5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GRIK5.png" width="220"/>
 </td>
 <td>5.19e-04</td>
-<td>49</td></tr>
+<td>49</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Brsk1
@@ -1877,7 +1897,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_BRSK1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_BRSK1.png" width="220"/>
 </td>
 <td>6.05e-05</td>
-<td>35</td></tr>
+<td>35</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Slc24a3
@@ -1910,7 +1930,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SLC24A3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SLC24A3.png" width="220"/>
 </td>
 <td>0.2297</td>
-<td>204</td></tr>
+<td>204</td><td></td><td></td></tr>
 <tr>
 <td>
       Tmem121
@@ -1943,7 +1963,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TMEM121.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TMEM121.png" width="220"/>
 </td>
 <td>0.9407</td>
-<td>271</td></tr>
+<td>271</td><td></td><td></td></tr>
 <tr>
 <td>
       Plekhg6
@@ -1976,7 +1996,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PLEKHG6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PLEKHG6.png" width="220"/>
 </td>
 <td>0.6168</td>
-<td>247</td></tr>
+<td>247</td><td></td><td></td></tr>
 <tr>
 <td>
       Prss41
@@ -2009,7 +2029,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Crnde
@@ -2042,7 +2062,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CRNDE.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CRNDE.png" width="220"/>
 </td>
 <td>0.0175</td>
-<td>116</td></tr>
+<td>116</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Dpf1
@@ -2075,7 +2095,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DPF1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DPF1.png" width="220"/>
 </td>
 <td>1.41e-07</td>
-<td>8</td></tr>
+<td>8</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Crlf1
@@ -2108,7 +2128,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CRLF1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CRLF1.png" width="220"/>
 </td>
 <td>0.6294</td>
-<td>250</td></tr>
+<td>250</td><td></td><td></td></tr>
 <tr>
 <td>
       Ptpn18
@@ -2141,7 +2161,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PTPN18.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PTPN18.png" width="220"/>
 </td>
 <td>0.5506</td>
-<td>240</td></tr>
+<td>240</td><td></td><td></td></tr>
 <tr>
 <td>
       Abcg4
@@ -2174,7 +2194,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ABCG4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ABCG4.png" width="220"/>
 </td>
 <td>0.4457</td>
-<td>233</td></tr>
+<td>233</td><td></td><td></td></tr>
 <tr>
 <td>
       Adam11
@@ -2207,7 +2227,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ADAM11.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ADAM11.png" width="220"/>
 </td>
 <td>3.19e-05</td>
-<td>29</td></tr>
+<td>29</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Bcar1
@@ -2240,7 +2260,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCAR1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCAR1.png" width="220"/>
 </td>
 <td>0.2569</td>
-<td>209</td></tr>
+<td>209</td><td></td><td></td></tr>
 <tr>
 <td>
       Hoxc5
@@ -2273,7 +2293,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HOXC5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HOXC5.png" width="220"/>
 </td>
 <td>0.0291</td>
-<td>134</td></tr>
+<td>134</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Adgrl1
@@ -2306,7 +2326,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ADGRL1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ADGRL1.png" width="220"/>
 </td>
 <td>0.2474</td>
-<td>206</td></tr>
+<td>206</td><td></td><td></td></tr>
 <tr>
 <td>
       Dhcr24
@@ -2339,7 +2359,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DHCR24.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DHCR24.png" width="220"/>
 </td>
 <td>0.1897</td>
-<td>194</td></tr>
+<td>194</td><td></td><td></td></tr>
 <tr>
 <td>
       Dpf3
@@ -2372,7 +2392,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DPF3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DPF3.png" width="220"/>
 </td>
 <td>0.2160</td>
-<td>200</td></tr>
+<td>200</td><td></td><td></td></tr>
 <tr>
 <td>
       Batf3
@@ -2405,7 +2425,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_BATF3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_BATF3.png" width="220"/>
 </td>
 <td>1.60e-03</td>
-<td>63</td></tr>
+<td>63</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Cbarp
@@ -2438,7 +2458,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CBARP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CBARP.png" width="220"/>
 </td>
 <td>2.34e-04</td>
-<td>41</td></tr>
+<td>41</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Hic2
@@ -2471,7 +2491,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_HIC2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_HIC2.png" width="220"/>
 </td>
 <td>0.0854</td>
-<td>163</td></tr>
+<td>163</td><td></td><td></td></tr>
 <tr>
 <td>
       Mpzl1
@@ -2504,7 +2524,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MPZL1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MPZL1.png" width="220"/>
 </td>
 <td>0.0275</td>
-<td>132</td></tr>
+<td>132</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Tpi1
@@ -2537,7 +2557,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TPI1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TPI1.png" width="220"/>
 </td>
 <td>0.8884</td>
-<td>265</td></tr>
+<td>265</td><td></td><td></td></tr>
 <tr>
 <td>
       Dlgap3
@@ -2570,7 +2590,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DLGAP3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DLGAP3.png" width="220"/>
 </td>
 <td>3.28e-04</td>
-<td>45</td></tr>
+<td>45</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Gm10157
@@ -2603,7 +2623,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Ap1m2
@@ -2636,7 +2656,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_AP1M2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_AP1M2.png" width="220"/>
 </td>
 <td>0.5214</td>
-<td>237</td></tr>
+<td>237</td><td></td><td></td></tr>
 <tr>
 <td>
       Samd14
@@ -2669,7 +2689,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SAMD14.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SAMD14.png" width="220"/>
 </td>
 <td>0.4152</td>
-<td>231</td></tr>
+<td>231</td><td></td><td></td></tr>
 <tr>
 <td>
       Map4k1
@@ -2702,7 +2722,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MAP4K1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MAP4K1.png" width="220"/>
 </td>
 <td>9.98e-03</td>
-<td>98</td></tr>
+<td>98</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       2410004I01Rik
@@ -2735,7 +2755,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Crabp1
@@ -2768,7 +2788,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Fndc4
@@ -2801,7 +2821,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FNDC4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FNDC4.png" width="220"/>
 </td>
 <td>3.29e-04</td>
-<td>46</td></tr>
+<td>46</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       A430093F15Rik
@@ -2834,7 +2854,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Pcsk4
@@ -2867,7 +2887,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PCSK4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PCSK4.png" width="220"/>
 </td>
 <td>0.0131</td>
-<td>108</td></tr>
+<td>108</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Fbxl14
@@ -2900,7 +2920,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FBXL14.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FBXL14.png" width="220"/>
 </td>
 <td>6.64e-03</td>
-<td>87</td></tr>
+<td>87</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Tcf15
@@ -2933,7 +2953,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TCF15.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TCF15.png" width="220"/>
 </td>
 <td>0.6313</td>
-<td>251</td></tr>
+<td>251</td><td></td><td></td></tr>
 <tr>
 <td>
       Ninl
@@ -2966,7 +2986,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NINL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NINL.png" width="220"/>
 </td>
 <td>0.0607</td>
-<td>150</td></tr>
+<td>150</td><td></td><td></td></tr>
 <tr>
 <td>
       Rcor2
@@ -2999,7 +3019,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RCOR2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RCOR2.png" width="220"/>
 </td>
 <td>1.16e-03</td>
-<td>60</td></tr>
+<td>60</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Nckipsd
@@ -3032,7 +3052,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NCKIPSD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NCKIPSD.png" width="220"/>
 </td>
 <td>0.0133</td>
-<td>109</td></tr>
+<td>109</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Dusp2
@@ -3065,7 +3085,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DUSP2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DUSP2.png" width="220"/>
 </td>
 <td>0.1070</td>
-<td>170</td></tr>
+<td>170</td><td></td><td></td></tr>
 <tr>
 <td>
       Lrrc23
@@ -3098,7 +3118,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LRRC23.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LRRC23.png" width="220"/>
 </td>
 <td>0.2224</td>
-<td>201</td></tr>
+<td>201</td><td></td><td></td></tr>
 <tr>
 <td>
       Cadm4
@@ -3131,7 +3151,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CADM4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CADM4.png" width="220"/>
 </td>
 <td>7.96e-03</td>
-<td>94</td></tr>
+<td>94</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ecd
@@ -3164,7 +3184,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ECD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ECD.png" width="220"/>
 </td>
 <td>0.0208</td>
-<td>122</td></tr>
+<td>122</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Esrrb
@@ -3197,7 +3217,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ESRRB.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ESRRB.png" width="220"/>
 </td>
 <td>0.8008</td>
-<td>261</td></tr>
+<td>261</td><td></td><td></td></tr>
 <tr>
 <td>
       Nrtn
@@ -3230,7 +3250,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NRTN.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NRTN.png" width="220"/>
 </td>
 <td>0.2253</td>
-<td>202</td></tr>
+<td>202</td><td></td><td></td></tr>
 <tr>
 <td>
       Dnajc9
@@ -3263,7 +3283,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DNAJC9.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DNAJC9.png" width="220"/>
 </td>
 <td>0.1317</td>
-<td>176</td></tr>
+<td>176</td><td></td><td></td></tr>
 <tr>
 <td>
       Cd164l2
@@ -3296,7 +3316,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CD164L2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CD164L2.png" width="220"/>
 </td>
 <td>0.4103</td>
-<td>229</td></tr>
+<td>229</td><td></td><td></td></tr>
 <tr>
 <td>
       Sema6b
@@ -3329,7 +3349,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SEMA6B.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SEMA6B.png" width="220"/>
 </td>
 <td>0.5376</td>
-<td>239</td></tr>
+<td>239</td><td></td><td></td></tr>
 <tr>
 <td>
       Tmem151b
@@ -3362,7 +3382,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TMEM151B.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TMEM151B.png" width="220"/>
 </td>
 <td>0.2733</td>
-<td>211</td></tr>
+<td>211</td><td></td><td></td></tr>
 <tr>
 <td>
       Irf6
@@ -3395,7 +3415,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IRF6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IRF6.png" width="220"/>
 </td>
 <td>1.91e-08</td>
-<td>3</td></tr>
+<td>3</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Mdfi
@@ -3428,7 +3448,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MDFI.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MDFI.png" width="220"/>
 </td>
 <td>0.0249</td>
-<td>127</td></tr>
+<td>127</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       ---
@@ -3459,7 +3479,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Mafa
@@ -3492,7 +3512,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MAFA.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MAFA.png" width="220"/>
 </td>
 <td>0.0287</td>
-<td>133</td></tr>
+<td>133</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Wnt5b
@@ -3525,7 +3545,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_WNT5B.png" height="190" src="TCGA/survival_curves/significant/survival_curve_WNT5B.png" width="220"/>
 </td>
 <td>0.0498</td>
-<td>146</td></tr>
+<td>146</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Dlx1
@@ -3558,7 +3578,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DLX1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DLX1.png" width="220"/>
 </td>
 <td>0.3159</td>
-<td>216</td></tr>
+<td>216</td><td></td><td></td></tr>
 <tr>
 <td>
       Nradd
@@ -3591,7 +3611,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Uck2
@@ -3624,7 +3644,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_UCK2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_UCK2.png" width="220"/>
 </td>
 <td>1.43e-03</td>
-<td>62</td></tr>
+<td>62</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Syngap1
@@ -3657,7 +3677,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SYNGAP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SYNGAP1.png" width="220"/>
 </td>
 <td>2.18e-04</td>
-<td>40</td></tr>
+<td>40</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Rpia
@@ -3690,7 +3710,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RPIA.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RPIA.png" width="220"/>
 </td>
 <td>0.6149</td>
-<td>246</td></tr>
+<td>246</td><td></td><td></td></tr>
 <tr>
 <td>
       Pitx3
@@ -3723,7 +3743,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Trnp1
@@ -3756,7 +3776,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TRNP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TRNP1.png" width="220"/>
 </td>
 <td>2.40e-05</td>
-<td>25</td></tr>
+<td>25</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Mlkl
@@ -3789,7 +3809,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MLKL.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MLKL.png" width="220"/>
 </td>
 <td>0.0215</td>
-<td>124</td></tr>
+<td>124</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Wnt1
@@ -3822,7 +3842,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_WNT1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_WNT1.png" width="220"/>
 </td>
 <td>0.0211</td>
-<td>123</td></tr>
+<td>123</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Slc32a1
@@ -3855,7 +3875,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Ripply3
@@ -3888,7 +3908,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RIPPLY3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RIPPLY3.png" width="220"/>
 </td>
 <td>0.5279</td>
-<td>238</td></tr>
+<td>238</td><td></td><td></td></tr>
 <tr>
 <td>
       Higd1a
@@ -3921,7 +3941,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_HIGD1A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_HIGD1A.png" width="220"/>
 </td>
 <td>0.0780</td>
-<td>158</td></tr>
+<td>158</td><td></td><td></td></tr>
 <tr>
 <td>
       Gm20163
@@ -3954,7 +3974,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Tubg2
@@ -3987,7 +4007,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TUBG2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TUBG2.png" width="220"/>
 </td>
 <td>0.0190</td>
-<td>119</td></tr>
+<td>119</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Gm9844
@@ -4020,7 +4040,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Fes
@@ -4053,7 +4073,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FES.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FES.png" width="220"/>
 </td>
 <td>0.0973</td>
-<td>169</td></tr>
+<td>169</td><td></td><td></td></tr>
 <tr>
 <td>
       Sec14l4
@@ -4086,7 +4106,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SEC14L4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SEC14L4.png" width="220"/>
 </td>
 <td>0.0628</td>
-<td>151</td></tr>
+<td>151</td><td></td><td></td></tr>
 <tr>
 <td>
       Barx2
@@ -4119,7 +4139,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BARX2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BARX2.png" width="220"/>
 </td>
 <td>0.1858</td>
-<td>193</td></tr>
+<td>193</td><td></td><td></td></tr>
 <tr>
 <td>
       Gm13420
@@ -4152,7 +4172,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Ddn
@@ -4185,7 +4205,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DDN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DDN.png" width="220"/>
 </td>
 <td>1.85e-03</td>
-<td>65</td></tr>
+<td>65</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Gm9176
@@ -4218,7 +4238,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Vax2os
@@ -4251,7 +4271,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Ntn3
@@ -4284,7 +4304,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NTN3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NTN3.png" width="220"/>
 </td>
 <td>0.0473</td>
-<td>145</td></tr>
+<td>145</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Bcl11a
@@ -4317,7 +4337,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCL11A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCL11A.png" width="220"/>
 </td>
 <td>0.2159</td>
-<td>199</td></tr>
+<td>199</td><td></td><td></td></tr>
 <tr>
 <td>
       Irf5
@@ -4350,7 +4370,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IRF5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IRF5.png" width="220"/>
 </td>
 <td>5.99e-03</td>
-<td>85</td></tr>
+<td>85</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ltk
@@ -4383,7 +4403,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LTK.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LTK.png" width="220"/>
 </td>
 <td>5.25e-04</td>
-<td>50</td></tr>
+<td>50</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Smarcd1
@@ -4416,7 +4436,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SMARCD1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SMARCD1.png" width="220"/>
 </td>
 <td>2.96e-05</td>
-<td>27</td></tr>
+<td>27</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Eif1ad10
@@ -4449,7 +4469,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Gpc2
@@ -4482,7 +4502,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GPC2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GPC2.png" width="220"/>
 </td>
 <td>1.92e-05</td>
-<td>23</td></tr>
+<td>23</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Sgk2
@@ -4515,7 +4535,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SGK2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SGK2.png" width="220"/>
 </td>
 <td>0.0867</td>
-<td>164</td></tr>
+<td>164</td><td></td><td></td></tr>
 <tr>
 <td>
       1700025G04Rik
@@ -4548,7 +4568,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Fbxl19
@@ -4581,7 +4601,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FBXL19.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FBXL19.png" width="220"/>
 </td>
 <td>7.63e-08</td>
-<td>7</td></tr>
+<td>7</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Osr2
@@ -4614,7 +4634,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_OSR2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_OSR2.png" width="220"/>
 </td>
 <td>0.0638</td>
-<td>152</td></tr>
+<td>152</td><td></td><td></td></tr>
 <tr>
 <td>
       Npr3
@@ -4647,7 +4667,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NPR3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NPR3.png" width="220"/>
 </td>
 <td>7.18e-08</td>
-<td>6</td></tr>
+<td>6</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Zfta
@@ -4680,7 +4700,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ZFTA.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ZFTA.png" width="220"/>
 </td>
 <td>0.0473</td>
-<td>144</td></tr>
+<td>144</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Gm13882
@@ -4713,7 +4733,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Celf5
@@ -4746,7 +4766,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CELF5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CELF5.png" width="220"/>
 </td>
 <td>7.74e-03</td>
-<td>93</td></tr>
+<td>93</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Stab1
@@ -4779,7 +4799,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_STAB1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_STAB1.png" width="220"/>
 </td>
 <td>0.0546</td>
-<td>149</td></tr>
+<td>149</td><td></td><td></td></tr>
 <tr>
 <td>
       Nr5a1
@@ -4812,7 +4832,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NR5A1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NR5A1.png" width="220"/>
 </td>
 <td>0.1260</td>
-<td>175</td></tr>
+<td>175</td><td></td><td></td></tr>
 <tr>
 <td>
       Pim2
@@ -4845,7 +4865,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PIM2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PIM2.png" width="220"/>
 </td>
 <td>9.95e-05</td>
-<td>37</td></tr>
+<td>37</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ccdc136
@@ -4878,7 +4898,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CCDC136.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CCDC136.png" width="220"/>
 </td>
 <td>0.0146</td>
-<td>111</td></tr>
+<td>111</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Dppa2
@@ -4911,7 +4931,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Calcoco2
@@ -4944,7 +4964,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CALCOCO2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CALCOCO2.png" width="220"/>
 </td>
 <td>7.31e-04</td>
-<td>56</td></tr>
+<td>56</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Mid1
@@ -4977,7 +4997,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MID1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MID1.png" width="220"/>
 </td>
 <td>0.0830</td>
-<td>160</td></tr>
+<td>160</td><td></td><td></td></tr>
 <tr>
 <td>
       Agap2
@@ -5010,7 +5030,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AGAP2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AGAP2.png" width="220"/>
 </td>
 <td>2.74e-03</td>
-<td>74</td></tr>
+<td>74</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Large2
@@ -5043,7 +5063,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LARGE2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LARGE2.png" width="220"/>
 </td>
 <td>0.0178</td>
-<td>118</td></tr>
+<td>118</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Pgk1
@@ -5076,7 +5096,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PGK1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PGK1.png" width="220"/>
 </td>
 <td>6.84e-03</td>
-<td>88</td></tr>
+<td>88</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Fam162a
@@ -5109,7 +5129,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FAM162A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FAM162A.png" width="220"/>
 </td>
 <td>0.1688</td>
-<td>189</td></tr>
+<td>189</td><td></td><td></td></tr>
 <tr>
 <td>
       Pfkl
@@ -5142,7 +5162,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PFKL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PFKL.png" width="220"/>
 </td>
 <td>0.3034</td>
-<td>214</td></tr>
+<td>214</td><td></td><td></td></tr>
 <tr>
 <td>
       Gapdh
@@ -5175,7 +5195,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GAPDH.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GAPDH.png" width="220"/>
 </td>
 <td>0.1593</td>
-<td>187</td></tr>
+<td>187</td><td></td><td></td></tr>
 <tr>
 <td>
       Ccnd2
@@ -5208,7 +5228,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CCND2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CCND2.png" width="220"/>
 </td>
 <td>0.1809</td>
-<td>190</td></tr>
+<td>190</td><td></td><td></td></tr>
 <tr>
 <td>
       Sp6
@@ -5241,7 +5261,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SP6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SP6.png" width="220"/>
 </td>
 <td>0.0850</td>
-<td>162</td></tr>
+<td>162</td><td></td><td></td></tr>
 <tr>
 <td>
       Vax2
@@ -5274,7 +5294,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_VAX2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_VAX2.png" width="220"/>
 </td>
 <td>0.3952</td>
-<td>228</td></tr>
+<td>228</td><td></td><td></td></tr>
 <tr>
 <td>
       Hoxc13
@@ -5307,7 +5327,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HOXC13.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HOXC13.png" width="220"/>
 </td>
 <td>0.0271</td>
-<td>131</td></tr>
+<td>131</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Rspo1
@@ -5340,7 +5360,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RSPO1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RSPO1.png" width="220"/>
 </td>
 <td>0.0740</td>
-<td>156</td></tr>
+<td>156</td><td></td><td></td></tr>
 <tr>
 <td>
       Tead2
@@ -5373,7 +5393,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TEAD2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TEAD2.png" width="220"/>
 </td>
 <td>0.7960</td>
-<td>260</td></tr>
+<td>260</td><td></td><td></td></tr>
 <tr>
 <td>
       Rims3
@@ -5406,7 +5426,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RIMS3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RIMS3.png" width="220"/>
 </td>
 <td>0.6751</td>
-<td>253</td></tr>
+<td>253</td><td></td><td></td></tr>
 <tr>
 <td>
       Fgf15
@@ -5439,7 +5459,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Zfp57
@@ -5472,7 +5492,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ZFP57.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ZFP57.png" width="220"/>
 </td>
 <td>0.3078</td>
-<td>215</td></tr>
+<td>215</td><td></td><td></td></tr>
 <tr>
 <td>
       Ndrg2
@@ -5505,7 +5525,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NDRG2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NDRG2.png" width="220"/>
 </td>
 <td>5.60e-03</td>
-<td>84</td></tr>
+<td>84</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Slc9a3r2
@@ -5538,7 +5558,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC9A3R2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC9A3R2.png" width="220"/>
 </td>
 <td>3.95e-06</td>
-<td>14</td></tr>
+<td>14</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Nxph4
@@ -5571,7 +5591,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NXPH4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NXPH4.png" width="220"/>
 </td>
 <td>0.1590</td>
-<td>186</td></tr>
+<td>186</td><td></td><td></td></tr>
 <tr>
 <td>
       Fbxo10
@@ -5604,7 +5624,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FBXO10.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FBXO10.png" width="220"/>
 </td>
 <td>0.3524</td>
-<td>223</td></tr>
+<td>223</td><td></td><td></td></tr>
 <tr>
 <td>
       Slc30a3
@@ -5637,7 +5657,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC30A3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC30A3.png" width="220"/>
 </td>
 <td>5.29e-04</td>
-<td>51</td></tr>
+<td>51</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Lhx6
@@ -5670,7 +5690,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LHX6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LHX6.png" width="220"/>
 </td>
 <td>0.7657</td>
-<td>258</td></tr>
+<td>258</td><td></td><td></td></tr>
 <tr>
 <td>
       Glipr2
@@ -5703,7 +5723,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GLIPR2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GLIPR2.png" width="220"/>
 </td>
 <td>2.51e-03</td>
-<td>73</td></tr>
+<td>73</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Septin5
@@ -5736,7 +5756,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SEPTIN5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SEPTIN5.png" width="220"/>
 </td>
 <td>3.01e-05</td>
-<td>28</td></tr>
+<td>28</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Cgref1
@@ -5769,7 +5789,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CGREF1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CGREF1.png" width="220"/>
 </td>
 <td>0.9733</td>
-<td>275</td></tr>
+<td>275</td><td></td><td></td></tr>
 <tr>
 <td>
       Espn
@@ -5802,7 +5822,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ESPN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ESPN.png" width="220"/>
 </td>
 <td>2.98e-03</td>
-<td>75</td></tr>
+<td>75</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Cib2
@@ -5835,7 +5855,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CIB2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CIB2.png" width="220"/>
 </td>
 <td>0.3753</td>
-<td>224</td></tr>
+<td>224</td><td></td><td></td></tr>
 <tr>
 <td>
       Tcea3
@@ -5868,7 +5888,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TCEA3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TCEA3.png" width="220"/>
 </td>
 <td>0.0331</td>
-<td>136</td></tr>
+<td>136</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Tpm2
@@ -5901,7 +5921,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TPM2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TPM2.png" width="220"/>
 </td>
 <td>1.23e-03</td>
-<td>61</td></tr>
+<td>61</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Angel1
@@ -5934,7 +5954,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ANGEL1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ANGEL1.png" width="220"/>
 </td>
 <td>0.3460</td>
-<td>221</td></tr>
+<td>221</td><td></td><td></td></tr>
 <tr>
 <td>
       Npr2
@@ -5967,7 +5987,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NPR2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NPR2.png" width="220"/>
 </td>
 <td>0.0101</td>
-<td>99</td></tr>
+<td>99</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ppp1r1b
@@ -6000,7 +6020,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PPP1R1B.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PPP1R1B.png" width="220"/>
 </td>
 <td>3.27e-03</td>
-<td>76</td></tr>
+<td>76</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Adgrg3
@@ -6033,7 +6053,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ADGRG3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ADGRG3.png" width="220"/>
 </td>
 <td>6.00e-04</td>
-<td>54</td></tr>
+<td>54</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Slc17a7
@@ -6066,7 +6086,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC17A7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC17A7.png" width="220"/>
 </td>
 <td>4.38e-03</td>
-<td>79</td></tr>
+<td>79</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ciart
@@ -6099,7 +6119,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CIART.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CIART.png" width="220"/>
 </td>
 <td>0.0445</td>
-<td>142</td></tr>
+<td>142</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Krt19
@@ -6132,7 +6152,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_KRT19.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_KRT19.png" width="220"/>
 </td>
 <td>0.0835</td>
-<td>161</td></tr>
+<td>161</td><td></td><td></td></tr>
 <tr>
 <td>
       Amhr2
@@ -6165,7 +6185,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_AMHR2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_AMHR2.png" width="220"/>
 </td>
 <td>0.3002</td>
-<td>213</td></tr>
+<td>213</td><td></td><td></td></tr>
 <tr>
 <td>
       Cryaa
@@ -6198,7 +6218,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Ckb
@@ -6231,7 +6251,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CKB.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CKB.png" width="220"/>
 </td>
 <td>0.6094</td>
-<td>245</td></tr>
+<td>245</td><td></td><td></td></tr>
 <tr>
 <td>
       Tbx15
@@ -6264,7 +6284,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TBX15.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TBX15.png" width="220"/>
 </td>
 <td>1.72e-03</td>
-<td>64</td></tr>
+<td>64</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Cand2
@@ -6297,7 +6317,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CAND2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CAND2.png" width="220"/>
 </td>
 <td>0.0970</td>
-<td>168</td></tr>
+<td>168</td><td></td><td></td></tr>
 <tr>
 <td>
       Dpysl5
@@ -6330,7 +6350,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DPYSL5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DPYSL5.png" width="220"/>
 </td>
 <td>0.0158</td>
-<td>113</td></tr>
+<td>113</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Bin2
@@ -6363,7 +6383,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BIN2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BIN2.png" width="220"/>
 </td>
 <td>0.1222</td>
-<td>173</td></tr>
+<td>173</td><td></td><td></td></tr>
 <tr>
 <td>
       Diras2
@@ -6396,7 +6416,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DIRAS2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DIRAS2.png" width="220"/>
 </td>
 <td>3.52e-04</td>
-<td>47</td></tr>
+<td>47</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Arhgdib
@@ -6429,7 +6449,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ARHGDIB.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ARHGDIB.png" width="220"/>
 </td>
 <td>0.1187</td>
-<td>171</td></tr>
+<td>171</td><td></td><td></td></tr>
 <tr>
 <td>
       Tekt2
@@ -6462,7 +6482,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TEKT2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TEKT2.png" width="220"/>
 </td>
 <td>0.0175</td>
-<td>117</td></tr>
+<td>117</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Igfbp2
@@ -6495,7 +6515,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_IGFBP2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_IGFBP2.png" width="220"/>
 </td>
 <td>0.1363</td>
-<td>177</td></tr>
+<td>177</td><td></td><td></td></tr>
 <tr>
 <td>
       Cyp2s1
@@ -6528,7 +6548,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CYP2S1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CYP2S1.png" width="220"/>
 </td>
 <td>9.31e-03</td>
-<td>95</td></tr>
+<td>95</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Efna3
@@ -6561,7 +6581,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_EFNA3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_EFNA3.png" width="220"/>
 </td>
 <td>7.13e-03</td>
-<td>90</td></tr>
+<td>90</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Rassf2
@@ -6594,7 +6614,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RASSF2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RASSF2.png" width="220"/>
 </td>
 <td>0.9057</td>
-<td>268</td></tr>
+<td>268</td><td></td><td></td></tr>
 <tr>
 <td>
       Tcf7
@@ -6627,7 +6647,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TCF7.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TCF7.png" width="220"/>
 </td>
 <td>0.1372</td>
-<td>179</td></tr>
+<td>179</td><td></td><td></td></tr>
 <tr>
 <td>
       Hsd17b1
@@ -6660,7 +6680,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HSD17B1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HSD17B1.png" width="220"/>
 </td>
 <td>0.0266</td>
-<td>129</td></tr>
+<td>129</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ccdc85c
@@ -6693,7 +6713,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CCDC85C.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CCDC85C.png" width="220"/>
 </td>
 <td>0.0162</td>
-<td>114</td></tr>
+<td>114</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Nckap1l
@@ -6726,7 +6746,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NCKAP1L.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NCKAP1L.png" width="220"/>
 </td>
 <td>0.9493</td>
-<td>272</td></tr>
+<td>272</td><td></td><td></td></tr>
 <tr>
 <td>
       Igsf5
@@ -6759,7 +6779,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_IGSF5.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_IGSF5.png" width="220"/>
 </td>
 <td>0.4116</td>
-<td>230</td></tr>
+<td>230</td><td></td><td></td></tr>
 <tr>
 <td>
       Vps26a
@@ -6792,7 +6812,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_VPS26A.png" height="190" src="TCGA/survival_curves/significant/survival_curve_VPS26A.png" width="220"/>
 </td>
 <td>4.02e-04</td>
-<td>48</td></tr>
+<td>48</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Gsta3
@@ -6825,7 +6845,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Ugt1a6a
@@ -6858,7 +6878,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Dnajc15
@@ -6891,7 +6911,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DNAJC15.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DNAJC15.png" width="220"/>
 </td>
 <td>0.9195</td>
-<td>270</td></tr>
+<td>270</td><td></td><td></td></tr>
 <tr>
 <td>
       Gm43305
@@ -6924,7 +6944,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Igsf11
@@ -6957,7 +6977,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IGSF11.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IGSF11.png" width="220"/>
 </td>
 <td>0.0152</td>
-<td>112</td></tr>
+<td>112</td><td>Low</td><td>dif</td></tr>
 <tr>
 <td>
       Sult1c2
@@ -6990,7 +7010,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SULT1C2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SULT1C2.png" width="220"/>
 </td>
 <td>0.1392</td>
-<td>180</td></tr>
+<td>180</td><td></td><td></td></tr>
 <tr>
 <td>
       Enpep
@@ -7023,7 +7043,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ENPEP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ENPEP.png" width="220"/>
 </td>
 <td>1.84e-05</td>
-<td>21</td></tr>
+<td>21</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Ppargc1a
@@ -7056,7 +7076,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PPARGC1A.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PPARGC1A.png" width="220"/>
 </td>
 <td>3.54e-05</td>
-<td>30</td></tr>
+<td>30</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       2610203C22Rik
@@ -7089,7 +7109,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Lcn2
@@ -7122,7 +7142,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LCN2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LCN2.png" width="220"/>
 </td>
 <td>5.56e-05</td>
-<td>34</td></tr>
+<td>34</td><td>Low</td><td>dif</td></tr>
 <tr>
 <td>
       Sim2
@@ -7155,7 +7175,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SIM2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SIM2.png" width="220"/>
 </td>
 <td>1.89e-03</td>
-<td>66</td></tr>
+<td>66</td><td>Low</td><td>dif</td></tr>
 <tr>
 <td>
       Gm30246
@@ -7188,7 +7208,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Cd68
@@ -7221,7 +7241,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CD68.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CD68.png" width="220"/>
 </td>
 <td>4.84e-03</td>
-<td>82</td></tr>
+<td>82</td><td>Low</td><td>dif</td></tr>
 <tr>
 <td>
       Il6ra
@@ -7254,7 +7274,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Gm13583
@@ -7287,7 +7307,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Sirpa
@@ -7320,7 +7340,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SIRPA.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SIRPA.png" width="220"/>
 </td>
 <td>0.0267</td>
-<td>130</td></tr>
+<td>130</td><td>Low</td><td>dif</td></tr>
 <tr>
 <td>
       Tfec
@@ -7353,7 +7373,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TFEC.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TFEC.png" width="220"/>
 </td>
 <td>3.18e-04</td>
-<td>44</td></tr>
+<td>44</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Ugt1a7c
@@ -7386,7 +7406,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Krt17
@@ -7419,7 +7439,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_KRT17.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_KRT17.png" width="220"/>
 </td>
 <td>0.0506</td>
-<td>148</td></tr>
+<td>148</td><td></td><td></td></tr>
 <tr>
 <td>
       Folr1
@@ -7452,7 +7472,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FOLR1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FOLR1.png" width="220"/>
 </td>
 <td>0.0889</td>
-<td>165</td></tr>
+<td>165</td><td></td><td></td></tr>
 <tr>
 <td>
       Acss3
@@ -7485,7 +7505,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ACSS3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ACSS3.png" width="220"/>
 </td>
 <td>2.55e-07</td>
-<td>10</td></tr>
+<td>10</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Gvin2
@@ -7518,7 +7538,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Avil
@@ -7551,7 +7571,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AVIL.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AVIL.png" width="220"/>
 </td>
 <td>1.90e-03</td>
-<td>67</td></tr>
+<td>67</td><td>Low</td><td>dif</td></tr>
 <tr>
 <td>
       Ostn
@@ -7584,7 +7604,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_OSTN.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_OSTN.png" width="220"/>
 </td>
 <td>0.3230</td>
-<td>217</td></tr>
+<td>217</td><td></td><td></td></tr>
 <tr>
 <td>
       Slc16a12
@@ -7617,7 +7637,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC16A12.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC16A12.png" width="220"/>
 </td>
 <td>3.33e-09</td>
-<td>0</td></tr>
+<td>0</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       St6gal1
@@ -7650,7 +7670,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ST6GAL1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ST6GAL1.png" width="220"/>
 </td>
 <td>0.1903</td>
-<td>195</td></tr>
+<td>195</td><td></td><td></td></tr>
 <tr>
 <td>
       ---
@@ -7681,7 +7701,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Erv3
@@ -7714,7 +7734,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Pde1a
@@ -7747,7 +7767,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PDE1A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PDE1A.png" width="220"/>
 </td>
 <td>0.6267</td>
-<td>249</td></tr>
+<td>249</td><td></td><td></td></tr>
 <tr>
 <td>
       Mmp2
@@ -7780,7 +7800,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MMP2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MMP2.png" width="220"/>
 </td>
 <td>0.6586</td>
-<td>252</td></tr>
+<td>252</td><td></td><td></td></tr>
 <tr>
 <td>
       Aig1
@@ -7813,7 +7833,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AIG1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AIG1.png" width="220"/>
 </td>
 <td>0.0368</td>
-<td>138</td></tr>
+<td>138</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Stra6
@@ -7846,7 +7866,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_STRA6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_STRA6.png" width="220"/>
 </td>
 <td>4.34e-05</td>
-<td>32</td></tr>
+<td>32</td><td>Low</td><td>dif</td></tr>
 <tr>
 <td>
       Radil
@@ -7879,7 +7899,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RADIL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RADIL.png" width="220"/>
 </td>
 <td>0.1406</td>
-<td>181</td></tr>
+<td>181</td><td></td><td></td></tr>
 <tr>
 <td>
       Spryd7
@@ -7912,7 +7932,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SPRYD7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SPRYD7.png" width="220"/>
 </td>
 <td>0.0118</td>
-<td>104</td></tr>
+<td>104</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Kalrn
@@ -7945,7 +7965,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_KALRN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_KALRN.png" width="220"/>
 </td>
 <td>1.97e-03</td>
-<td>68</td></tr>
+<td>68</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Ret
@@ -7978,7 +7998,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RET.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RET.png" width="220"/>
 </td>
 <td>2.19e-03</td>
-<td>71</td></tr>
+<td>71</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Rtn4rl1
@@ -8011,7 +8031,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RTN4RL1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RTN4RL1.png" width="220"/>
 </td>
 <td>0.0322</td>
-<td>135</td></tr>
+<td>135</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Rnf17
@@ -8044,7 +8064,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RNF17.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RNF17.png" width="220"/>
 </td>
 <td>0.0246</td>
-<td>126</td></tr>
+<td>126</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Lct
@@ -8077,7 +8097,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LCT.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LCT.png" width="220"/>
 </td>
 <td>0.2394</td>
-<td>205</td></tr>
+<td>205</td><td></td><td></td></tr>
 <tr>
 <td>
       Flnc
@@ -8110,7 +8130,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FLNC.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FLNC.png" width="220"/>
 </td>
 <td>0.0128</td>
-<td>107</td></tr>
+<td>107</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Grin1
@@ -8143,7 +8163,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GRIN1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GRIN1.png" width="220"/>
 </td>
 <td>0.2089</td>
-<td>198</td></tr>
+<td>198</td><td></td><td></td></tr>
 <tr>
 <td>
       Cilp2
@@ -8176,7 +8196,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CILP2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CILP2.png" width="220"/>
 </td>
 <td>6.13e-08</td>
-<td>5</td></tr>
+<td>5</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Panx3
@@ -8209,7 +8229,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Tiam1
@@ -8242,7 +8262,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TIAM1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TIAM1.png" width="220"/>
 </td>
 <td>0.5863</td>
-<td>244</td></tr>
+<td>244</td><td></td><td></td></tr>
 <tr>
 <td>
       Megf6
@@ -8275,7 +8295,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MEGF6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MEGF6.png" width="220"/>
 </td>
 <td>0.1583</td>
-<td>185</td></tr>
+<td>185</td><td></td><td></td></tr>
 <tr>
 <td>
       Lurap1l
@@ -8308,7 +8328,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LURAP1L.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LURAP1L.png" width="220"/>
 </td>
 <td>0.0145</td>
-<td>110</td></tr>
+<td>110</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Scube3
@@ -8341,7 +8361,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SCUBE3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SCUBE3.png" width="220"/>
 </td>
 <td>0.5540</td>
-<td>241</td></tr>
+<td>241</td><td></td><td></td></tr>
 <tr>
 <td>
       Podnl1
@@ -8374,7 +8394,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PODNL1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PODNL1.png" width="220"/>
 </td>
 <td>8.82e-09</td>
-<td>1</td></tr>
+<td>1</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Cracd
@@ -8407,7 +8427,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CRACD.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CRACD.png" width="220"/>
 </td>
 <td>0.1216</td>
-<td>172</td></tr>
+<td>172</td><td></td><td></td></tr>
 <tr>
 <td>
       Frmd4b
@@ -8440,7 +8460,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FRMD4B.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FRMD4B.png" width="220"/>
 </td>
 <td>3.14e-04</td>
-<td>43</td></tr>
+<td>43</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Bmp7
@@ -8473,7 +8493,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_BMP7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_BMP7.png" width="220"/>
 </td>
 <td>0.0240</td>
-<td>125</td></tr>
+<td>125</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       2610528A11Rik
@@ -8506,7 +8526,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Cerox1
@@ -8539,7 +8559,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CEROX1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CEROX1.png" width="220"/>
 </td>
 <td>0.5724</td>
-<td>243</td></tr>
+<td>243</td><td></td><td></td></tr>
 <tr>
 <td>
       Slc16a14
@@ -8572,7 +8592,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC16A14.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC16A14.png" width="220"/>
 </td>
 <td>0.0425</td>
-<td>140</td></tr>
+<td>140</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Ube2l6
@@ -8605,7 +8625,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_UBE2L6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_UBE2L6.png" width="220"/>
 </td>
 <td>0.4521</td>
-<td>234</td></tr>
+<td>234</td><td></td><td></td></tr>
 <tr>
 <td>
       Bcl2l11
@@ -8638,7 +8658,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCL2L11.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCL2L11.png" width="220"/>
 </td>
 <td>0.2563</td>
-<td>208</td></tr>
+<td>208</td><td></td><td></td></tr>
 <tr>
 <td>
       Slc2a3
@@ -8671,7 +8691,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC2A3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC2A3.png" width="220"/>
 </td>
 <td>0.0260</td>
-<td>128</td></tr>
+<td>128</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Gng2
@@ -8704,7 +8724,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GNG2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GNG2.png" width="220"/>
 </td>
 <td>0.7098</td>
-<td>254</td></tr>
+<td>254</td><td></td><td></td></tr>
 <tr>
 <td>
       Sohlh2
@@ -8737,7 +8757,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SOHLH2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SOHLH2.png" width="220"/>
 </td>
 <td>7.60e-03</td>
-<td>92</td></tr>
+<td>92</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Igf2
@@ -8770,7 +8790,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IGF2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IGF2.png" width="220"/>
 </td>
 <td>0.0421</td>
-<td>139</td></tr>
+<td>139</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Serping1
@@ -8803,7 +8823,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SERPING1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SERPING1.png" width="220"/>
 </td>
 <td>0.0925</td>
-<td>166</td></tr>
+<td>166</td><td></td><td></td></tr>
 <tr>
 <td>
       Slc25a23
@@ -8836,7 +8856,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC25A23.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC25A23.png" width="220"/>
 </td>
 <td>5.44e-06</td>
-<td>16</td></tr>
+<td>16</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Fmod
@@ -8869,7 +8889,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FMOD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FMOD.png" width="220"/>
 </td>
 <td>0.0105</td>
-<td>100</td></tr>
+<td>100</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Tuba3a
@@ -8902,7 +8922,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Bcam
@@ -8935,7 +8955,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCAM.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCAM.png" width="220"/>
 </td>
 <td>0.0932</td>
-<td>167</td></tr>
+<td>167</td><td></td><td></td></tr>
 <tr>
 <td>
       Tex101
@@ -8968,7 +8988,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TEX101.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TEX101.png" width="220"/>
 </td>
 <td>8.62e-05</td>
-<td>36</td></tr>
+<td>36</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Mmp17
@@ -9001,7 +9021,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MMP17.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MMP17.png" width="220"/>
 </td>
 <td>6.51e-06</td>
-<td>17</td></tr>
+<td>17</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Apln
@@ -9034,7 +9054,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_APLN.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_APLN.png" width="220"/>
 </td>
 <td>0.1907</td>
-<td>196</td></tr>
+<td>196</td><td></td><td></td></tr>
 <tr>
 <td>
       Btbd11
@@ -9067,7 +9087,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Tcf24
@@ -9100,7 +9120,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TCF24.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TCF24.png" width="220"/>
 </td>
 <td>2.31e-03</td>
-<td>72</td></tr>
+<td>72</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ndufa4l2
@@ -9133,7 +9153,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NDUFA4L2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NDUFA4L2.png" width="220"/>
 </td>
 <td>0.2292</td>
-<td>203</td></tr>
+<td>203</td><td></td><td></td></tr>
 <tr>
 <td>
       Il17rd
@@ -9166,7 +9186,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IL17RD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IL17RD.png" width="220"/>
 </td>
 <td>1.89e-05</td>
-<td>22</td></tr>
+<td>22</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Kcnh3
@@ -9199,7 +9219,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_KCNH3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_KCNH3.png" width="220"/>
 </td>
 <td>3.37e-06</td>
-<td>13</td></tr>
+<td>13</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Slc29a4
@@ -9232,7 +9252,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SLC29A4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SLC29A4.png" width="220"/>
 </td>
 <td>0.8900</td>
-<td>266</td></tr>
+<td>266</td><td></td><td></td></tr>
 <tr>
 <td>
       Cacng7
@@ -9265,7 +9285,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CACNG7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CACNG7.png" width="220"/>
 </td>
 <td>4.71e-03</td>
-<td>81</td></tr>
+<td>81</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Npnt
@@ -9298,7 +9318,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NPNT.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NPNT.png" width="220"/>
 </td>
 <td>1.64e-04</td>
-<td>39</td></tr>
+<td>39</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Zfp365
@@ -9331,7 +9351,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Rab11fip4
@@ -9364,7 +9384,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RAB11FIP4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RAB11FIP4.png" width="220"/>
 </td>
 <td>0.1832</td>
-<td>191</td></tr>
+<td>191</td><td></td><td></td></tr>
 <tr>
 <td>
       Igsf3
@@ -9397,7 +9417,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_IGSF3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_IGSF3.png" width="220"/>
 </td>
 <td>0.1834</td>
-<td>192</td></tr>
+<td>192</td><td></td><td></td></tr>
 <tr>
 <td>
       Gm4779
@@ -9430,7 +9450,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Pard6g
@@ -9463,7 +9483,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PARD6G.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PARD6G.png" width="220"/>
 </td>
 <td>0.0454</td>
-<td>143</td></tr>
+<td>143</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       8030474K03Rik
@@ -9496,7 +9516,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Alcam
@@ -9529,7 +9549,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ALCAM.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ALCAM.png" width="220"/>
 </td>
 <td>8.79e-06</td>
-<td>18</td></tr>
+<td>18</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Dock11
@@ -9562,7 +9582,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DOCK11.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DOCK11.png" width="220"/>
 </td>
 <td>0.3494</td>
-<td>222</td></tr>
+<td>222</td><td></td><td></td></tr>
 <tr>
 <td>
       Sema4d
@@ -9595,7 +9615,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SEMA4D.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SEMA4D.png" width="220"/>
 </td>
 <td>0.2837</td>
-<td>212</td></tr>
+<td>212</td><td></td><td></td></tr>
 <tr>
 <td>
       Agmo
@@ -9628,7 +9648,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AGMO.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AGMO.png" width="220"/>
 </td>
 <td>0.0207</td>
-<td>121</td></tr>
+<td>121</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Hhip
@@ -9661,7 +9681,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_HHIP.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_HHIP.png" width="220"/>
 </td>
 <td>0.2644</td>
-<td>210</td></tr>
+<td>210</td><td></td><td></td></tr>
 <tr>
 <td>
       Tuba3b
@@ -9694,7 +9714,7 @@
       NA
      </td>
 <td>NA</td>
-<td>500</td></tr>
+<td>500</td><td></td><td></td></tr>
 <tr>
 <td>
       Clmn
@@ -9727,7 +9747,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CLMN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CLMN.png" width="220"/>
 </td>
 <td>3.76e-05</td>
-<td>31</td></tr>
+<td>31</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Prr5
@@ -9760,7 +9780,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PRR5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PRR5.png" width="220"/>
 </td>
 <td>0.0113</td>
-<td>102</td></tr>
+<td>102</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ppbp
@@ -9793,7 +9813,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PPBP.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PPBP.png" width="220"/>
 </td>
 <td>0.8978</td>
-<td>267</td></tr>
+<td>267</td><td></td><td></td></tr>
 <tr>
 <td>
       Arhgap8
@@ -9826,7 +9846,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ARHGAP8.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ARHGAP8.png" width="220"/>
 </td>
 <td>0.0698</td>
-<td>155</td></tr>
+<td>155</td><td></td><td></td></tr>
 <tr>
 <td>
       Txndc16
@@ -9859,7 +9879,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TXNDC16.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TXNDC16.png" width="220"/>
 </td>
 <td>5.05e-06</td>
-<td>15</td></tr>
+<td>15</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Myh10
@@ -9892,7 +9912,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MYH10.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MYH10.png" width="220"/>
 </td>
 <td>5.92e-04</td>
-<td>53</td></tr>
+<td>53</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Wnt4
@@ -9925,7 +9945,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_WNT4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_WNT4.png" width="220"/>
 </td>
 <td>3.47e-03</td>
-<td>77</td></tr>
+<td>77</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Ankrd35
@@ -9958,7 +9978,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ANKRD35.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ANKRD35.png" width="220"/>
 </td>
 <td>0.0202</td>
-<td>120</td></tr>
+<td>120</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Nt5e
@@ -9991,7 +10011,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NT5E.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NT5E.png" width="220"/>
 </td>
 <td>4.24e-03</td>
-<td>78</td></tr>
+<td>78</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Epha4
@@ -10024,7 +10044,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_EPHA4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_EPHA4.png" width="220"/>
 </td>
 <td>2.04e-05</td>
-<td>24</td></tr>
+<td>24</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Ggh
@@ -10057,7 +10077,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GGH.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GGH.png" width="220"/>
 </td>
 <td>0.0425</td>
-<td>141</td></tr>
+<td>141</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Tacstd2
@@ -10090,7 +10110,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TACSTD2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TACSTD2.png" width="220"/>
 </td>
 <td>0.9720</td>
-<td>274</td></tr>
+<td>274</td><td></td><td></td></tr>
 <tr>
 <td>
       Igf2bp1
@@ -10123,7 +10143,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IGF2BP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IGF2BP1.png" width="220"/>
 </td>
 <td>4.97e-03</td>
-<td>83</td></tr>
+<td>83</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Mcm6
@@ -10156,7 +10176,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MCM6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MCM6.png" width="220"/>
 </td>
 <td>0.4531</td>
-<td>235</td></tr>
+<td>235</td><td></td><td></td></tr>
 <tr>
 <td>
       Vim
@@ -10189,7 +10209,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_VIM.png" height="190" src="TCGA/survival_curves/significant/survival_curve_VIM.png" width="220"/>
 </td>
 <td>2.19e-03</td>
-<td>70</td></tr>
+<td>70</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Dstn
@@ -10222,7 +10242,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DSTN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DSTN.png" width="220"/>
 </td>
 <td>0.0118</td>
-<td>105</td></tr>
+<td>105</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Hnrnpm
@@ -10255,7 +10275,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HNRNPM.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HNRNPM.png" width="220"/>
 </td>
 <td>9.89e-03</td>
-<td>97</td></tr>
+<td>97</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Col1a1
@@ -10288,7 +10308,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_COL1A1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_COL1A1.png" width="220"/>
 </td>
 <td>2.35e-04</td>
-<td>42</td></tr>
+<td>42</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Poldip3
@@ -10321,7 +10341,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_POLDIP3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_POLDIP3.png" width="220"/>
 </td>
 <td>2.59e-05</td>
-<td>26</td></tr>
+<td>26</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Hnrnpl
@@ -10354,7 +10374,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HNRNPL.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HNRNPL.png" width="220"/>
 </td>
 <td>4.54e-03</td>
-<td>80</td></tr>
+<td>80</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Sf3b2
@@ -10387,7 +10407,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SF3B2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SF3B2.png" width="220"/>
 </td>
 <td>0.0679</td>
-<td>154</td></tr>
+<td>154</td><td></td><td></td></tr>
 <tr>
 <td>
       Anp32a
@@ -10420,7 +10440,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ANP32A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ANP32A.png" width="220"/>
 </td>
 <td>0.3403</td>
-<td>219</td></tr>
+<td>219</td><td></td><td></td></tr>
 <tr>
 <td>
       Dbn1
@@ -10453,7 +10473,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DBN1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DBN1.png" width="220"/>
 </td>
 <td>9.69e-03</td>
-<td>96</td></tr>
+<td>96</td><td>Low</td><td>same</td></tr>
 <tr>
 <td>
       Prdx2
@@ -10486,7 +10506,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PRDX2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PRDX2.png" width="220"/>
 </td>
 <td>6.60e-03</td>
-<td>86</td></tr>
+<td>86</td><td>High</td><td>dif</td></tr>
 <tr>
 <td>
       Asah1
@@ -10519,7 +10539,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ASAH1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ASAH1.png" width="220"/>
 </td>
 <td>1.02e-05</td>
-<td>20</td></tr>
+<td>20</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Myo6
@@ -10552,7 +10572,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MYO6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MYO6.png" width="220"/>
 </td>
 <td>3.20e-08</td>
-<td>4</td></tr>
+<td>4</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Ranbp2
@@ -10585,7 +10605,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RANBP2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RANBP2.png" width="220"/>
 </td>
 <td>5.89e-04</td>
-<td>52</td></tr>
+<td>52</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Sord
@@ -10618,7 +10638,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SORD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SORD.png" width="220"/>
 </td>
 <td>0.0113</td>
-<td>101</td></tr>
+<td>101</td><td>High</td><td>same</td></tr>
 <tr>
 <td>
       Tfrc
@@ -10651,7 +10671,7 @@
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TFRC.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TFRC.png" width="220"/>
 </td>
 <td>0.8838</td>
-<td>264</td></tr>
+<td>264</td><td></td><td></td></tr>
 </tbody>
 </table>
 <!-- The Modal -->
