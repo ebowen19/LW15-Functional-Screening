@@ -45,20 +45,6 @@
 </header>
 
 <br/>
-<strong> Hide Columns: </strong>
-<form>
-<input id="hideGeneID" name="hideGeneID" type="checkbox" class="column-visibility-toggle"/>
-<label for="hideGeneID">Gene ID</label>
-<input id="hideCoverage" name="hideCoverage" type="checkbox" class="column-visibility-toggle"/>
-<label for="hideCoverage">Coverage Information</label>
-<input id="hideRegulation" name="hideRegulation" type="checkbox" class="column-visibility-toggle"/>
-<label for="hideRegulation">Regulation in Sensitive</label>
-<input id="hideFoundIn" name="hideFoundIn" type="checkbox" class="column-visibility-toggle"/>
-<label for="hideFoundIn">Found In</label>
-<input id="hideCategory" name="hideCategory" type="checkbox" class="column-visibility-toggle"/>
-<label for="hideCategory">Category</label>
-</form>
-<br/>
 <a href="./TCGA/comparison_stats.html"><strong> TCGA vs LW15 Comparison: </strong></a>
 <br/>
 For genes upregulated in sensitive according to LW15 RNA-seq data, we expect to see worse prognosis in TCGA Survival
@@ -76,7 +62,20 @@ Show only genes with significant survival curves with:
 <label for="difTrend">Differing trend </label>
 <br/>
 </form>
-<h2>320 Significant LW15 Genes</h2>
+<strong> Hide Columns: </strong>
+<form>
+<input id="hideGeneID" name="hideGeneID" type="checkbox" class="column-visibility-toggle"/>
+<label for="hideGeneID">Gene ID</label>
+<input id="hideCoverage" name="hideCoverage" type="checkbox" class="column-visibility-toggle"/>
+<label for="hideCoverage">Coverage Information</label>
+<input id="hideRegulation" name="hideRegulation" type="checkbox" class="column-visibility-toggle"/>
+<label for="hideRegulation">Regulation in Sensitive</label>
+<input id="hideFoundIn" name="hideFoundIn" type="checkbox" class="column-visibility-toggle"/>
+<label for="hideFoundIn">Found In</label>
+<input id="hideCategory" name="hideCategory" type="checkbox" class="column-visibility-toggle"/>
+<label for="hideCategory">Category</label>
+</form>
+<h2>320 Significant LW15 Genes:</h2>
 <table border="1" id="functionalScreening">
 <thead>
 <tr style="text-align: right;">
