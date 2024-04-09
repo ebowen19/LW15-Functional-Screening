@@ -1,4 +1,29 @@
-<table border="1" >
+<html>
+<head>
+  <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+  <link href="../scripts/styles.css" rel="stylesheet" type="text/css"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js" type="text/javascript"></script>
+
+
+  <script src="scripts/script.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.simpleTable').DataTable({
+        "searching": false,
+        "lengthChange": false,
+        "paging": false,
+        "order":[],
+        "bInfo": false // This will hide the "Showing 1 to n of n entries" info
+      });
+    });
+  </script>
+</head>
+<body>
+  <p style="font-size:17px;"><a href="../index.html"><strong>Home</strong></a></p>
+
+  <h2>Analysis Summary Stats</h2>
+  <table class="simpleTable" border="1">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -212,3 +237,5 @@
     </tr>
   </tbody>
 </table>
+</body>
+</html>
