@@ -16,32 +16,31 @@
 </script>
 </head>
 <body>
-
 <header>
-     <h1>LW15 Functional Screening Gene Summaries</h1>
-     <p style="font-size:17px;">
-          <a href="https://ebowen19.github.io/LW15-Target-Genes/">
-          <strong>
+<h1>LW15 Functional Screening Gene Summaries</h1>
+<p style="font-size:17px;">
+<a href="https://ebowen19.github.io/LW15-Target-Genes/">
+<strong>
                LW15 RNA-seq analysis Details
               </strong>
-          </a>
-          </p>
-          <p style="font-size:17px;">
-          <a href="category_descriptions.html">
-          <strong>
+</a>
+</p>
+<p style="font-size:17px;">
+<a href="category_descriptions.html">
+<strong>
                Category Descriptions
               </strong>
-          </a>
-          </p>
-          <p style="font-size:17px;">
-          <a href="./summary/summary.html">
-          <mark>
-          <strong>
+</a>
+</p>
+<p style="font-size:17px;">
+<a href="./summary/summary.html">
+<mark>
+<strong>
                 Analysis Summary Statistics
                </strong>
-          </mark></a></p>
+</mark></a></p>
 </header>
-<hr style="background-color: gray; height: 0.25px;">
+<hr style="background-color: gray; height: 0.25px;"/>
 <br/>
 <a href="./TCGA/comparison_stats.html"><strong> TCGA vs LW15 Comparison: </strong></a>
 <br/>
@@ -62,16 +61,18 @@ Show only genes with significant survival curves with:
 </form>
 <strong> Hide Columns: </strong>
 <form>
-<input id="hideGeneID" name="hideGeneID" type="checkbox" class="column-visibility-toggle"/>
+<input class="column-visibility-toggle" id="hideGeneID" name="hideGeneID" type="checkbox"/>
 <label for="hideGeneID">Gene ID</label>
-<input id="hideCoverage" name="hideCoverage" type="checkbox" class="column-visibility-toggle"/>
+<input class="column-visibility-toggle" id="hideCoverage" name="hideCoverage" type="checkbox"/>
 <label for="hideCoverage">Coverage Information</label>
-<input id="hideRegulation" name="hideRegulation" type="checkbox" class="column-visibility-toggle"/>
+<input class="column-visibility-toggle" id="hideRegulation" name="hideRegulation" type="checkbox"/>
 <label for="hideRegulation">Regulation in Sensitive</label>
-<input id="hideFoundIn" name="hideFoundIn" type="checkbox" class="column-visibility-toggle"/>
+<input class="column-visibility-toggle" id="hideFoundIn" name="hideFoundIn" type="checkbox"/>
 <label for="hideFoundIn">Found In</label>
-<input id="hideCategory" name="hideCategory" type="checkbox" class="column-visibility-toggle"/>
+<input class="column-visibility-toggle" id="hideCategory" name="hideCategory" type="checkbox"/>
 <label for="hideCategory">Category</label>
+<input class="column-visibility-toggle" id="hideGraeber" name="hideGraeber" type="checkbox"/>
+<label for="hideGraeber">Graeber Gene Expression</label>
 </form>
 <h2>320 Significant LW15 Genes:</h2>
 <table border="1" id="functionalScreening">
@@ -114,7 +115,7 @@ Show only genes with significant survival curves with:
      </th>
 <th>Expression of Higher Survival group
      </th>
-<th>LW15 vs TCGA</th></tr>
+<th>LW15 vs TCGA</th><th>Graeber Gene Expression</th></tr>
 </thead>
 <tbody>
 <tr>
@@ -149,7 +150,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Caskin1
@@ -182,7 +183,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CASKIN1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CASKIN1.png" width="220"/>
 </td>
 <td>0.1230</td>
-<td>174</td><td></td><td></td></tr>
+<td>174</td><td></td><td></td><td><img alt="CASKIN1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CASKIN1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Scarf2
@@ -215,7 +216,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SCARF2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SCARF2.png" width="220"/>
 </td>
 <td>7.47e-03</td>
-<td>91</td><td>Low</td><td>same</td></tr>
+<td>91</td><td>Low</td><td>same</td><td><img alt="SCARF2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SCARF2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Vps4a
@@ -248,7 +249,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_VPS4A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_VPS4A.png" width="220"/>
 </td>
 <td>0.1548</td>
-<td>184</td><td></td><td></td></tr>
+<td>184</td><td></td><td></td><td><img alt="VPS4A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/VPS4A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Card10
@@ -281,7 +282,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CARD10.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CARD10.png" width="220"/>
 </td>
 <td>0.5207</td>
-<td>236</td><td></td><td></td></tr>
+<td>236</td><td></td><td></td><td><img alt="CARD10" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CARD10_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Thap11
@@ -314,7 +315,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_THAP11.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_THAP11.png" width="220"/>
 </td>
 <td>0.6210</td>
-<td>248</td><td></td><td></td></tr>
+<td>248</td><td></td><td></td><td><img alt="THAP11" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/THAP11_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nup50
@@ -347,7 +348,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NUP50.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NUP50.png" width="220"/>
 </td>
 <td>0.8168</td>
-<td>262</td><td></td><td></td></tr>
+<td>262</td><td></td><td></td><td><img alt="NUP50" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NUP50_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rrad
@@ -380,7 +381,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RRAD.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RRAD.png" width="220"/>
 </td>
 <td>0.1363</td>
-<td>178</td><td></td><td></td></tr>
+<td>178</td><td></td><td></td><td><img alt="RRAD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RRAD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Eps8l2
@@ -413,7 +414,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_EPS8L2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_EPS8L2.png" width="220"/>
 </td>
 <td>0.2517</td>
-<td>207</td><td></td><td></td></tr>
+<td>207</td><td></td><td></td><td><img alt="EPS8L2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/EPS8L2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cited1
@@ -446,7 +447,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="CITED1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CITED1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Reep6
@@ -479,7 +480,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_REEP6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_REEP6.png" width="220"/>
 </td>
 <td>6.93e-03</td>
-<td>89</td><td>Low</td><td>same</td></tr>
+<td>89</td><td>Low</td><td>same</td><td><img alt="REEP6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/REEP6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ccdc92
@@ -512,7 +513,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CCDC92.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CCDC92.png" width="220"/>
 </td>
 <td>0.1926</td>
-<td>197</td><td></td><td></td></tr>
+<td>197</td><td></td><td></td><td><img alt="CCDC92" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CCDC92_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Trp53rka
@@ -545,7 +546,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Gfer
@@ -578,7 +579,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GFER.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GFER.png" width="220"/>
 </td>
 <td>0.0116</td>
-<td>103</td><td>Low</td><td>same</td></tr>
+<td>103</td><td>Low</td><td>same</td><td><img alt="GFER" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GFER_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Shf
@@ -611,7 +612,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SHF.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SHF.png" width="220"/>
 </td>
 <td>0.3903</td>
-<td>227</td><td></td><td></td></tr>
+<td>227</td><td></td><td></td><td><img alt="SHF" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SHF_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Stac2
@@ -644,7 +645,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_STAC2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_STAC2.png" width="220"/>
 </td>
 <td>0.3443</td>
-<td>220</td><td></td><td></td></tr>
+<td>220</td><td></td><td></td><td><img alt="STAC2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/STAC2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Zfp395
@@ -677,7 +678,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Sptbn4
@@ -710,7 +711,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SPTBN4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SPTBN4.png" width="220"/>
 </td>
 <td>0.1524</td>
-<td>183</td><td></td><td></td></tr>
+<td>183</td><td></td><td></td><td><img alt="SPTBN4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SPTBN4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       B4galt3
@@ -743,7 +744,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_B4GALT3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_B4GALT3.png" width="220"/>
 </td>
 <td>2.13e-03</td>
-<td>69</td><td>Low</td><td>same</td></tr>
+<td>69</td><td>Low</td><td>same</td><td><img alt="B4GALT3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/B4GALT3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sh3bp1
@@ -776,7 +777,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SH3BP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SH3BP1.png" width="220"/>
 </td>
 <td>2.49e-07</td>
-<td>9</td><td>Low</td><td>same</td></tr>
+<td>9</td><td>Low</td><td>same</td><td><img alt="SH3BP1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SH3BP1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rasgrp4
@@ -809,7 +810,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RASGRP4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RASGRP4.png" width="220"/>
 </td>
 <td>0.4287</td>
-<td>232</td><td></td><td></td></tr>
+<td>232</td><td></td><td></td><td><img alt="RASGRP4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RASGRP4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Spata2l
@@ -842,7 +843,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SPATA2L.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SPATA2L.png" width="220"/>
 </td>
 <td>0.7268</td>
-<td>256</td><td></td><td></td></tr>
+<td>256</td><td></td><td></td><td><img alt="SPATA2L" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SPATA2L_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Arid3c
@@ -875,7 +876,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ARID3C.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ARID3C.png" width="220"/>
 </td>
 <td>1.79e-08</td>
-<td>2</td><td>Low</td><td>same</td></tr>
+<td>2</td><td>Low</td><td>same</td><td><img alt="ARID3C" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ARID3C_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Vill
@@ -908,7 +909,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_VILL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_VILL.png" width="220"/>
 </td>
 <td>0.1516</td>
-<td>182</td><td></td><td></td></tr>
+<td>182</td><td></td><td></td><td><img alt="VILL" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/VILL_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rfng
@@ -941,7 +942,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RFNG.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RFNG.png" width="220"/>
 </td>
 <td>0.0170</td>
-<td>115</td><td>Low</td><td>same</td></tr>
+<td>115</td><td>Low</td><td>same</td><td><img alt="RFNG" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RFNG_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nlgn2
@@ -974,7 +975,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NLGN2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NLGN2.png" width="220"/>
 </td>
 <td>1.02e-04</td>
-<td>38</td><td>Low</td><td>same</td></tr>
+<td>38</td><td>Low</td><td>same</td><td><img alt="NLGN2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NLGN2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Syce2
@@ -1007,7 +1008,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SYCE2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SYCE2.png" width="220"/>
 </td>
 <td>2.81e-06</td>
-<td>12</td><td>Low</td><td>same</td></tr>
+<td>12</td><td>Low</td><td>same</td><td><img alt="SYCE2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SYCE2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Prph
@@ -1040,7 +1041,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PRPH.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PRPH.png" width="220"/>
 </td>
 <td>0.3279</td>
-<td>218</td><td></td><td></td></tr>
+<td>218</td><td></td><td></td><td><img alt="PRPH" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PRPH_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mkrn1
@@ -1073,7 +1074,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MKRN1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MKRN1.png" width="220"/>
 </td>
 <td>0.1683</td>
-<td>188</td><td></td><td></td></tr>
+<td>188</td><td></td><td></td><td><img alt="MKRN1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MKRN1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gpr157
@@ -1106,7 +1107,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GPR157.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GPR157.png" width="220"/>
 </td>
 <td>0.8556</td>
-<td>263</td><td></td><td></td></tr>
+<td>263</td><td></td><td></td><td><img alt="GPR157" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GPR157_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Foxa3
@@ -1139,7 +1140,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FOXA3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FOXA3.png" width="220"/>
 </td>
 <td>0.0756</td>
-<td>157</td><td></td><td></td></tr>
+<td>157</td><td></td><td></td><td><img alt="FOXA3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FOXA3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Zcwpw1
@@ -1172,7 +1173,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ZCWPW1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ZCWPW1.png" width="220"/>
 </td>
 <td>0.0124</td>
-<td>106</td><td>Low</td><td>same</td></tr>
+<td>106</td><td>Low</td><td>same</td><td><img alt="ZCWPW1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ZCWPW1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Prrx2
@@ -1205,7 +1206,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PRRX2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PRRX2.png" width="220"/>
 </td>
 <td>1.15e-03</td>
-<td>59</td><td>Low</td><td>same</td></tr>
+<td>59</td><td>Low</td><td>same</td><td><img alt="PRRX2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PRRX2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ldhd
@@ -1238,7 +1239,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LDHD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LDHD.png" width="220"/>
 </td>
 <td>1.66e-06</td>
-<td>11</td><td>High</td><td>dif</td></tr>
+<td>11</td><td>High</td><td>dif</td><td><img alt="LDHD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/LDHD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Stard10
@@ -1271,7 +1272,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_STARD10.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_STARD10.png" width="220"/>
 </td>
 <td>0.7324</td>
-<td>257</td><td></td><td></td></tr>
+<td>257</td><td></td><td></td><td><img alt="STARD10" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/STARD10_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Arsi
@@ -1304,7 +1305,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ARSI.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ARSI.png" width="220"/>
 </td>
 <td>7.61e-04</td>
-<td>57</td><td>Low</td><td>same</td></tr>
+<td>57</td><td>Low</td><td>same</td><td><img alt="ARSI" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ARSI_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Plvap
@@ -1337,7 +1338,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PLVAP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PLVAP.png" width="220"/>
 </td>
 <td>4.84e-05</td>
-<td>33</td><td>High</td><td>dif</td></tr>
+<td>33</td><td>High</td><td>dif</td><td><img alt="PLVAP" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PLVAP_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Prss16
@@ -1370,7 +1371,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PRSS16.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PRSS16.png" width="220"/>
 </td>
 <td>0.9161</td>
-<td>269</td><td></td><td></td></tr>
+<td>269</td><td></td><td></td><td><img alt="PRSS16" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PRSS16_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fam117a
@@ -1403,7 +1404,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FAM117A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FAM117A.png" width="220"/>
 </td>
 <td>0.5702</td>
-<td>242</td><td></td><td></td></tr>
+<td>242</td><td></td><td></td><td><img alt="FAM117A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FAM117A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Trim62
@@ -1436,7 +1437,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TRIM62.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TRIM62.png" width="220"/>
 </td>
 <td>0.0345</td>
-<td>137</td><td>High</td><td>dif</td></tr>
+<td>137</td><td>High</td><td>dif</td><td><img alt="TRIM62" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TRIM62_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Eva1c
@@ -1469,7 +1470,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_EVA1C.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_EVA1C.png" width="220"/>
 </td>
 <td>0.7817</td>
-<td>259</td><td></td><td></td></tr>
+<td>259</td><td></td><td></td><td><img alt="EVA1C" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/EVA1C_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Lrrc73
@@ -1502,7 +1503,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LRRC73.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LRRC73.png" width="220"/>
 </td>
 <td>0.3872</td>
-<td>225</td><td></td><td></td></tr>
+<td>225</td><td></td><td></td><td><img alt="LRRC73" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/LRRC73_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tradd
@@ -1535,7 +1536,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TRADD.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TRADD.png" width="220"/>
 </td>
 <td>0.7171</td>
-<td>255</td><td></td><td></td></tr>
+<td>255</td><td></td><td></td><td><img alt="TRADD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TRADD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dact3
@@ -1568,7 +1569,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DACT3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DACT3.png" width="220"/>
 </td>
 <td>0.0644</td>
-<td>153</td><td></td><td></td></tr>
+<td>153</td><td></td><td></td><td><img alt="DACT3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DACT3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ptpn6
@@ -1601,7 +1602,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PTPN6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PTPN6.png" width="220"/>
 </td>
 <td>8.39e-04</td>
-<td>58</td><td>Low</td><td>same</td></tr>
+<td>58</td><td>Low</td><td>same</td><td><img alt="PTPN6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PTPN6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rtraf
@@ -1634,7 +1635,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RTRAF.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RTRAF.png" width="220"/>
 </td>
 <td>0.9664</td>
-<td>273</td><td></td><td></td></tr>
+<td>273</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Gm9747
@@ -1667,7 +1668,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Pgf
@@ -1700,7 +1701,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PGF.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PGF.png" width="220"/>
 </td>
 <td>0.0499</td>
-<td>147</td><td>Low</td><td>same</td></tr>
+<td>147</td><td>Low</td><td>same</td><td><img alt="PGF" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PGF_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mypop
@@ -1733,7 +1734,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MYPOP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MYPOP.png" width="220"/>
 </td>
 <td>9.46e-06</td>
-<td>19</td><td>Low</td><td>same</td></tr>
+<td>19</td><td>Low</td><td>same</td><td><img alt="MYPOP" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MYPOP_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fbxo17
@@ -1766,7 +1767,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FBXO17.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FBXO17.png" width="220"/>
 </td>
 <td>0.3873</td>
-<td>226</td><td></td><td></td></tr>
+<td>226</td><td></td><td></td><td><img alt="FBXO17" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FBXO17_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Hoxc11
@@ -1799,7 +1800,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HOXC11.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HOXC11.png" width="220"/>
 </td>
 <td>6.11e-04</td>
-<td>55</td><td>Low</td><td>same</td></tr>
+<td>55</td><td>Low</td><td>same</td><td><img alt="HOXC11" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HOXC11_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Glo1
@@ -1832,7 +1833,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GLO1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GLO1.png" width="220"/>
 </td>
 <td>0.0802</td>
-<td>159</td><td></td><td></td></tr>
+<td>159</td><td></td><td></td><td><img alt="GLO1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GLO1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Grik5
@@ -1865,7 +1866,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GRIK5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GRIK5.png" width="220"/>
 </td>
 <td>5.19e-04</td>
-<td>49</td><td>Low</td><td>same</td></tr>
+<td>49</td><td>Low</td><td>same</td><td><img alt="GRIK5" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GRIK5_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Brsk1
@@ -1898,7 +1899,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_BRSK1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_BRSK1.png" width="220"/>
 </td>
 <td>6.05e-05</td>
-<td>35</td><td>Low</td><td>same</td></tr>
+<td>35</td><td>Low</td><td>same</td><td><img alt="BRSK1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BRSK1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc24a3
@@ -1931,7 +1932,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SLC24A3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SLC24A3.png" width="220"/>
 </td>
 <td>0.2297</td>
-<td>204</td><td></td><td></td></tr>
+<td>204</td><td></td><td></td><td><img alt="SLC24A3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC24A3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tmem121
@@ -1964,7 +1965,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TMEM121.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TMEM121.png" width="220"/>
 </td>
 <td>0.9407</td>
-<td>271</td><td></td><td></td></tr>
+<td>271</td><td></td><td></td><td><img alt="TMEM121" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TMEM121_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Plekhg6
@@ -1997,7 +1998,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PLEKHG6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PLEKHG6.png" width="220"/>
 </td>
 <td>0.6168</td>
-<td>247</td><td></td><td></td></tr>
+<td>247</td><td></td><td></td><td><img alt="PLEKHG6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PLEKHG6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Prss41
@@ -2030,7 +2031,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="PRSS41" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PRSS41_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Crnde
@@ -2063,7 +2064,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CRNDE.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CRNDE.png" width="220"/>
 </td>
 <td>0.0175</td>
-<td>116</td><td>Low</td><td>same</td></tr>
+<td>116</td><td>Low</td><td>same</td><td><img alt="CRNDE" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CRNDE_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dpf1
@@ -2096,7 +2097,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DPF1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DPF1.png" width="220"/>
 </td>
 <td>1.41e-07</td>
-<td>8</td><td>Low</td><td>same</td></tr>
+<td>8</td><td>Low</td><td>same</td><td><img alt="DPF1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DPF1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Crlf1
@@ -2129,7 +2130,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CRLF1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CRLF1.png" width="220"/>
 </td>
 <td>0.6294</td>
-<td>250</td><td></td><td></td></tr>
+<td>250</td><td></td><td></td><td><img alt="CRLF1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CRLF1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ptpn18
@@ -2162,7 +2163,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PTPN18.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PTPN18.png" width="220"/>
 </td>
 <td>0.5506</td>
-<td>240</td><td></td><td></td></tr>
+<td>240</td><td></td><td></td><td><img alt="PTPN18" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PTPN18_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Abcg4
@@ -2195,7 +2196,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ABCG4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ABCG4.png" width="220"/>
 </td>
 <td>0.4457</td>
-<td>233</td><td></td><td></td></tr>
+<td>233</td><td></td><td></td><td><img alt="ABCG4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ABCG4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Adam11
@@ -2228,7 +2229,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ADAM11.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ADAM11.png" width="220"/>
 </td>
 <td>3.19e-05</td>
-<td>29</td><td>Low</td><td>same</td></tr>
+<td>29</td><td>Low</td><td>same</td><td><img alt="ADAM11" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ADAM11_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Bcar1
@@ -2261,7 +2262,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCAR1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCAR1.png" width="220"/>
 </td>
 <td>0.2569</td>
-<td>209</td><td></td><td></td></tr>
+<td>209</td><td></td><td></td><td><img alt="BCAR1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BCAR1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Hoxc5
@@ -2294,7 +2295,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HOXC5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HOXC5.png" width="220"/>
 </td>
 <td>0.0291</td>
-<td>134</td><td>Low</td><td>same</td></tr>
+<td>134</td><td>Low</td><td>same</td><td><img alt="HOXC5" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HOXC5_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Adgrl1
@@ -2327,7 +2328,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ADGRL1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ADGRL1.png" width="220"/>
 </td>
 <td>0.2474</td>
-<td>206</td><td></td><td></td></tr>
+<td>206</td><td></td><td></td><td><img alt="ADGRL1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ADGRL1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dhcr24
@@ -2360,7 +2361,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DHCR24.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DHCR24.png" width="220"/>
 </td>
 <td>0.1897</td>
-<td>194</td><td></td><td></td></tr>
+<td>194</td><td></td><td></td><td><img alt="DHCR24" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DHCR24_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dpf3
@@ -2393,7 +2394,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DPF3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DPF3.png" width="220"/>
 </td>
 <td>0.2160</td>
-<td>200</td><td></td><td></td></tr>
+<td>200</td><td></td><td></td><td><img alt="DPF3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DPF3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Batf3
@@ -2426,7 +2427,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_BATF3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_BATF3.png" width="220"/>
 </td>
 <td>1.60e-03</td>
-<td>63</td><td>Low</td><td>same</td></tr>
+<td>63</td><td>Low</td><td>same</td><td><img alt="BATF3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BATF3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cbarp
@@ -2459,7 +2460,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CBARP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CBARP.png" width="220"/>
 </td>
 <td>2.34e-04</td>
-<td>41</td><td>Low</td><td>same</td></tr>
+<td>41</td><td>Low</td><td>same</td><td></td></tr>
 <tr>
 <td>
       Hic2
@@ -2492,7 +2493,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_HIC2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_HIC2.png" width="220"/>
 </td>
 <td>0.0854</td>
-<td>163</td><td></td><td></td></tr>
+<td>163</td><td></td><td></td><td><img alt="HIC2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HIC2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mpzl1
@@ -2525,7 +2526,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MPZL1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MPZL1.png" width="220"/>
 </td>
 <td>0.0275</td>
-<td>132</td><td>Low</td><td>same</td></tr>
+<td>132</td><td>Low</td><td>same</td><td><img alt="MPZL1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MPZL1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tpi1
@@ -2558,7 +2559,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TPI1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TPI1.png" width="220"/>
 </td>
 <td>0.8884</td>
-<td>265</td><td></td><td></td></tr>
+<td>265</td><td></td><td></td><td><img alt="TPI1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TPI1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dlgap3
@@ -2591,7 +2592,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DLGAP3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DLGAP3.png" width="220"/>
 </td>
 <td>3.28e-04</td>
-<td>45</td><td>Low</td><td>same</td></tr>
+<td>45</td><td>Low</td><td>same</td><td><img alt="DLGAP3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DLGAP3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm10157
@@ -2624,7 +2625,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Ap1m2
@@ -2657,7 +2658,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_AP1M2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_AP1M2.png" width="220"/>
 </td>
 <td>0.5214</td>
-<td>237</td><td></td><td></td></tr>
+<td>237</td><td></td><td></td><td><img alt="AP1M2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/AP1M2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Samd14
@@ -2690,7 +2691,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SAMD14.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SAMD14.png" width="220"/>
 </td>
 <td>0.4152</td>
-<td>231</td><td></td><td></td></tr>
+<td>231</td><td></td><td></td><td><img alt="SAMD14" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SAMD14_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Map4k1
@@ -2723,7 +2724,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MAP4K1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MAP4K1.png" width="220"/>
 </td>
 <td>9.98e-03</td>
-<td>98</td><td>Low</td><td>same</td></tr>
+<td>98</td><td>Low</td><td>same</td><td><img alt="MAP4K1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MAP4K1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       2410004I01Rik
@@ -2756,7 +2757,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Crabp1
@@ -2789,7 +2790,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="CRABP1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CRABP1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fndc4
@@ -2822,7 +2823,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FNDC4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FNDC4.png" width="220"/>
 </td>
 <td>3.29e-04</td>
-<td>46</td><td>Low</td><td>same</td></tr>
+<td>46</td><td>Low</td><td>same</td><td><img alt="FNDC4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FNDC4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       A430093F15Rik
@@ -2855,7 +2856,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Pcsk4
@@ -2888,7 +2889,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PCSK4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PCSK4.png" width="220"/>
 </td>
 <td>0.0131</td>
-<td>108</td><td>Low</td><td>same</td></tr>
+<td>108</td><td>Low</td><td>same</td><td><img alt="PCSK4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PCSK4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fbxl14
@@ -2921,7 +2922,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FBXL14.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FBXL14.png" width="220"/>
 </td>
 <td>6.64e-03</td>
-<td>87</td><td>High</td><td>dif</td></tr>
+<td>87</td><td>High</td><td>dif</td><td><img alt="FBXL14" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FBXL14_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tcf15
@@ -2954,7 +2955,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TCF15.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TCF15.png" width="220"/>
 </td>
 <td>0.6313</td>
-<td>251</td><td></td><td></td></tr>
+<td>251</td><td></td><td></td><td><img alt="TCF15" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TCF15_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ninl
@@ -2987,7 +2988,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NINL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NINL.png" width="220"/>
 </td>
 <td>0.0607</td>
-<td>150</td><td></td><td></td></tr>
+<td>150</td><td></td><td></td><td><img alt="NINL" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NINL_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rcor2
@@ -3020,7 +3021,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RCOR2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RCOR2.png" width="220"/>
 </td>
 <td>1.16e-03</td>
-<td>60</td><td>Low</td><td>same</td></tr>
+<td>60</td><td>Low</td><td>same</td><td><img alt="RCOR2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RCOR2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nckipsd
@@ -3053,7 +3054,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NCKIPSD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NCKIPSD.png" width="220"/>
 </td>
 <td>0.0133</td>
-<td>109</td><td>High</td><td>dif</td></tr>
+<td>109</td><td>High</td><td>dif</td><td><img alt="NCKIPSD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NCKIPSD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dusp2
@@ -3086,7 +3087,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DUSP2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DUSP2.png" width="220"/>
 </td>
 <td>0.1070</td>
-<td>170</td><td></td><td></td></tr>
+<td>170</td><td></td><td></td><td><img alt="DUSP2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DUSP2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Lrrc23
@@ -3119,7 +3120,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LRRC23.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LRRC23.png" width="220"/>
 </td>
 <td>0.2224</td>
-<td>201</td><td></td><td></td></tr>
+<td>201</td><td></td><td></td><td><img alt="LRRC23" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/LRRC23_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cadm4
@@ -3152,7 +3153,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CADM4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CADM4.png" width="220"/>
 </td>
 <td>7.96e-03</td>
-<td>94</td><td>Low</td><td>same</td></tr>
+<td>94</td><td>Low</td><td>same</td><td><img alt="CADM4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CADM4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ecd
@@ -3185,7 +3186,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ECD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ECD.png" width="220"/>
 </td>
 <td>0.0208</td>
-<td>122</td><td>High</td><td>dif</td></tr>
+<td>122</td><td>High</td><td>dif</td><td><img alt="ECD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ECD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Esrrb
@@ -3218,7 +3219,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ESRRB.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ESRRB.png" width="220"/>
 </td>
 <td>0.8008</td>
-<td>261</td><td></td><td></td></tr>
+<td>261</td><td></td><td></td><td><img alt="ESRRB" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ESRRB_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nrtn
@@ -3251,7 +3252,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NRTN.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NRTN.png" width="220"/>
 </td>
 <td>0.2253</td>
-<td>202</td><td></td><td></td></tr>
+<td>202</td><td></td><td></td><td><img alt="NRTN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NRTN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dnajc9
@@ -3284,7 +3285,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DNAJC9.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DNAJC9.png" width="220"/>
 </td>
 <td>0.1317</td>
-<td>176</td><td></td><td></td></tr>
+<td>176</td><td></td><td></td><td><img alt="DNAJC9" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DNAJC9_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cd164l2
@@ -3317,7 +3318,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CD164L2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CD164L2.png" width="220"/>
 </td>
 <td>0.4103</td>
-<td>229</td><td></td><td></td></tr>
+<td>229</td><td></td><td></td><td><img alt="CD164L2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CD164L2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sema6b
@@ -3350,7 +3351,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SEMA6B.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SEMA6B.png" width="220"/>
 </td>
 <td>0.5376</td>
-<td>239</td><td></td><td></td></tr>
+<td>239</td><td></td><td></td><td><img alt="SEMA6B" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SEMA6B_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tmem151b
@@ -3383,7 +3384,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TMEM151B.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TMEM151B.png" width="220"/>
 </td>
 <td>0.2733</td>
-<td>211</td><td></td><td></td></tr>
+<td>211</td><td></td><td></td><td><img alt="TMEM151B" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TMEM151B_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Irf6
@@ -3416,7 +3417,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IRF6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IRF6.png" width="220"/>
 </td>
 <td>1.91e-08</td>
-<td>3</td><td>High</td><td>dif</td></tr>
+<td>3</td><td>High</td><td>dif</td><td><img alt="IRF6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/IRF6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mdfi
@@ -3449,7 +3450,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MDFI.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MDFI.png" width="220"/>
 </td>
 <td>0.0249</td>
-<td>127</td><td>Low</td><td>same</td></tr>
+<td>127</td><td>Low</td><td>same</td><td><img alt="MDFI" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MDFI_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       ---
@@ -3480,7 +3481,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Mafa
@@ -3513,7 +3514,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MAFA.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MAFA.png" width="220"/>
 </td>
 <td>0.0287</td>
-<td>133</td><td>High</td><td>dif</td></tr>
+<td>133</td><td>High</td><td>dif</td><td><img alt="MAFA" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MAFA_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Wnt5b
@@ -3546,7 +3547,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_WNT5B.png" height="190" src="TCGA/survival_curves/significant/survival_curve_WNT5B.png" width="220"/>
 </td>
 <td>0.0498</td>
-<td>146</td><td>Low</td><td>same</td></tr>
+<td>146</td><td>Low</td><td>same</td><td><img alt="WNT5B" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/WNT5B_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dlx1
@@ -3579,7 +3580,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DLX1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DLX1.png" width="220"/>
 </td>
 <td>0.3159</td>
-<td>216</td><td></td><td></td></tr>
+<td>216</td><td></td><td></td><td><img alt="DLX1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DLX1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nradd
@@ -3612,7 +3613,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Uck2
@@ -3645,7 +3646,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_UCK2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_UCK2.png" width="220"/>
 </td>
 <td>1.43e-03</td>
-<td>62</td><td>Low</td><td>same</td></tr>
+<td>62</td><td>Low</td><td>same</td><td><img alt="UCK2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/UCK2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Syngap1
@@ -3678,7 +3679,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SYNGAP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SYNGAP1.png" width="220"/>
 </td>
 <td>2.18e-04</td>
-<td>40</td><td>Low</td><td>same</td></tr>
+<td>40</td><td>Low</td><td>same</td><td><img alt="SYNGAP1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SYNGAP1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rpia
@@ -3711,7 +3712,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RPIA.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RPIA.png" width="220"/>
 </td>
 <td>0.6149</td>
-<td>246</td><td></td><td></td></tr>
+<td>246</td><td></td><td></td><td><img alt="RPIA" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RPIA_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Pitx3
@@ -3744,7 +3745,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="PITX3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PITX3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Trnp1
@@ -3777,7 +3778,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TRNP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TRNP1.png" width="220"/>
 </td>
 <td>2.40e-05</td>
-<td>25</td><td>Low</td><td>same</td></tr>
+<td>25</td><td>Low</td><td>same</td><td><img alt="TRNP1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TRNP1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mlkl
@@ -3810,7 +3811,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MLKL.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MLKL.png" width="220"/>
 </td>
 <td>0.0215</td>
-<td>124</td><td>Low</td><td>same</td></tr>
+<td>124</td><td>Low</td><td>same</td><td><img alt="MLKL" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MLKL_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Wnt1
@@ -3843,7 +3844,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_WNT1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_WNT1.png" width="220"/>
 </td>
 <td>0.0211</td>
-<td>123</td><td>Low</td><td>same</td></tr>
+<td>123</td><td>Low</td><td>same</td><td><img alt="WNT1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/WNT1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc32a1
@@ -3876,7 +3877,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="SLC32A1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC32A1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ripply3
@@ -3909,7 +3910,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RIPPLY3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RIPPLY3.png" width="220"/>
 </td>
 <td>0.5279</td>
-<td>238</td><td></td><td></td></tr>
+<td>238</td><td></td><td></td><td><img alt="RIPPLY3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RIPPLY3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Higd1a
@@ -3942,7 +3943,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_HIGD1A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_HIGD1A.png" width="220"/>
 </td>
 <td>0.0780</td>
-<td>158</td><td></td><td></td></tr>
+<td>158</td><td></td><td></td><td><img alt="HIGD1A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HIGD1A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm20163
@@ -3975,7 +3976,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Tubg2
@@ -4008,7 +4009,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TUBG2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TUBG2.png" width="220"/>
 </td>
 <td>0.0190</td>
-<td>119</td><td>Low</td><td>same</td></tr>
+<td>119</td><td>Low</td><td>same</td><td><img alt="TUBG2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TUBG2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm9844
@@ -4041,7 +4042,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Fes
@@ -4074,7 +4075,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FES.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FES.png" width="220"/>
 </td>
 <td>0.0973</td>
-<td>169</td><td></td><td></td></tr>
+<td>169</td><td></td><td></td><td><img alt="FES" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FES_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sec14l4
@@ -4107,7 +4108,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SEC14L4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SEC14L4.png" width="220"/>
 </td>
 <td>0.0628</td>
-<td>151</td><td></td><td></td></tr>
+<td>151</td><td></td><td></td><td><img alt="SEC14L4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SEC14L4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Barx2
@@ -4140,7 +4141,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BARX2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BARX2.png" width="220"/>
 </td>
 <td>0.1858</td>
-<td>193</td><td></td><td></td></tr>
+<td>193</td><td></td><td></td><td><img alt="BARX2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BARX2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm13420
@@ -4173,7 +4174,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Ddn
@@ -4206,7 +4207,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DDN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DDN.png" width="220"/>
 </td>
 <td>1.85e-03</td>
-<td>65</td><td>Low</td><td>same</td></tr>
+<td>65</td><td>Low</td><td>same</td><td><img alt="DDN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DDN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm9176
@@ -4239,7 +4240,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Vax2os
@@ -4272,7 +4273,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Ntn3
@@ -4305,7 +4306,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NTN3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NTN3.png" width="220"/>
 </td>
 <td>0.0473</td>
-<td>145</td><td>Low</td><td>same</td></tr>
+<td>145</td><td>Low</td><td>same</td><td><img alt="NTN3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NTN3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Bcl11a
@@ -4338,7 +4339,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCL11A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCL11A.png" width="220"/>
 </td>
 <td>0.2159</td>
-<td>199</td><td></td><td></td></tr>
+<td>199</td><td></td><td></td><td><img alt="BCL11A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BCL11A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Irf5
@@ -4371,7 +4372,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IRF5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IRF5.png" width="220"/>
 </td>
 <td>5.99e-03</td>
-<td>85</td><td>Low</td><td>same</td></tr>
+<td>85</td><td>Low</td><td>same</td><td><img alt="IRF5" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/IRF5_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ltk
@@ -4404,7 +4405,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LTK.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LTK.png" width="220"/>
 </td>
 <td>5.25e-04</td>
-<td>50</td><td>Low</td><td>same</td></tr>
+<td>50</td><td>Low</td><td>same</td><td><img alt="LTK" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/LTK_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Smarcd1
@@ -4437,7 +4438,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SMARCD1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SMARCD1.png" width="220"/>
 </td>
 <td>2.96e-05</td>
-<td>27</td><td>Low</td><td>same</td></tr>
+<td>27</td><td>Low</td><td>same</td><td><img alt="SMARCD1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SMARCD1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Eif1ad10
@@ -4470,7 +4471,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Gpc2
@@ -4503,7 +4504,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GPC2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GPC2.png" width="220"/>
 </td>
 <td>1.92e-05</td>
-<td>23</td><td>Low</td><td>same</td></tr>
+<td>23</td><td>Low</td><td>same</td><td><img alt="GPC2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GPC2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sgk2
@@ -4536,7 +4537,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SGK2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SGK2.png" width="220"/>
 </td>
 <td>0.0867</td>
-<td>164</td><td></td><td></td></tr>
+<td>164</td><td></td><td></td><td><img alt="SGK2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SGK2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       1700025G04Rik
@@ -4569,7 +4570,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Fbxl19
@@ -4602,7 +4603,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FBXL19.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FBXL19.png" width="220"/>
 </td>
 <td>7.63e-08</td>
-<td>7</td><td>Low</td><td>same</td></tr>
+<td>7</td><td>Low</td><td>same</td><td><img alt="FBXL19" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FBXL19_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Osr2
@@ -4635,7 +4636,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_OSR2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_OSR2.png" width="220"/>
 </td>
 <td>0.0638</td>
-<td>152</td><td></td><td></td></tr>
+<td>152</td><td></td><td></td><td><img alt="OSR2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/OSR2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Npr3
@@ -4668,7 +4669,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NPR3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NPR3.png" width="220"/>
 </td>
 <td>7.18e-08</td>
-<td>6</td><td>High</td><td>dif</td></tr>
+<td>6</td><td>High</td><td>dif</td><td><img alt="NPR3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NPR3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Zfta
@@ -4701,7 +4702,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ZFTA.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ZFTA.png" width="220"/>
 </td>
 <td>0.0473</td>
-<td>144</td><td>High</td><td>dif</td></tr>
+<td>144</td><td>High</td><td>dif</td><td></td></tr>
 <tr>
 <td>
       Gm13882
@@ -4734,7 +4735,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Celf5
@@ -4767,7 +4768,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CELF5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CELF5.png" width="220"/>
 </td>
 <td>7.74e-03</td>
-<td>93</td><td>Low</td><td>same</td></tr>
+<td>93</td><td>Low</td><td>same</td><td><img alt="CELF5" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CELF5_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Stab1
@@ -4800,7 +4801,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_STAB1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_STAB1.png" width="220"/>
 </td>
 <td>0.0546</td>
-<td>149</td><td></td><td></td></tr>
+<td>149</td><td></td><td></td><td><img alt="STAB1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/STAB1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nr5a1
@@ -4833,7 +4834,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NR5A1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NR5A1.png" width="220"/>
 </td>
 <td>0.1260</td>
-<td>175</td><td></td><td></td></tr>
+<td>175</td><td></td><td></td><td><img alt="NR5A1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NR5A1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Pim2
@@ -4866,7 +4867,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PIM2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PIM2.png" width="220"/>
 </td>
 <td>9.95e-05</td>
-<td>37</td><td>Low</td><td>same</td></tr>
+<td>37</td><td>Low</td><td>same</td><td><img alt="PIM2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PIM2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ccdc136
@@ -4899,7 +4900,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CCDC136.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CCDC136.png" width="220"/>
 </td>
 <td>0.0146</td>
-<td>111</td><td>Low</td><td>same</td></tr>
+<td>111</td><td>Low</td><td>same</td><td><img alt="CCDC136" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CCDC136_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dppa2
@@ -4932,7 +4933,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="DPPA2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DPPA2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Calcoco2
@@ -4965,7 +4966,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CALCOCO2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CALCOCO2.png" width="220"/>
 </td>
 <td>7.31e-04</td>
-<td>56</td><td>High</td><td>dif</td></tr>
+<td>56</td><td>High</td><td>dif</td><td><img alt="CALCOCO2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CALCOCO2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mid1
@@ -4998,7 +4999,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MID1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MID1.png" width="220"/>
 </td>
 <td>0.0830</td>
-<td>160</td><td></td><td></td></tr>
+<td>160</td><td></td><td></td><td><img alt="MID1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MID1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Agap2
@@ -5031,7 +5032,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AGAP2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AGAP2.png" width="220"/>
 </td>
 <td>2.74e-03</td>
-<td>74</td><td>Low</td><td>same</td></tr>
+<td>74</td><td>Low</td><td>same</td><td><img alt="AGAP2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/AGAP2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Large2
@@ -5064,7 +5065,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LARGE2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LARGE2.png" width="220"/>
 </td>
 <td>0.0178</td>
-<td>118</td><td>Low</td><td>same</td></tr>
+<td>118</td><td>Low</td><td>same</td><td></td></tr>
 <tr>
 <td>
       Pgk1
@@ -5097,7 +5098,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PGK1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PGK1.png" width="220"/>
 </td>
 <td>6.84e-03</td>
-<td>88</td><td>High</td><td>dif</td></tr>
+<td>88</td><td>High</td><td>dif</td><td><img alt="PGK1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PGK1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fam162a
@@ -5130,7 +5131,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FAM162A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FAM162A.png" width="220"/>
 </td>
 <td>0.1688</td>
-<td>189</td><td></td><td></td></tr>
+<td>189</td><td></td><td></td><td><img alt="FAM162A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FAM162A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Pfkl
@@ -5163,7 +5164,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PFKL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PFKL.png" width="220"/>
 </td>
 <td>0.3034</td>
-<td>214</td><td></td><td></td></tr>
+<td>214</td><td></td><td></td><td><img alt="PFKL" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PFKL_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gapdh
@@ -5196,7 +5197,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GAPDH.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GAPDH.png" width="220"/>
 </td>
 <td>0.1593</td>
-<td>187</td><td></td><td></td></tr>
+<td>187</td><td></td><td></td><td><img alt="GAPDH" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GAPDH_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ccnd2
@@ -5229,7 +5230,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CCND2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CCND2.png" width="220"/>
 </td>
 <td>0.1809</td>
-<td>190</td><td></td><td></td></tr>
+<td>190</td><td></td><td></td><td><img alt="CCND2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CCND2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sp6
@@ -5262,7 +5263,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SP6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SP6.png" width="220"/>
 </td>
 <td>0.0850</td>
-<td>162</td><td></td><td></td></tr>
+<td>162</td><td></td><td></td><td><img alt="SP6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SP6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Vax2
@@ -5295,7 +5296,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_VAX2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_VAX2.png" width="220"/>
 </td>
 <td>0.3952</td>
-<td>228</td><td></td><td></td></tr>
+<td>228</td><td></td><td></td><td><img alt="VAX2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/VAX2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Hoxc13
@@ -5328,7 +5329,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HOXC13.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HOXC13.png" width="220"/>
 </td>
 <td>0.0271</td>
-<td>131</td><td>Low</td><td>same</td></tr>
+<td>131</td><td>Low</td><td>same</td><td><img alt="HOXC13" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HOXC13_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rspo1
@@ -5361,7 +5362,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RSPO1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RSPO1.png" width="220"/>
 </td>
 <td>0.0740</td>
-<td>156</td><td></td><td></td></tr>
+<td>156</td><td></td><td></td><td><img alt="RSPO1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RSPO1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tead2
@@ -5394,7 +5395,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TEAD2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TEAD2.png" width="220"/>
 </td>
 <td>0.7960</td>
-<td>260</td><td></td><td></td></tr>
+<td>260</td><td></td><td></td><td><img alt="TEAD2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TEAD2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rims3
@@ -5427,7 +5428,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RIMS3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RIMS3.png" width="220"/>
 </td>
 <td>0.6751</td>
-<td>253</td><td></td><td></td></tr>
+<td>253</td><td></td><td></td><td><img alt="RIMS3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RIMS3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fgf15
@@ -5460,7 +5461,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Zfp57
@@ -5493,7 +5494,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ZFP57.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ZFP57.png" width="220"/>
 </td>
 <td>0.3078</td>
-<td>215</td><td></td><td></td></tr>
+<td>215</td><td></td><td></td><td><img alt="ZFP57" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ZFP57_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ndrg2
@@ -5526,7 +5527,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NDRG2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NDRG2.png" width="220"/>
 </td>
 <td>5.60e-03</td>
-<td>84</td><td>High</td><td>dif</td></tr>
+<td>84</td><td>High</td><td>dif</td><td><img alt="NDRG2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NDRG2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc9a3r2
@@ -5559,7 +5560,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC9A3R2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC9A3R2.png" width="220"/>
 </td>
 <td>3.95e-06</td>
-<td>14</td><td>High</td><td>dif</td></tr>
+<td>14</td><td>High</td><td>dif</td><td><img alt="SLC9A3R2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC9A3R2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nxph4
@@ -5592,7 +5593,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NXPH4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NXPH4.png" width="220"/>
 </td>
 <td>0.1590</td>
-<td>186</td><td></td><td></td></tr>
+<td>186</td><td></td><td></td><td><img alt="NXPH4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NXPH4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fbxo10
@@ -5625,7 +5626,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FBXO10.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FBXO10.png" width="220"/>
 </td>
 <td>0.3524</td>
-<td>223</td><td></td><td></td></tr>
+<td>223</td><td></td><td></td><td><img alt="FBXO10" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FBXO10_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc30a3
@@ -5658,7 +5659,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC30A3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC30A3.png" width="220"/>
 </td>
 <td>5.29e-04</td>
-<td>51</td><td>Low</td><td>same</td></tr>
+<td>51</td><td>Low</td><td>same</td><td><img alt="SLC30A3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC30A3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Lhx6
@@ -5691,7 +5692,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LHX6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LHX6.png" width="220"/>
 </td>
 <td>0.7657</td>
-<td>258</td><td></td><td></td></tr>
+<td>258</td><td></td><td></td><td><img alt="LHX6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/LHX6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Glipr2
@@ -5724,7 +5725,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GLIPR2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GLIPR2.png" width="220"/>
 </td>
 <td>2.51e-03</td>
-<td>73</td><td>Low</td><td>same</td></tr>
+<td>73</td><td>Low</td><td>same</td><td><img alt="GLIPR2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GLIPR2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Septin5
@@ -5757,7 +5758,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SEPTIN5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SEPTIN5.png" width="220"/>
 </td>
 <td>3.01e-05</td>
-<td>28</td><td>Low</td><td>same</td></tr>
+<td>28</td><td>Low</td><td>same</td><td></td></tr>
 <tr>
 <td>
       Cgref1
@@ -5790,7 +5791,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CGREF1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CGREF1.png" width="220"/>
 </td>
 <td>0.9733</td>
-<td>275</td><td></td><td></td></tr>
+<td>275</td><td></td><td></td><td><img alt="CGREF1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CGREF1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Espn
@@ -5823,7 +5824,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ESPN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ESPN.png" width="220"/>
 </td>
 <td>2.98e-03</td>
-<td>75</td><td>High</td><td>dif</td></tr>
+<td>75</td><td>High</td><td>dif</td><td><img alt="ESPN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ESPN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cib2
@@ -5856,7 +5857,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CIB2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CIB2.png" width="220"/>
 </td>
 <td>0.3753</td>
-<td>224</td><td></td><td></td></tr>
+<td>224</td><td></td><td></td><td><img alt="CIB2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CIB2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tcea3
@@ -5889,7 +5890,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TCEA3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TCEA3.png" width="220"/>
 </td>
 <td>0.0331</td>
-<td>136</td><td>High</td><td>dif</td></tr>
+<td>136</td><td>High</td><td>dif</td><td><img alt="TCEA3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TCEA3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tpm2
@@ -5922,7 +5923,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TPM2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TPM2.png" width="220"/>
 </td>
 <td>1.23e-03</td>
-<td>61</td><td>Low</td><td>same</td></tr>
+<td>61</td><td>Low</td><td>same</td><td><img alt="TPM2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TPM2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Angel1
@@ -5955,7 +5956,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ANGEL1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ANGEL1.png" width="220"/>
 </td>
 <td>0.3460</td>
-<td>221</td><td></td><td></td></tr>
+<td>221</td><td></td><td></td><td><img alt="ANGEL1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ANGEL1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Npr2
@@ -5988,7 +5989,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NPR2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NPR2.png" width="220"/>
 </td>
 <td>0.0101</td>
-<td>99</td><td>Low</td><td>same</td></tr>
+<td>99</td><td>Low</td><td>same</td><td><img alt="NPR2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NPR2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ppp1r1b
@@ -6021,7 +6022,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PPP1R1B.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PPP1R1B.png" width="220"/>
 </td>
 <td>3.27e-03</td>
-<td>76</td><td>Low</td><td>same</td></tr>
+<td>76</td><td>Low</td><td>same</td><td><img alt="PPP1R1B" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PPP1R1B_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Adgrg3
@@ -6054,7 +6055,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ADGRG3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ADGRG3.png" width="220"/>
 </td>
 <td>6.00e-04</td>
-<td>54</td><td>Low</td><td>same</td></tr>
+<td>54</td><td>Low</td><td>same</td><td><img alt="ADGRG3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ADGRG3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc17a7
@@ -6078,7 +6079,7 @@ Show only genes with significant survival curves with:
       Cell Survival/Proliferation
      </td>
 <td>
-      Involved in neurotransmitter release as a vesicular glutamate transporter. Glutamate pathway has been implicated in cancer, influencing proliferation, migration & survival.
+      Involved in neurotransmitter release as a vesicular glutamate transporter. Glutamate pathway has been implicated in cancer, influencing proliferation, migration &amp; survival.
      </td>
 <td>
 <img alt="Slc17a7" class_="thumbnail" height="190" src="gene plots/Slc17a7.png" width="220"/>
@@ -6087,7 +6088,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC17A7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC17A7.png" width="220"/>
 </td>
 <td>4.38e-03</td>
-<td>79</td><td>Low</td><td>same</td></tr>
+<td>79</td><td>Low</td><td>same</td><td><img alt="SLC17A7" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC17A7_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ciart
@@ -6120,7 +6121,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CIART.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CIART.png" width="220"/>
 </td>
 <td>0.0445</td>
-<td>142</td><td>High</td><td>dif</td></tr>
+<td>142</td><td>High</td><td>dif</td><td><img alt="CIART" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CIART_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Krt19
@@ -6153,7 +6154,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_KRT19.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_KRT19.png" width="220"/>
 </td>
 <td>0.0835</td>
-<td>161</td><td></td><td></td></tr>
+<td>161</td><td></td><td></td><td><img alt="KRT19" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/KRT19_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Amhr2
@@ -6186,7 +6187,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_AMHR2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_AMHR2.png" width="220"/>
 </td>
 <td>0.3002</td>
-<td>213</td><td></td><td></td></tr>
+<td>213</td><td></td><td></td><td><img alt="AMHR2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/AMHR2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cryaa
@@ -6219,7 +6220,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="CRYAA" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CRYAA_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ckb
@@ -6252,7 +6253,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CKB.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CKB.png" width="220"/>
 </td>
 <td>0.6094</td>
-<td>245</td><td></td><td></td></tr>
+<td>245</td><td></td><td></td><td><img alt="CKB" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CKB_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tbx15
@@ -6285,7 +6286,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TBX15.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TBX15.png" width="220"/>
 </td>
 <td>1.72e-03</td>
-<td>64</td><td>Low</td><td>same</td></tr>
+<td>64</td><td>Low</td><td>same</td><td><img alt="TBX15" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TBX15_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cand2
@@ -6318,7 +6319,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CAND2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CAND2.png" width="220"/>
 </td>
 <td>0.0970</td>
-<td>168</td><td></td><td></td></tr>
+<td>168</td><td></td><td></td><td><img alt="CAND2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CAND2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dpysl5
@@ -6339,7 +6340,7 @@ Show only genes with significant survival curves with:
       PCA &amp; combined volcano
      </td>
 <td>
-      Cytoskeleton & Microtubules
+      Cytoskeleton &amp; Microtubules
      </td>
 <td>
       Participates in neuronal development and axon guidance as Dihydropyrimidinase-like 5. Impacts microtubule stability.
@@ -6351,7 +6352,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DPYSL5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DPYSL5.png" width="220"/>
 </td>
 <td>0.0158</td>
-<td>113</td><td>Low</td><td>same</td></tr>
+<td>113</td><td>Low</td><td>same</td><td><img alt="DPYSL5" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DPYSL5_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Bin2
@@ -6384,7 +6385,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BIN2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BIN2.png" width="220"/>
 </td>
 <td>0.1222</td>
-<td>173</td><td></td><td></td></tr>
+<td>173</td><td></td><td></td><td><img alt="BIN2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BIN2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Diras2
@@ -6417,7 +6418,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DIRAS2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DIRAS2.png" width="220"/>
 </td>
 <td>3.52e-04</td>
-<td>47</td><td>High</td><td>dif</td></tr>
+<td>47</td><td>High</td><td>dif</td><td><img alt="DIRAS2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DIRAS2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Arhgdib
@@ -6450,7 +6451,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ARHGDIB.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ARHGDIB.png" width="220"/>
 </td>
 <td>0.1187</td>
-<td>171</td><td></td><td></td></tr>
+<td>171</td><td></td><td></td><td><img alt="ARHGDIB" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ARHGDIB_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tekt2
@@ -6483,7 +6484,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TEKT2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TEKT2.png" width="220"/>
 </td>
 <td>0.0175</td>
-<td>117</td><td>High</td><td>dif</td></tr>
+<td>117</td><td>High</td><td>dif</td><td><img alt="TEKT2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TEKT2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Igfbp2
@@ -6516,7 +6517,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_IGFBP2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_IGFBP2.png" width="220"/>
 </td>
 <td>0.1363</td>
-<td>177</td><td></td><td></td></tr>
+<td>177</td><td></td><td></td><td><img alt="IGFBP2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/IGFBP2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cyp2s1
@@ -6549,7 +6550,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CYP2S1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CYP2S1.png" width="220"/>
 </td>
 <td>9.31e-03</td>
-<td>95</td><td>Low</td><td>same</td></tr>
+<td>95</td><td>Low</td><td>same</td><td><img alt="CYP2S1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CYP2S1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Efna3
@@ -6582,7 +6583,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_EFNA3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_EFNA3.png" width="220"/>
 </td>
 <td>7.13e-03</td>
-<td>90</td><td>Low</td><td>same</td></tr>
+<td>90</td><td>Low</td><td>same</td><td><img alt="EFNA3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/EFNA3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rassf2
@@ -6615,7 +6616,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RASSF2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RASSF2.png" width="220"/>
 </td>
 <td>0.9057</td>
-<td>268</td><td></td><td></td></tr>
+<td>268</td><td></td><td></td><td><img alt="RASSF2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RASSF2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tcf7
@@ -6648,7 +6649,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TCF7.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TCF7.png" width="220"/>
 </td>
 <td>0.1372</td>
-<td>179</td><td></td><td></td></tr>
+<td>179</td><td></td><td></td><td><img alt="TCF7" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TCF7_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Hsd17b1
@@ -6681,7 +6682,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HSD17B1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HSD17B1.png" width="220"/>
 </td>
 <td>0.0266</td>
-<td>129</td><td>Low</td><td>same</td></tr>
+<td>129</td><td>Low</td><td>same</td><td><img alt="HSD17B1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HSD17B1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ccdc85c
@@ -6714,7 +6715,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CCDC85C.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CCDC85C.png" width="220"/>
 </td>
 <td>0.0162</td>
-<td>114</td><td>High</td><td>dif</td></tr>
+<td>114</td><td>High</td><td>dif</td><td><img alt="CCDC85C" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CCDC85C_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nckap1l
@@ -6747,7 +6748,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NCKAP1L.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NCKAP1L.png" width="220"/>
 </td>
 <td>0.9493</td>
-<td>272</td><td></td><td></td></tr>
+<td>272</td><td></td><td></td><td><img alt="NCKAP1L" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/NCKAP1L_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Igsf5
@@ -6780,7 +6781,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_IGSF5.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_IGSF5.png" width="220"/>
 </td>
 <td>0.4116</td>
-<td>230</td><td></td><td></td></tr>
+<td>230</td><td></td><td></td><td><img alt="IGSF5" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/IGSF5_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Vps26a
@@ -6813,7 +6814,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_VPS26A.png" height="190" src="TCGA/survival_curves/significant/survival_curve_VPS26A.png" width="220"/>
 </td>
 <td>4.02e-04</td>
-<td>48</td><td>High</td><td>same</td></tr>
+<td>48</td><td>High</td><td>same</td><td><img alt="VPS26A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/VPS26A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gsta3
@@ -6846,7 +6847,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="GSTA3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/GSTA3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ugt1a6a
@@ -6879,7 +6880,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Dnajc15
@@ -6912,7 +6913,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DNAJC15.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DNAJC15.png" width="220"/>
 </td>
 <td>0.9195</td>
-<td>270</td><td></td><td></td></tr>
+<td>270</td><td></td><td></td><td><img alt="DNAJC15" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/DNAJC15_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm43305
@@ -6945,7 +6946,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Igsf11
@@ -6978,7 +6979,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IGSF11.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IGSF11.png" width="220"/>
 </td>
 <td>0.0152</td>
-<td>112</td><td>Low</td><td>dif</td></tr>
+<td>112</td><td>Low</td><td>dif</td><td><img alt="IGSF11" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/IGSF11_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sult1c2
@@ -7011,7 +7012,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SULT1C2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SULT1C2.png" width="220"/>
 </td>
 <td>0.1392</td>
-<td>180</td><td></td><td></td></tr>
+<td>180</td><td></td><td></td><td><img alt="SULT1C2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/SULT1C2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Enpep
@@ -7044,7 +7045,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ENPEP.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ENPEP.png" width="220"/>
 </td>
 <td>1.84e-05</td>
-<td>21</td><td>High</td><td>same</td></tr>
+<td>21</td><td>High</td><td>same</td><td><img alt="ENPEP" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/ENPEP_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ppargc1a
@@ -7077,7 +7078,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PPARGC1A.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PPARGC1A.png" width="220"/>
 </td>
 <td>3.54e-05</td>
-<td>30</td><td>High</td><td>same</td></tr>
+<td>30</td><td>High</td><td>same</td><td><img alt="PPARGC1A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/PPARGC1A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       2610203C22Rik
@@ -7110,7 +7111,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Lcn2
@@ -7143,7 +7144,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LCN2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LCN2.png" width="220"/>
 </td>
 <td>5.56e-05</td>
-<td>34</td><td>Low</td><td>dif</td></tr>
+<td>34</td><td>Low</td><td>dif</td><td><img alt="LCN2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/LCN2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sim2
@@ -7176,7 +7177,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SIM2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SIM2.png" width="220"/>
 </td>
 <td>1.89e-03</td>
-<td>66</td><td>Low</td><td>dif</td></tr>
+<td>66</td><td>Low</td><td>dif</td><td><img alt="SIM2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/SIM2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm30246
@@ -7209,7 +7210,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Cd68
@@ -7242,7 +7243,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CD68.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CD68.png" width="220"/>
 </td>
 <td>4.84e-03</td>
-<td>82</td><td>Low</td><td>dif</td></tr>
+<td>82</td><td>Low</td><td>dif</td><td><img alt="CD68" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/CD68_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Il6ra
@@ -7275,7 +7276,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Gm13583
@@ -7308,7 +7309,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Sirpa
@@ -7341,7 +7342,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SIRPA.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SIRPA.png" width="220"/>
 </td>
 <td>0.0267</td>
-<td>130</td><td>Low</td><td>dif</td></tr>
+<td>130</td><td>Low</td><td>dif</td><td><img alt="SIRPA" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/SIRPA_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tfec
@@ -7374,7 +7375,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TFEC.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TFEC.png" width="220"/>
 </td>
 <td>3.18e-04</td>
-<td>44</td><td>High</td><td>same</td></tr>
+<td>44</td><td>High</td><td>same</td><td><img alt="TFEC" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/TFEC_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ugt1a7c
@@ -7407,7 +7408,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Krt17
@@ -7440,7 +7441,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_KRT17.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_KRT17.png" width="220"/>
 </td>
 <td>0.0506</td>
-<td>148</td><td></td><td></td></tr>
+<td>148</td><td></td><td></td><td><img alt="KRT17" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/KRT17_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Folr1
@@ -7473,7 +7474,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_FOLR1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_FOLR1.png" width="220"/>
 </td>
 <td>0.0889</td>
-<td>165</td><td></td><td></td></tr>
+<td>165</td><td></td><td></td><td><img alt="FOLR1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/FOLR1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Acss3
@@ -7506,7 +7507,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ACSS3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ACSS3.png" width="220"/>
 </td>
 <td>2.55e-07</td>
-<td>10</td><td>High</td><td>same</td></tr>
+<td>10</td><td>High</td><td>same</td><td><img alt="ACSS3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/ACSS3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gvin2
@@ -7539,7 +7540,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Avil
@@ -7572,7 +7573,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AVIL.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AVIL.png" width="220"/>
 </td>
 <td>1.90e-03</td>
-<td>67</td><td>Low</td><td>dif</td></tr>
+<td>67</td><td>Low</td><td>dif</td><td><img alt="AVIL" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/AVIL_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ostn
@@ -7605,7 +7606,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_OSTN.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_OSTN.png" width="220"/>
 </td>
 <td>0.3230</td>
-<td>217</td><td></td><td></td></tr>
+<td>217</td><td></td><td></td><td><img alt="OSTN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/OSTN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc16a12
@@ -7638,7 +7639,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC16A12.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC16A12.png" width="220"/>
 </td>
 <td>3.33e-09</td>
-<td>0</td><td>High</td><td>same</td></tr>
+<td>0</td><td>High</td><td>same</td><td><img alt="SLC16A12" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/SLC16A12_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       St6gal1
@@ -7671,7 +7672,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ST6GAL1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ST6GAL1.png" width="220"/>
 </td>
 <td>0.1903</td>
-<td>195</td><td></td><td></td></tr>
+<td>195</td><td></td><td></td><td><img alt="ST6GAL1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/ST6GAL1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       ---
@@ -7702,7 +7703,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Erv3
@@ -7735,7 +7736,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Pde1a
@@ -7768,7 +7769,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PDE1A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PDE1A.png" width="220"/>
 </td>
 <td>0.6267</td>
-<td>249</td><td></td><td></td></tr>
+<td>249</td><td></td><td></td><td><img alt="PDE1A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/PDE1A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mmp2
@@ -7801,7 +7802,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MMP2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MMP2.png" width="220"/>
 </td>
 <td>0.6586</td>
-<td>252</td><td></td><td></td></tr>
+<td>252</td><td></td><td></td><td><img alt="MMP2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/MMP2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Aig1
@@ -7834,7 +7835,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AIG1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AIG1.png" width="220"/>
 </td>
 <td>0.0368</td>
-<td>138</td><td>High</td><td>same</td></tr>
+<td>138</td><td>High</td><td>same</td><td><img alt="AIG1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/AIG1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Stra6
@@ -7867,7 +7868,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_STRA6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_STRA6.png" width="220"/>
 </td>
 <td>4.34e-05</td>
-<td>32</td><td>Low</td><td>dif</td></tr>
+<td>32</td><td>Low</td><td>dif</td><td><img alt="STRA6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/STRA6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Radil
@@ -7900,7 +7901,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RADIL.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RADIL.png" width="220"/>
 </td>
 <td>0.1406</td>
-<td>181</td><td></td><td></td></tr>
+<td>181</td><td></td><td></td><td><img alt="RADIL" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RADIL_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Spryd7
@@ -7933,7 +7934,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SPRYD7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SPRYD7.png" width="220"/>
 </td>
 <td>0.0118</td>
-<td>104</td><td>High</td><td>dif</td></tr>
+<td>104</td><td>High</td><td>dif</td><td><img alt="SPRYD7" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SPRYD7_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Kalrn
@@ -7966,7 +7967,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_KALRN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_KALRN.png" width="220"/>
 </td>
 <td>1.97e-03</td>
-<td>68</td><td>High</td><td>dif</td></tr>
+<td>68</td><td>High</td><td>dif</td><td><img alt="KALRN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/KALRN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ret
@@ -7999,7 +8000,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RET.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RET.png" width="220"/>
 </td>
 <td>2.19e-03</td>
-<td>71</td><td>Low</td><td>same</td></tr>
+<td>71</td><td>Low</td><td>same</td><td><img alt="RET" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RET_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rtn4rl1
@@ -8032,7 +8033,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RTN4RL1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RTN4RL1.png" width="220"/>
 </td>
 <td>0.0322</td>
-<td>135</td><td>Low</td><td>same</td></tr>
+<td>135</td><td>Low</td><td>same</td><td><img alt="RTN4RL1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RTN4RL1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Rnf17
@@ -8065,7 +8066,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RNF17.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RNF17.png" width="220"/>
 </td>
 <td>0.0246</td>
-<td>126</td><td>Low</td><td>same</td></tr>
+<td>126</td><td>Low</td><td>same</td><td><img alt="RNF17" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RNF17_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Lct
@@ -8098,7 +8099,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_LCT.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_LCT.png" width="220"/>
 </td>
 <td>0.2394</td>
-<td>205</td><td></td><td></td></tr>
+<td>205</td><td></td><td></td><td><img alt="LCT" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/LCT_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Flnc
@@ -8131,7 +8132,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FLNC.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FLNC.png" width="220"/>
 </td>
 <td>0.0128</td>
-<td>107</td><td>High</td><td>dif</td></tr>
+<td>107</td><td>High</td><td>dif</td><td><img alt="FLNC" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FLNC_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Grin1
@@ -8164,7 +8165,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GRIN1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GRIN1.png" width="220"/>
 </td>
 <td>0.2089</td>
-<td>198</td><td></td><td></td></tr>
+<td>198</td><td></td><td></td><td><img alt="GRIN1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GRIN1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cilp2
@@ -8197,7 +8198,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CILP2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CILP2.png" width="220"/>
 </td>
 <td>6.13e-08</td>
-<td>5</td><td>Low</td><td>same</td></tr>
+<td>5</td><td>Low</td><td>same</td><td><img alt="CILP2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CILP2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Panx3
@@ -8230,7 +8231,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="PANX3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PANX3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tiam1
@@ -8263,7 +8264,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TIAM1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TIAM1.png" width="220"/>
 </td>
 <td>0.5863</td>
-<td>244</td><td></td><td></td></tr>
+<td>244</td><td></td><td></td><td><img alt="TIAM1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TIAM1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Megf6
@@ -8296,7 +8297,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MEGF6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MEGF6.png" width="220"/>
 </td>
 <td>0.1583</td>
-<td>185</td><td></td><td></td></tr>
+<td>185</td><td></td><td></td><td><img alt="MEGF6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MEGF6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Lurap1l
@@ -8329,7 +8330,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_LURAP1L.png" height="190" src="TCGA/survival_curves/significant/survival_curve_LURAP1L.png" width="220"/>
 </td>
 <td>0.0145</td>
-<td>110</td><td>High</td><td>dif</td></tr>
+<td>110</td><td>High</td><td>dif</td><td><img alt="LURAP1L" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/LURAP1L_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Scube3
@@ -8362,7 +8363,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SCUBE3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SCUBE3.png" width="220"/>
 </td>
 <td>0.5540</td>
-<td>241</td><td></td><td></td></tr>
+<td>241</td><td></td><td></td><td><img alt="SCUBE3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SCUBE3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Podnl1
@@ -8395,7 +8396,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PODNL1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PODNL1.png" width="220"/>
 </td>
 <td>8.82e-09</td>
-<td>1</td><td>Low</td><td>same</td></tr>
+<td>1</td><td>Low</td><td>same</td><td><img alt="PODNL1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PODNL1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cracd
@@ -8428,7 +8429,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CRACD.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CRACD.png" width="220"/>
 </td>
 <td>0.1216</td>
-<td>172</td><td></td><td></td></tr>
+<td>172</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Frmd4b
@@ -8461,7 +8462,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FRMD4B.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FRMD4B.png" width="220"/>
 </td>
 <td>3.14e-04</td>
-<td>43</td><td>High</td><td>dif</td></tr>
+<td>43</td><td>High</td><td>dif</td><td><img alt="FRMD4B" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FRMD4B_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Bmp7
@@ -8494,7 +8495,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_BMP7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_BMP7.png" width="220"/>
 </td>
 <td>0.0240</td>
-<td>125</td><td>High</td><td>dif</td></tr>
+<td>125</td><td>High</td><td>dif</td><td><img alt="BMP7" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BMP7_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       2610528A11Rik
@@ -8527,7 +8528,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Cerox1
@@ -8560,7 +8561,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_CEROX1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_CEROX1.png" width="220"/>
 </td>
 <td>0.5724</td>
-<td>243</td><td></td><td></td></tr>
+<td>243</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Slc16a14
@@ -8593,7 +8594,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC16A14.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC16A14.png" width="220"/>
 </td>
 <td>0.0425</td>
-<td>140</td><td>High</td><td>dif</td></tr>
+<td>140</td><td>High</td><td>dif</td><td><img alt="SLC16A14" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC16A14_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ube2l6
@@ -8626,7 +8627,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_UBE2L6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_UBE2L6.png" width="220"/>
 </td>
 <td>0.4521</td>
-<td>234</td><td></td><td></td></tr>
+<td>234</td><td></td><td></td><td><img alt="UBE2L6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/UBE2L6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Bcl2l11
@@ -8659,7 +8660,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCL2L11.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCL2L11.png" width="220"/>
 </td>
 <td>0.2563</td>
-<td>208</td><td></td><td></td></tr>
+<td>208</td><td></td><td></td><td><img alt="BCL2L11" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BCL2L11_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc2a3
@@ -8692,7 +8693,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC2A3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC2A3.png" width="220"/>
 </td>
 <td>0.0260</td>
-<td>128</td><td>Low</td><td>same</td></tr>
+<td>128</td><td>Low</td><td>same</td><td><img alt="SLC2A3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC2A3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gng2
@@ -8725,7 +8726,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_GNG2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_GNG2.png" width="220"/>
 </td>
 <td>0.7098</td>
-<td>254</td><td></td><td></td></tr>
+<td>254</td><td></td><td></td><td><img alt="GNG2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GNG2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sohlh2
@@ -8758,7 +8759,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SOHLH2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SOHLH2.png" width="220"/>
 </td>
 <td>7.60e-03</td>
-<td>92</td><td>Low</td><td>same</td></tr>
+<td>92</td><td>Low</td><td>same</td><td><img alt="SOHLH2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SOHLH2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Igf2
@@ -8791,7 +8792,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IGF2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IGF2.png" width="220"/>
 </td>
 <td>0.0421</td>
-<td>139</td><td>High</td><td>dif</td></tr>
+<td>139</td><td>High</td><td>dif</td><td><img alt="IGF2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/IGF2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Serping1
@@ -8824,7 +8825,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SERPING1.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SERPING1.png" width="220"/>
 </td>
 <td>0.0925</td>
-<td>166</td><td></td><td></td></tr>
+<td>166</td><td></td><td></td><td><img alt="SERPING1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SERPING1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc25a23
@@ -8857,7 +8858,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SLC25A23.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SLC25A23.png" width="220"/>
 </td>
 <td>5.44e-06</td>
-<td>16</td><td>High</td><td>dif</td></tr>
+<td>16</td><td>High</td><td>dif</td><td><img alt="SLC25A23" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC25A23_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Fmod
@@ -8890,7 +8891,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_FMOD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_FMOD.png" width="220"/>
 </td>
 <td>0.0105</td>
-<td>100</td><td>Low</td><td>same</td></tr>
+<td>100</td><td>Low</td><td>same</td><td><img alt="FMOD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/FMOD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tuba3a
@@ -8923,7 +8924,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Bcam
@@ -8956,7 +8957,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_BCAM.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_BCAM.png" width="220"/>
 </td>
 <td>0.0932</td>
-<td>167</td><td></td><td></td></tr>
+<td>167</td><td></td><td></td><td><img alt="BCAM" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BCAM_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tex101
@@ -8989,7 +8990,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TEX101.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TEX101.png" width="220"/>
 </td>
 <td>8.62e-05</td>
-<td>36</td><td>Low</td><td>same</td></tr>
+<td>36</td><td>Low</td><td>same</td><td><img alt="TEX101" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TEX101_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mmp17
@@ -9022,7 +9023,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MMP17.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MMP17.png" width="220"/>
 </td>
 <td>6.51e-06</td>
-<td>17</td><td>Low</td><td>same</td></tr>
+<td>17</td><td>Low</td><td>same</td><td><img alt="MMP17" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MMP17_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Apln
@@ -9055,7 +9056,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_APLN.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_APLN.png" width="220"/>
 </td>
 <td>0.1907</td>
-<td>196</td><td></td><td></td></tr>
+<td>196</td><td></td><td></td><td><img alt="APLN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/APLN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Btbd11
@@ -9088,7 +9089,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td><img alt="BTBD11" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/BTBD11_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tcf24
@@ -9121,7 +9122,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TCF24.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TCF24.png" width="220"/>
 </td>
 <td>2.31e-03</td>
-<td>72</td><td>Low</td><td>same</td></tr>
+<td>72</td><td>Low</td><td>same</td><td><img alt="TCF24" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TCF24_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ndufa4l2
@@ -9154,7 +9155,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_NDUFA4L2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_NDUFA4L2.png" width="220"/>
 </td>
 <td>0.2292</td>
-<td>203</td><td></td><td></td></tr>
+<td>203</td><td></td><td></td><td><img alt="NDUFA4L2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NDUFA4L2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Il17rd
@@ -9187,7 +9188,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IL17RD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IL17RD.png" width="220"/>
 </td>
 <td>1.89e-05</td>
-<td>22</td><td>High</td><td>dif</td></tr>
+<td>22</td><td>High</td><td>dif</td><td><img alt="IL17RD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/IL17RD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Kcnh3
@@ -9220,7 +9221,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_KCNH3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_KCNH3.png" width="220"/>
 </td>
 <td>3.37e-06</td>
-<td>13</td><td>Low</td><td>same</td></tr>
+<td>13</td><td>Low</td><td>same</td><td><img alt="KCNH3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/KCNH3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Slc29a4
@@ -9253,7 +9254,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SLC29A4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SLC29A4.png" width="220"/>
 </td>
 <td>0.8900</td>
-<td>266</td><td></td><td></td></tr>
+<td>266</td><td></td><td></td><td><img alt="SLC29A4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SLC29A4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Cacng7
@@ -9286,7 +9287,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CACNG7.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CACNG7.png" width="220"/>
 </td>
 <td>4.71e-03</td>
-<td>81</td><td>Low</td><td>same</td></tr>
+<td>81</td><td>Low</td><td>same</td><td><img alt="CACNG7" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CACNG7_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Npnt
@@ -9319,7 +9320,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NPNT.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NPNT.png" width="220"/>
 </td>
 <td>1.64e-04</td>
-<td>39</td><td>High</td><td>dif</td></tr>
+<td>39</td><td>High</td><td>dif</td><td><img alt="NPNT" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NPNT_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Zfp365
@@ -9352,7 +9353,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Rab11fip4
@@ -9385,7 +9386,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_RAB11FIP4.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_RAB11FIP4.png" width="220"/>
 </td>
 <td>0.1832</td>
-<td>191</td><td></td><td></td></tr>
+<td>191</td><td></td><td></td><td><img alt="RAB11FIP4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/RAB11FIP4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Igsf3
@@ -9418,7 +9419,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_IGSF3.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_IGSF3.png" width="220"/>
 </td>
 <td>0.1834</td>
-<td>192</td><td></td><td></td></tr>
+<td>192</td><td></td><td></td><td><img alt="IGSF3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/IGSF3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Gm4779
@@ -9451,7 +9452,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Pard6g
@@ -9484,7 +9485,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PARD6G.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PARD6G.png" width="220"/>
 </td>
 <td>0.0454</td>
-<td>143</td><td>High</td><td>dif</td></tr>
+<td>143</td><td>High</td><td>dif</td><td><img alt="PARD6G" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PARD6G_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       8030474K03Rik
@@ -9517,7 +9518,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Alcam
@@ -9550,7 +9551,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ALCAM.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ALCAM.png" width="220"/>
 </td>
 <td>8.79e-06</td>
-<td>18</td><td>High</td><td>dif</td></tr>
+<td>18</td><td>High</td><td>dif</td><td><img alt="ALCAM" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ALCAM_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dock11
@@ -9583,7 +9584,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_DOCK11.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_DOCK11.png" width="220"/>
 </td>
 <td>0.3494</td>
-<td>222</td><td></td><td></td></tr>
+<td>222</td><td></td><td></td><td><img alt="DOCK11" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DOCK11_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sema4d
@@ -9616,7 +9617,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SEMA4D.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SEMA4D.png" width="220"/>
 </td>
 <td>0.2837</td>
-<td>212</td><td></td><td></td></tr>
+<td>212</td><td></td><td></td><td><img alt="SEMA4D" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SEMA4D_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Agmo
@@ -9649,7 +9650,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_AGMO.png" height="190" src="TCGA/survival_curves/significant/survival_curve_AGMO.png" width="220"/>
 </td>
 <td>0.0207</td>
-<td>121</td><td>High</td><td>dif</td></tr>
+<td>121</td><td>High</td><td>dif</td><td><img alt="AGMO" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/AGMO_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Hhip
@@ -9682,7 +9683,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_HHIP.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_HHIP.png" width="220"/>
 </td>
 <td>0.2644</td>
-<td>210</td><td></td><td></td></tr>
+<td>210</td><td></td><td></td><td><img alt="HHIP" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HHIP_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tuba3b
@@ -9715,7 +9716,7 @@ Show only genes with significant survival curves with:
       NA
      </td>
 <td>NA</td>
-<td>500</td><td></td><td></td></tr>
+<td>500</td><td></td><td></td><td></td></tr>
 <tr>
 <td>
       Clmn
@@ -9748,7 +9749,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_CLMN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_CLMN.png" width="220"/>
 </td>
 <td>3.76e-05</td>
-<td>31</td><td>High</td><td>dif</td></tr>
+<td>31</td><td>High</td><td>dif</td><td><img alt="CLMN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/CLMN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Prr5
@@ -9781,7 +9782,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PRR5.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PRR5.png" width="220"/>
 </td>
 <td>0.0113</td>
-<td>102</td><td>Low</td><td>same</td></tr>
+<td>102</td><td>Low</td><td>same</td><td><img alt="PRR5" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PRR5_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ppbp
@@ -9814,7 +9815,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_PPBP.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_PPBP.png" width="220"/>
 </td>
 <td>0.8978</td>
-<td>267</td><td></td><td></td></tr>
+<td>267</td><td></td><td></td><td><img alt="PPBP" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PPBP_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Arhgap8
@@ -9847,7 +9848,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ARHGAP8.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ARHGAP8.png" width="220"/>
 </td>
 <td>0.0698</td>
-<td>155</td><td></td><td></td></tr>
+<td>155</td><td></td><td></td><td><img alt="ARHGAP8" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ARHGAP8_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Txndc16
@@ -9880,7 +9881,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_TXNDC16.png" height="190" src="TCGA/survival_curves/significant/survival_curve_TXNDC16.png" width="220"/>
 </td>
 <td>5.05e-06</td>
-<td>15</td><td>High</td><td>dif</td></tr>
+<td>15</td><td>High</td><td>dif</td><td><img alt="TXNDC16" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TXNDC16_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Myh10
@@ -9913,7 +9914,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MYH10.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MYH10.png" width="220"/>
 </td>
 <td>5.92e-04</td>
-<td>53</td><td>High</td><td>dif</td></tr>
+<td>53</td><td>High</td><td>dif</td><td><img alt="MYH10" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MYH10_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Wnt4
@@ -9946,7 +9947,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_WNT4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_WNT4.png" width="220"/>
 </td>
 <td>3.47e-03</td>
-<td>77</td><td>Low</td><td>same</td></tr>
+<td>77</td><td>Low</td><td>same</td><td><img alt="WNT4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/WNT4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ankrd35
@@ -9979,7 +9980,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ANKRD35.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ANKRD35.png" width="220"/>
 </td>
 <td>0.0202</td>
-<td>120</td><td>Low</td><td>same</td></tr>
+<td>120</td><td>Low</td><td>same</td><td><img alt="ANKRD35" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ANKRD35_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Nt5e
@@ -10012,7 +10013,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_NT5E.png" height="190" src="TCGA/survival_curves/significant/survival_curve_NT5E.png" width="220"/>
 </td>
 <td>4.24e-03</td>
-<td>78</td><td>High</td><td>dif</td></tr>
+<td>78</td><td>High</td><td>dif</td><td><img alt="NT5E" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/NT5E_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Epha4
@@ -10045,7 +10046,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_EPHA4.png" height="190" src="TCGA/survival_curves/significant/survival_curve_EPHA4.png" width="220"/>
 </td>
 <td>2.04e-05</td>
-<td>24</td><td>High</td><td>dif</td></tr>
+<td>24</td><td>High</td><td>dif</td><td><img alt="EPHA4" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/EPHA4_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ggh
@@ -10078,7 +10079,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_GGH.png" height="190" src="TCGA/survival_curves/significant/survival_curve_GGH.png" width="220"/>
 </td>
 <td>0.0425</td>
-<td>141</td><td>High</td><td>dif</td></tr>
+<td>141</td><td>High</td><td>dif</td><td><img alt="GGH" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/GGH_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tacstd2
@@ -10111,7 +10112,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TACSTD2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TACSTD2.png" width="220"/>
 </td>
 <td>0.9720</td>
-<td>274</td><td></td><td></td></tr>
+<td>274</td><td></td><td></td><td><img alt="TACSTD2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/TACSTD2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Igf2bp1
@@ -10144,7 +10145,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_IGF2BP1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_IGF2BP1.png" width="220"/>
 </td>
 <td>4.97e-03</td>
-<td>83</td><td>Low</td><td>same</td></tr>
+<td>83</td><td>Low</td><td>same</td><td><img alt="IGF2BP1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/IGF2BP1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Mcm6
@@ -10177,7 +10178,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_MCM6.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_MCM6.png" width="220"/>
 </td>
 <td>0.4531</td>
-<td>235</td><td></td><td></td></tr>
+<td>235</td><td></td><td></td><td><img alt="MCM6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/MCM6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Vim
@@ -10210,7 +10211,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_VIM.png" height="190" src="TCGA/survival_curves/significant/survival_curve_VIM.png" width="220"/>
 </td>
 <td>2.19e-03</td>
-<td>70</td><td>Low</td><td>same</td></tr>
+<td>70</td><td>Low</td><td>same</td><td><img alt="VIM" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/VIM_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dstn
@@ -10243,7 +10244,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DSTN.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DSTN.png" width="220"/>
 </td>
 <td>0.0118</td>
-<td>105</td><td>High</td><td>dif</td></tr>
+<td>105</td><td>High</td><td>dif</td><td><img alt="DSTN" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DSTN_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Hnrnpm
@@ -10276,7 +10277,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HNRNPM.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HNRNPM.png" width="220"/>
 </td>
 <td>9.89e-03</td>
-<td>97</td><td>High</td><td>dif</td></tr>
+<td>97</td><td>High</td><td>dif</td><td><img alt="HNRNPM" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HNRNPM_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Col1a1
@@ -10309,7 +10310,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_COL1A1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_COL1A1.png" width="220"/>
 </td>
 <td>2.35e-04</td>
-<td>42</td><td>Low</td><td>same</td></tr>
+<td>42</td><td>Low</td><td>same</td><td><img alt="COL1A1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/COL1A1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Poldip3
@@ -10342,7 +10343,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_POLDIP3.png" height="190" src="TCGA/survival_curves/significant/survival_curve_POLDIP3.png" width="220"/>
 </td>
 <td>2.59e-05</td>
-<td>26</td><td>High</td><td>dif</td></tr>
+<td>26</td><td>High</td><td>dif</td><td><img alt="POLDIP3" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/POLDIP3_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Hnrnpl
@@ -10375,7 +10376,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_HNRNPL.png" height="190" src="TCGA/survival_curves/significant/survival_curve_HNRNPL.png" width="220"/>
 </td>
 <td>4.54e-03</td>
-<td>80</td><td>Low</td><td>same</td></tr>
+<td>80</td><td>Low</td><td>same</td><td><img alt="HNRNPL" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/HNRNPL_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sf3b2
@@ -10408,7 +10409,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_SF3B2.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_SF3B2.png" width="220"/>
 </td>
 <td>0.0679</td>
-<td>154</td><td></td><td></td></tr>
+<td>154</td><td></td><td></td><td><img alt="SF3B2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/SF3B2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Anp32a
@@ -10441,7 +10442,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_ANP32A.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_ANP32A.png" width="220"/>
 </td>
 <td>0.3403</td>
-<td>219</td><td></td><td></td></tr>
+<td>219</td><td></td><td></td><td><img alt="ANP32A" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/ANP32A_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Dbn1
@@ -10474,7 +10475,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_DBN1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_DBN1.png" width="220"/>
 </td>
 <td>9.69e-03</td>
-<td>96</td><td>Low</td><td>same</td></tr>
+<td>96</td><td>Low</td><td>same</td><td><img alt="DBN1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/DBN1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Prdx2
@@ -10507,7 +10508,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_PRDX2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_PRDX2.png" width="220"/>
 </td>
 <td>6.60e-03</td>
-<td>86</td><td>High</td><td>dif</td></tr>
+<td>86</td><td>High</td><td>dif</td><td><img alt="PRDX2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/upregulated/PRDX2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Asah1
@@ -10540,7 +10541,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_ASAH1.png" height="190" src="TCGA/survival_curves/significant/survival_curve_ASAH1.png" width="220"/>
 </td>
 <td>1.02e-05</td>
-<td>20</td><td>High</td><td>same</td></tr>
+<td>20</td><td>High</td><td>same</td><td><img alt="ASAH1" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/ASAH1_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Myo6
@@ -10573,7 +10574,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_MYO6.png" height="190" src="TCGA/survival_curves/significant/survival_curve_MYO6.png" width="220"/>
 </td>
 <td>3.20e-08</td>
-<td>4</td><td>High</td><td>same</td></tr>
+<td>4</td><td>High</td><td>same</td><td><img alt="MYO6" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/MYO6_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Ranbp2
@@ -10606,7 +10607,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_RANBP2.png" height="190" src="TCGA/survival_curves/significant/survival_curve_RANBP2.png" width="220"/>
 </td>
 <td>5.89e-04</td>
-<td>52</td><td>High</td><td>same</td></tr>
+<td>52</td><td>High</td><td>same</td><td><img alt="RANBP2" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/RANBP2_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Sord
@@ -10639,7 +10640,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/significant/survival_curve_SORD.png" height="190" src="TCGA/survival_curves/significant/survival_curve_SORD.png" width="220"/>
 </td>
 <td>0.0113</td>
-<td>101</td><td>High</td><td>same</td></tr>
+<td>101</td><td>High</td><td>same</td><td><img alt="SORD" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/SORD_bar_graph.png" width="150"/></td></tr>
 <tr>
 <td>
       Tfrc
@@ -10672,7 +10673,7 @@ Show only genes with significant survival curves with:
 <img class="thumbnail" data-img-src="TCGA/survival_curves/non-significant/survival_curve_TFRC.png" height="190" src="TCGA/survival_curves/non-significant/survival_curve_TFRC.png" width="220"/>
 </td>
 <td>0.8838</td>
-<td>264</td><td></td><td></td></tr>
+<td>264</td><td></td><td></td><td><img alt="TFRC" class_="thumbnail" height="150" src="../Graeber/bar_graphs/downregulated/TFRC_bar_graph.png" width="150"/></td></tr>
 </tbody>
 </table>
 <!-- The Modal -->
