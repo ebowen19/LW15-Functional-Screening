@@ -147,5 +147,42 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // Initial call to adjust table width
   adjustTableWidth();
+
+  $(document).ready(function() {
+    // Initialize the DataTable and include an initComplete callback
+            // Parse the URL query parameter
+            var urlParams = new URLSearchParams(window.location.search);
+            var searchValue = urlParams.get('searchValue');
+
+            if (searchValue) {
+                var found = false;
+
+                // Search through the table
+                table.rows().every(function() {
+                    var data = this.data();
+                    if (data[0] === searchValue) { // Assuming the searchable value is in the first column
+                        var rowIndex = this.index();
+                        table.row(rowIndex).nodes().to$().css('background-color', 'yellow'); // Highlight the row
+
+                        // Change page to the one containing the matched row
+                        var page = Math.floor(rowIndex / table.page.len());
+                        table.page(page).draw(false);
+
+                        // Scroll to the highlighted row
+                        $('html, body').animate({
+                            scrollTop: $(table.row(rowIndex).node()).offset().top
+                        }, 1000);
+
+                        found = true;
+                        return false; // Stop searching
+                    }
+                });
+
+                if (!found) {
+                    console.log('No matching entry found for:', searchValue);
+                }
+            };
+});
+
 });
 
