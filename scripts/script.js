@@ -25,7 +25,6 @@ $(document).ready(function() {
                     }
 
                     var node = self.rows({ search: 'applied' }).nodes();
-                    $(node).css('background-color', 'yellow');
                     if (node.length > 0) {
                         $('html, body').animate({
                             scrollTop: $(node).offset().top - 100
