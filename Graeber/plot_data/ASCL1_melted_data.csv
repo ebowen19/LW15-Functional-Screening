@@ -1,0 +1,51 @@
+,PatientSeries,TumorCategory,ExpressionLevel
+0,P1,Basal Cells,2.704606413
+1,P2,Basal Cells,2.146850696
+2,P3,Basal Cells,0.939828359
+3,P4,Basal Cells,2.813811968
+4,P5,Basal Cells,0.0
+5,P6,Basal Cells,4.220360914
+6,P7,Basal Cells,3.740128839
+7,P8,Basal Cells,3.290099967
+8,P9,Basal Cells,5.799494043
+9,P10,Basal Cells,3.609778597
+10,P1,Organoids,4.112141293
+11,P2,Organoids,2.971129654
+12,P3,Organoids,0.0
+13,P4,Organoids,3.253475007
+14,P5,Organoids,0.0
+15,P6,Organoids,5.415805981
+16,P7,Organoids,4.436561644
+17,P8,Organoids,3.481040556
+18,P9,Organoids,2.830640695
+19,P10,Organoids,2.833962778
+20,P1,Early Tumors,12.4741678
+21,P2,Early Tumors,11.28536575
+22,P3,Early Tumors,5.594850075
+23,P4,Early Tumors,7.615400112
+24,P5,Early Tumors,3.820076821
+25,P6,Early Tumors,9.207686933
+26,P7,Early Tumors,13.91537359
+27,P8,Early Tumors,10.38503137
+28,P9,Early Tumors,9.876635734
+29,P10,Early Tumors,11.59029792
+30,P1,Transitional Tumors,14.37047616
+31,P2,Transitional Tumors,8.009491623
+32,P3,Transitional Tumors,5.242350984
+33,P4,Transitional Tumors,11.8872977
+34,P5,Transitional Tumors,0.0
+35,P6,Transitional Tumors,8.215488347
+36,P7,Transitional Tumors,14.91101099
+37,P8,Transitional Tumors,8.993075379
+38,P9,Transitional Tumors,10.56002162
+39,P10,Transitional Tumors,15.39961336
+40,P1,Endpoint Tumors,14.72560673
+41,P2,Endpoint Tumors,24.29010241
+42,P3,Endpoint Tumors,0.0
+43,P4,Endpoint Tumors,13.77361995
+44,P5,Endpoint Tumors,13.587929514999999
+45,P6,Endpoint Tumors,26.8759083
+46,P7,Endpoint Tumors,29.95480805
+47,P8,Endpoint Tumors,25.85186022
+48,P9,Endpoint Tumors,13.58777793
+49,P10,Endpoint Tumors,3.233458623

@@ -1,0 +1,237 @@
+table {
+    border-collapse: collapse;
+    width: 100%; /* Adjust as needed */
+    /*font-family: Arial, sans-serif;*/
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+  }
+
+  th, td {
+    padding: 8px; /* Adjust padding as needed */
+    text-align: left;
+  }
+  
+  /* Center all columns except the first and last */
+  td {
+    text-align: center;
+  }
+
+  /* Exclude the first and last columns from the centering rule */
+  td:first-child {
+    text-align: left; /* Keep the first and last columns left-aligned */
+  }
+  /* Exclude the first and last columns from the centering rule */
+  td:first-child {
+    font-weight: bold; /* Keep the first and last columns left-aligned */
+  }
+
+  .thumbnail {
+    cursor: pointer;
+  }
+  
+    .modal {
+      display: none; /* Keep the modal hidden initially */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(255, 255, 255, 0.9); /* White with reduced transparency */
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      flex-direction: column; /* Arrange children in a vertical stack */
+      padding-top: 150px; /* Add padding at the top inside the modal */
+
+    }
+
+  .modal-trigger {
+      cursor: pointer;
+      color: blue; /* or any other style */
+      text-decoration: underline;
+  }
+
+
+
+  .modal-content {
+    /* Set only one dimension (width or height) and leave the other to auto */
+    width: auto;       /* Adjust the width automatically */
+    height: auto;      /* Adjust the height automatically */
+    max-width: 80%;    /* Maximum width, adjust as needed */
+    max-height: 80%;   /* Maximum height, adjust as needed */
+    display: block;    /* Use block to center the image */
+    margin: auto;      /* Center the image horizontally */
+  }
+
+
+  /* Add Animation */
+  .modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    max-height: 80%; /* Adjust as needed */
+    max-width: 80%; /* Adjust as needed */
+    margin-top: 15px; /* Space below the caption */
+    margin-bottom: 15px; /* Space above the download link */
+  }
+  
+  img.modal-image {
+    max-width: 100%; /* Ensure the image's width does not exceed the container's width */
+    max-height: 100%; /* Ensure the image's height does not exceed the container's height */
+    object-fit: contain; /* This ensures the image maintains its aspect ratio */
+    height: auto; /* This ensures the height adjusts according to the width while maintaining aspect ratio */
+  }
+  
+  
+
+
+  /* Add Animation */
+  .modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    max-height: 80%; /* Adjust as needed */
+    max-width: 80%; /* Adjust as needed */
+    margin-top: 15px; /* Space below the caption */
+    margin-bottom: 15px; /* Space above the download link */
+  }
+  
+  .modal-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* White text color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px; /* Adjust this value to position the caption within the modal */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block; /* Or block, depending on your layout */
+  }
+
+
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+
+  /* Close Button */
+  .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: black; /* Change to black */
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000; /* Change hover color to black or any other color as desired */
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+
+  /* Change styles for download link */
+  .download-link {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px; /* Space below the image */
+    margin-bottom: 30px; /* Space from the bottom of the modal */
+  }
+
+/* Key */
+
+#key {
+position: absolute; /* Initially set to absolute */
+top: 10px;
+right: 10px;
+border: 1px solid rgb(225, 155, 234);
+background-color: white;
+padding: 10px;
+width: 125px; /* Adjust the width as needed */
+}
+
+/* custom_styles.css */
+.dataTables_length {
+  margin-bottom: 10px; /* Adjust the space as needed */
+}
+
+.dataTables_filter {
+  margin-bottom: 20px; /* Adjust the space as needed */
+}
+
+/* align description column text to the left */
+#functionalScreening td:nth-child(8) {
+  text-align: left;
+}
+
+/* Target images that should be clickable */
+table img {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+td, th {
+  border: 1px solid #ddd !important; /* Making the border thinner and forcing precedence */
+}
+
+mark {
+  background-color: #ff00ee41; /* Replace #ffcc00 with your desired hex code */
+  font-weight: bold;
+}
+.simpleTable, .simpleTable th, .simpleTable td {
+  border: 1px solid #ddd !important; /* Thinner border */
+}
+
+.simpleTable {
+  border-collapse: collapse !important;
+}
+
+/* Hide text within the modal */
+.modal * { 
+  color: transparent !important; 
+}
+
+/* Ensure images within the modal are fully opaque */
+.modal img {
+  opacity: 1.0 !important;
+}
+
+/* Adjust modal background for semi-transparency without affecting content */
+.modal {
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity as needed */
+}
+
+/* Re-apply full opacity to modal content to override semi-transparent background */
+.modal-content {
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 1 !important; /* Full opacity */
+}
+
+#img01 {
+  max-width: 600px; /* Adjust based on your preference */
+  max-height: 400px; /* Adjust based on your preference */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is block-level for correct centering */
+  margin: auto; /* Center the image within the modal */
+}
+
+
