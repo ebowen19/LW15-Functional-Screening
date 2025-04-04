@@ -1,0 +1,76 @@
+Gene,Ensembl_ID,Category,Description
+Mme,ENSMUSG00000027820,Membrane Proteins & Endocytosis,Membrane metallo-endopeptidase involved in peptide degradation and cell surface receptor regulation; may influence statin uptake.
+Greb1,ENSMUSG00000036523,Gene expression,Estrogen-regulated gene involved in hormone-responsive growth; may impact transcriptional response to statin treatment.
+Ifi44,ENSMUSG00000028037,Inflammation & Immune Modulation,Interferon-induced protein involved in antiviral defense; associated with immune activation and inflammation.
+Hspa12a,ENSMUSG00000025092,Ubiquitination & Protein Stability,Atypical heat shock protein potentially involved in stress response and proteostasis; may affect cellular stress handling under statins.
+Rnf130,ENSMUSG00000020376,Ubiquitination & Protein Stability,E3 ubiquitin ligase implicated in immune signaling and protein degradation pathways.
+P2ry14,ENSMUSG00000036381,Cell Adhesion & Signaling,G-protein-coupled receptor responsive to UDP-sugars; modulates inflammatory signaling and cell-cell interactions.
+Xlr3a,ENSMUSG00000057836,None,X-linked lymphocyte-regulated gene with unclear role in statin response or related cellular processes.
+Xaf1,ENSMUSG00000040483,Apoptosis / Cell Cycle Regulation,Promotes apoptosis through antagonism of XIAP; may enhance statin-induced cancer cell death.
+Oas2,ENSMUSG00000032690,Inflammation & Immune Modulation,Oligoadenylate synthase activated by interferons; mediates immune responses against stress and infection.
+Ncam1,ENSMUSG00000039542,Cell Adhesion & Signaling,Mediates cell-cell adhesion and signaling in development and cancer microenvironments.
+Ghr,ENSMUSG00000055737,Cell Survival/Proliferation,Growth hormone receptor; activates JAK/STAT and PI3K pathways promoting survival and proliferation.
+Atp2b4,ENSMUSG00000026463,Membrane Proteins & Endocytosis,Plasma membrane calcium transporter; influences cellular calcium homeostasis and signaling.
+Platr3,ENSMUSG00000084762,None,
+Pde5a,ENSMUSG00000053965,"Kinases, Transcription Factors, and Protein Degradation",Phosphodiesterase involved in cGMP breakdown; modulates signaling and may affect cellular response to stress.
+Car6,ENSMUSG00000028972,Metabolism,Carbonic anhydrase involved in pH regulation and bicarbonate transport; linked to metabolic adaptation.
+Nlrc5,ENSMUSG00000074151,Inflammation & Immune Modulation,NOD-like receptor involved in MHC class I gene regulation; impacts immune modulation.
+Minar2,ENSMUSG00000050875,None,Poorly characterized membrane protein; role in statin response not currently established.
+Abcc2,ENSMUSG00000025194,Membrane Proteins & Endocytosis,ATP-binding cassette transporter; involved in xenobiotic efflux and drug resistance.
+Usp18,ENSMUSG00000030107,Ubiquitination & Protein Stability,Deubiquitinating enzyme regulating interferon signaling and ISGylation.
+Maged2,ENSMUSG00000025268,None,
+Ptn,ENSMUSG00000029838,Cell Survival/Proliferation,"Growth factor promoting survival, proliferation, and angiogenesis in tumors."
+Icam1,ENSMUSG00000037405,None,
+Apol9b,ENSMUSG00000068246,None,
+Lncenc1,ENSMUSG00000078952,None,Long non-coding RNA; function in cellular signaling or statin response is not well understood.
+Kcnj16,ENSMUSG00000051497,None,
+Mamdc2,ENSMUSG00000033207,Cell Adhesion & Signaling,Membrane-associated mucin-domain protein implicated in cell adhesion and signaling.
+Pcyt1b,ENSMUSG00000035246,None,
+Gm43549,ENSMUSG00000106334,None,Predicted non-coding gene with unknown functional relevance to statin response.
+Afp,ENSMUSG00000054932,Gene expression,Fetal plasma protein marker involved in liver development; reflects transcriptional regulation.
+Esrp1,ENSMUSG00000040728,Gene expression,Splicing regulator involved in epithelial cell-specific gene expression programs.
+Lrrc31,ENSMUSG00000074653,Gene expression,Leucine-rich repeat protein possibly involved in transcriptional regulation and developmental processes.
+C3,ENSMUSG00000024164,Inflammation & Immune Modulation,Central complement component in immune signaling; contributes to tumor-associated inflammation.
+Ifit1,ENSMUSG00000034459,None,
+Tgtp1,ENSMUSG00000078922,None,
+Selenop,ENSMUSG00000064373,Metabolism,Selenoprotein involved in selenium transport and antioxidant defense; linked to redox homeostasis.
+Irf7,ENSMUSG00000025498,None,
+---,ENSMUSG00000120364,None,Unresolved gene identifier; no annotation available.
+Gbp2,ENSMUSG00000028270,Inflammation & Immune Modulation,Guanylate-binding protein induced by interferons; part of cellular immune defense.
+Zbp1,ENSMUSG00000027514,Inflammation & Immune Modulation,Z-DNA binding protein; activates interferon pathways and immune response under stress.
+Cfh,ENSMUSG00000026365,Inflammation & Immune Modulation,Regulates complement activation and innate immunity; potential role in tumor immune evasion.
+Rhox5,ENSMUSG00000095180,None,Homeobox gene involved in reproductive development; no known statin-related role.
+Gm7592,ENSMUSG00000118607,None,Uncharacterized non-coding RNA with no direct links to statin-relevant pathways.
+Rtp4,ENSMUSG00000033355,Membrane Proteins & Endocytosis,Receptor transporter protein involved in GPCR trafficking; may affect receptor sensitivity.
+Pla2g4a,ENSMUSG00000056220,Metabolism,Phospholipase A2 enzyme involved in lipid metabolism and eicosanoid production; impacts inflammation.
+Heph,ENSMUSG00000031209,Metabolism,Ferroxidase involved in iron transport and homeostasis; linked to oxidative metabolism.
+Fmo2,ENSMUSG00000040170,Metabolism,Flavin-containing monooxygenase involved in drug metabolism and xenobiotic detoxification.
+Tshr,ENSMUSG00000020963,Gene expression,Thyroid-stimulating hormone receptor involved in endocrine signaling and transcriptional control.
+Trim30a,ENSMUSG00000030921,Ubiquitination & Protein Stability,Tripartite motif protein functioning in protein ubiquitination and regulation of immune signaling.
+Bank1,ENSMUSG00000037922,Inflammation & Immune Modulation,Adaptor protein involved in B-cell receptor signaling; regulates immune activation pathways.
+Rorb,ENSMUSG00000036192,Gene expression,"Nuclear receptor involved in gene transcription regulation, circadian rhythm, and neurodevelopment."
+Hspa1a,ENSMUSG00000091971,None,
+Clec11a,ENSMUSG00000004473,Cell Survival/Proliferation,C-type lectin promoting hematopoietic cell growth and survival.
+Gbp3,ENSMUSG00000028268,Inflammation & Immune Modulation,Guanylate-binding protein in interferon-induced defense; modulates immune cell signaling.
+Spats2l,ENSMUSG00000038305,None,
+Oasl2,ENSMUSG00000029561,None,
+Arhgef3,ENSMUSG00000021895,Cytoskeleton & Microtubules,Rho guanine nucleotide exchange factor; regulates actin dynamics and cell shape.
+Krt20,ENSMUSG00000035775,Cytoskeleton & Microtubules,Intermediate filament protein involved in structural integrity and cellular differentiation.
+Slamf8,ENSMUSG00000053318,None,
+Aqp5,ENSMUSG00000044217,Membrane Proteins & Endocytosis,Aquaporin water channel regulating fluid transport across epithelial membranes.
+Phf11d,ENSMUSG00000068245,Gene expression,PHD finger protein associated with transcriptional regulation and immune-related gene expression.
+Ripk3,ENSMUSG00000022221,Apoptosis / Cell Cycle Regulation,Regulator of necroptosis and apoptosis; may enhance statin-induced cell death mechanisms.
+Gfra1,ENSMUSG00000025089,None,
+Iigp1,ENSMUSG00000054072,Inflammation & Immune Modulation,Immunity-related GTPase induced by interferons; contributes to host defense.
+Bco1,ENSMUSG00000031845,Metabolism,Beta-carotene oxygenase involved in vitamin A biosynthesis; part of cellular metabolic processes.
+Ptgis,ENSMUSG00000017969,Metabolism,Enzyme catalyzing prostaglandin I2 synthesis; regulates vascular tone and inflammatory responses.
+Serpinb9d,ENSMUSG00000054266,Ubiquitination & Protein Stability,Intracellular serpin regulating protease activity and cell death pathways.
+Gbp2b,ENSMUSG00000040264,Inflammation & Immune Modulation,Guanylate-binding protein family member induced by interferons; involved in innate immune defense.
+Nrp1,ENSMUSG00000025810,Cell Adhesion & Signaling,"Receptor involved in VEGF signaling, angiogenesis, and tumor microenvironment regulation."
+Lox,ENSMUSG00000024529,None,
+Fxyd2,ENSMUSG00000059412,Membrane Proteins & Endocytosis,Ion transport regulator that modulates sodium-potassium ATPase activity in epithelial cells.
+Gtpbp10,ENSMUSG00000040464,Metabolism,GTP-binding protein associated with mitochondrial function; potentially modulates energy homeostasis.
+Snca,ENSMUSG00000025889,Cytoskeleton & Microtubules,Alpha-synuclein; involved in synaptic vesicle trafficking and cytoskeletal dynamics.
+Islr,ENSMUSG00000037206,Cell Adhesion & Signaling,Immunoglobulin superfamily member involved in cell signaling and tumor microenvironment interactions.
+Slc7a3,ENSMUSG00000031297,Metabolism,Cationic amino acid transporter involved in nutrient uptake and metabolic signaling.
+Thsd7a,ENSMUSG00000032625,Cell Adhesion & Signaling,Thrombospondin domain-containing protein influencing angiogenesis and cell adhesion.
