@@ -1,0 +1,2260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<html>
+<head>
+<title>
+   High Variance Gene Summaries
+  </title>
+<!-- Include the DataTables CSS -->
+<link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+<!-- Then include custom styles -->
+<link href="scripts/styles.css" rel="stylesheet" type="text/css"/>
+<!-- link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"> -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript">
+</script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js" type="text/javascript">
+</script>
+</head>
+<body>
+<header>
+<h1>
+    High Variance Gene Summaries
+   </h1>
+<br/>
+   Genes with top 200 highest variance in the LW15 RNA-seq data that don't also show up in the PCA/GSEA/diff expr gene lists.
+   <br/>
+<p style="font-size:17px;">
+<a href="https://ebowen19.github.io/LW15-Target-Genes/">
+<br/>
+<a href="./TCGA/comparison_stats.html">
+<strong>
+       TCGA vs LW15 Comparison:
+      </strong>
+</a>
+<br/>
+     For genes upregulated in sensitive according to LW15 RNA-seq data, we expect to see worse prognosis in TCGA Survival
+curve for higher expression, and the opposite for genes downregulated in sensitive. Filter by genes which show the same or differing trend between the LW15 gene plots and TCGA Survival curves according 
+to this criteria.
+     <br/>
+<br/>
+     Show only genes with significant survival curves with:
+     <form>
+<input id="sameTrend" name="sameTrend" type="checkbox"/>
+<label for="sameTrend">
+       Same trend
+      </label>
+<br/>
+<input id="difTrend" name="difTrend" type="checkbox"/>
+<label for="difTrend">
+       Differing trend
+      </label>
+<br/>
+</form>
+<strong>
+      Hide Columns:
+     </strong>
+<form>
+<input class="column-visibility-toggle" id="hideGeneID" name="hideGeneID" type="checkbox"/>
+<label for="hideGeneID">
+       Gene ID
+      </label>
+<input class="column-visibility-toggle" id="hideCoverage" name="hideCoverage" type="checkbox"/>
+<label for="hideCoverage">
+       Coverage Information
+      </label>
+<input class="column-visibility-toggle" id="hideRegulation" name="hideRegulation" type="checkbox"/>
+<label for="hideRegulation">
+       Differential Expression in Sensitive
+      </label>
+<input class="column-visibility-toggle" id="hideCategory" name="hideCategory" type="checkbox"/>
+<label for="hideCategory">
+       Category
+      </label>
+<input class="column-visibility-toggle" id="hideGraeber" name="hideGraeber" type="checkbox"/>
+<label for="hideGraeber">
+       Graeber Gene Expression
+      </label>
+</form>
+<h2>
+      75 Unique High Variance Genes:
+     </h2>
+<table border="1" id="functionalScreening">
+<thead>
+<tr style="text-align: right;">
+<th>
+         Gene Name
+        </th>
+<th>
+         Regulation in Sensitive
+        </th>
+<th>
+         CRISPR cov.
+        </th>
+<th>
+         cDNA cov.
+        </th>
+<th>
+         Gene ID
+        </th>
+<th>
+         Category
+        </th>
+<th>
+         Description
+        </th>
+<th>
+         Gene Plot
+        </th>
+<th text="Survival Curve">
+         TCGA Survival Curve
+        </th>
+<th text="Survival Curve Significant?">
+         Survival Curve p-val
+        </th>
+<th>
+         pval sorting index
+        </th>
+<th>
+         Expression of Higher Survival group
+        </th>
+        ""
+        <th>
+         LW15 vs TCGA
+        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+         Mme
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000027820
+        </td>
+<td>Membrane Proteins &amp; Endocytosis</td>
+<td>Membrane metallo-endopeptidase involved in peptide degradation and cell surface receptor regulation; may influence statin uptake.</td>
+<td>
+<img alt="Mme" height="200" src="gene plots/Mme.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_MME.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_MME.png" width="220"/>
+</td>
+<td>0.2332</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Greb1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000036523
+        </td>
+<td>Gene expression</td>
+<td>Estrogen-regulated gene involved in hormone-responsive growth; may impact transcriptional response to statin treatment.</td>
+<td>
+<img alt="Greb1" height="200" src="gene plots/Greb1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_GREB1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_GREB1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Ifi44
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000028037
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Interferon-induced protein involved in antiviral defense; associated with immune activation and inflammation.</td>
+<td>
+<img alt="Ifi44" height="200" src="gene plots/Ifi44.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_IFI44.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_IFI44.png" width="220"/>
+</td>
+<td>0.3140</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Hspa12a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000025092
+        </td>
+<td>Ubiquitination &amp; Protein Stability</td>
+<td>Atypical heat shock protein potentially involved in stress response and proteostasis; may affect cellular stress handling under statins.</td>
+<td>
+<img alt="Hspa12a" height="200" src="gene plots/Hspa12a.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_HSPA12A.png" height="190" src="TCGA/survival_curves/significant\survival_curve_HSPA12A.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Rnf130
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000020376
+        </td>
+<td>Ubiquitination &amp; Protein Stability</td>
+<td>E3 ubiquitin ligase implicated in immune signaling and protein degradation pathways.</td>
+<td>
+<img alt="Rnf130" height="200" src="gene plots/Rnf130.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_RNF130.png" height="190" src="TCGA/survival_curves/significant\survival_curve_RNF130.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         P2ry14
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000036381
+        </td>
+<td>Cell Adhesion &amp; Signaling</td>
+<td>G-protein-coupled receptor responsive to UDP-sugars; modulates inflammatory signaling and cell-cell interactions.</td>
+<td>
+<img alt="P2ry14" height="200" src="gene plots/P2ry14.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_P2RY14.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_P2RY14.png" width="220"/>
+</td>
+<td>0.1257</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Xlr3a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000057836
+        </td>
+<td>None</td>
+<td>X-linked lymphocyte-regulated gene with unclear role in statin response or related cellular processes.</td>
+<td>
+<img alt="Xlr3a" height="200" src="gene plots/Xlr3a.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Xaf1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000040483
+        </td>
+<td>Apoptosis / Cell Cycle Regulation</td>
+<td>Promotes apoptosis through antagonism of XIAP; may enhance statin-induced cancer cell death.</td>
+<td>
+<img alt="Xaf1" height="200" src="gene plots/Xaf1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_XAF1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_XAF1.png" width="220"/>
+</td>
+<td>0.0061</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Oas2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000032690
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Oligoadenylate synthase activated by interferons; mediates immune responses against stress and infection.</td>
+<td>
+<img alt="Oas2" height="200" src="gene plots/Oas2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_OAS2.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_OAS2.png" width="220"/>
+</td>
+<td>0.4184</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Ncam1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000039542
+        </td>
+<td>Cell Adhesion &amp; Signaling</td>
+<td>Mediates cell-cell adhesion and signaling in development and cancer microenvironments.</td>
+<td>
+<img alt="Ncam1" height="200" src="gene plots/Ncam1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_NCAM1.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_NCAM1.png" width="220"/>
+</td>
+<td>0.3280</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Ghr
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000055737
+        </td>
+<td>Cell Survival/Proliferation</td>
+<td>Growth hormone receptor; activates JAK/STAT and PI3K pathways promoting survival and proliferation.</td>
+<td>
+<img alt="Ghr" height="200" src="gene plots/Ghr.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_GHR.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_GHR.png" width="220"/>
+</td>
+<td>0.2772</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Atp2b4
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000026463
+        </td>
+<td>Membrane Proteins &amp; Endocytosis</td>
+<td>Plasma membrane calcium transporter; influences cellular calcium homeostasis and signaling.</td>
+<td>
+<img alt="Atp2b4" height="200" src="gene plots/Atp2b4.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_ATP2B4.png" height="190" src="TCGA/survival_curves/significant\survival_curve_ATP2B4.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Platr3
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000084762
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Platr3" height="200" src="gene plots/Platr3.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Pde5a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000053965
+        </td>
+<td>Kinases, Transcription Factors, and Protein Degradation</td>
+<td>Phosphodiesterase involved in cGMP breakdown; modulates signaling and may affect cellular response to stress.</td>
+<td>
+<img alt="Pde5a" height="200" src="gene plots/Pde5a.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_PDE5A.png" height="190" src="TCGA/survival_curves/significant\survival_curve_PDE5A.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Car6
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000028972
+        </td>
+<td>Metabolism</td>
+<td>Carbonic anhydrase involved in pH regulation and bicarbonate transport; linked to metabolic adaptation.</td>
+<td>
+<img alt="Car6" height="200" src="gene plots/Car6.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Nlrc5
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000074151
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>NOD-like receptor involved in MHC class I gene regulation; impacts immune modulation.</td>
+<td>
+<img alt="Nlrc5" height="200" src="gene plots/Nlrc5.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_NLRC5.png" height="190" src="TCGA/survival_curves/significant\survival_curve_NLRC5.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Minar2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000050875
+        </td>
+<td>None</td>
+<td>Poorly characterized membrane protein; role in statin response not currently established.</td>
+<td>
+<img alt="Minar2" height="200" src="gene plots/Minar2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_MINAR2.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_MINAR2.png" width="220"/>
+</td>
+<td>nan</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Abcc2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000025194
+        </td>
+<td>Membrane Proteins &amp; Endocytosis</td>
+<td>ATP-binding cassette transporter; involved in xenobiotic efflux and drug resistance.</td>
+<td>
+<img alt="Abcc2" height="200" src="gene plots/Abcc2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_ABCC2.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_ABCC2.png" width="220"/>
+</td>
+<td>0.1203</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Usp18
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000030107
+        </td>
+<td>Ubiquitination &amp; Protein Stability</td>
+<td>Deubiquitinating enzyme regulating interferon signaling and ISGylation.</td>
+<td>
+<img alt="Usp18" height="200" src="gene plots/Usp18.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_USP18.png" height="190" src="TCGA/survival_curves/significant\survival_curve_USP18.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Maged2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000025268
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Maged2" height="200" src="gene plots/Maged2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_MAGED2.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_MAGED2.png" width="220"/>
+</td>
+<td>0.9707</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Ptn
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000029838
+        </td>
+<td>Cell Survival/Proliferation</td>
+<td>Growth factor promoting survival, proliferation, and angiogenesis in tumors.</td>
+<td>
+<img alt="Ptn" height="200" src="gene plots/Ptn.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_PTN.png" height="190" src="TCGA/survival_curves/significant\survival_curve_PTN.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Icam1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000037405
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Icam1" height="200" src="gene plots/Icam1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_ICAM1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_ICAM1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Apol9b
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000068246
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Apol9b" height="200" src="gene plots/Apol9b.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Lncenc1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000078952
+        </td>
+<td>None</td>
+<td>Long non-coding RNA; function in cellular signaling or statin response is not well understood.</td>
+<td>
+<img alt="Lncenc1" height="200" src="gene plots/Lncenc1.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Kcnj16
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000051497
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Kcnj16" height="200" src="gene plots/Kcnj16.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_KCNJ16.png" height="190" src="TCGA/survival_curves/significant\survival_curve_KCNJ16.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Mamdc2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000033207
+        </td>
+<td>Cell Adhesion &amp; Signaling</td>
+<td>Membrane-associated mucin-domain protein implicated in cell adhesion and signaling.</td>
+<td>
+<img alt="Mamdc2" height="200" src="gene plots/Mamdc2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_MAMDC2.png" height="190" src="TCGA/survival_curves/significant\survival_curve_MAMDC2.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Pcyt1b
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000035246
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Pcyt1b" height="200" src="gene plots/Pcyt1b.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_PCYT1B.png" height="190" src="TCGA/survival_curves/significant\survival_curve_PCYT1B.png" width="220"/>
+</td>
+<td>0.0003</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Gm43549
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000106334
+        </td>
+<td>None</td>
+<td>Predicted non-coding gene with unknown functional relevance to statin response.</td>
+<td>
+<img alt="Gm43549" height="200" src="gene plots/Gm43549.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Afp
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000054932
+        </td>
+<td>Gene expression</td>
+<td>Fetal plasma protein marker involved in liver development; reflects transcriptional regulation.</td>
+<td>
+<img alt="Afp" height="200" src="gene plots/Afp.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_AFP.png" height="190" src="TCGA/survival_curves/significant\survival_curve_AFP.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Esrp1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000040728
+        </td>
+<td>Gene expression</td>
+<td>Splicing regulator involved in epithelial cell-specific gene expression programs.</td>
+<td>
+<img alt="Esrp1" height="200" src="gene plots/Esrp1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_ESRP1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_ESRP1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Lrrc31
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000074653
+        </td>
+<td>Gene expression</td>
+<td>Leucine-rich repeat protein possibly involved in transcriptional regulation and developmental processes.</td>
+<td>
+<img alt="Lrrc31" height="200" src="gene plots/Lrrc31.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_LRRC31.png" height="190" src="TCGA/survival_curves/significant\survival_curve_LRRC31.png" width="220"/>
+</td>
+<td>0.0444</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         C3
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000024164
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Central complement component in immune signaling; contributes to tumor-associated inflammation.</td>
+<td>
+<img alt="C3" height="200" src="gene plots/C3.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_C3.png" height="190" src="TCGA/survival_curves/significant\survival_curve_C3.png" width="220"/>
+</td>
+<td>0.0355</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Ifit1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000034459
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Ifit1" height="200" src="gene plots/Ifit1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_IFIT1.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_IFIT1.png" width="220"/>
+</td>
+<td>0.1477</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Tgtp1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000078922
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Tgtp1" height="200" src="gene plots/Tgtp1.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Selenop
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000064373
+        </td>
+<td>Metabolism</td>
+<td>Selenoprotein involved in selenium transport and antioxidant defense; linked to redox homeostasis.</td>
+<td>
+<img alt="Selenop" height="200" src="gene plots/Selenop.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_SELENOP.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_SELENOP.png" width="220"/>
+</td>
+<td>0.1291</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Irf7
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000025498
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Irf7" height="200" src="gene plots/Irf7.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_IRF7.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_IRF7.png" width="220"/>
+</td>
+<td>0.2863</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         ---
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000120364
+        </td>
+<td>None</td>
+<td>Unresolved gene identifier; no annotation available.</td>
+<td>
+<img alt="ENSMUSG00000120364" height="200" src="gene plots/ENSMUSG00000120364.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Gbp2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000028270
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Guanylate-binding protein induced by interferons; part of cellular immune defense.</td>
+<td>
+<img alt="Gbp2" height="200" src="gene plots/Gbp2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_GBP2.png" height="190" src="TCGA/survival_curves/significant\survival_curve_GBP2.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Zbp1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000027514
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Z-DNA binding protein; activates interferon pathways and immune response under stress.</td>
+<td>
+<img alt="Zbp1" height="200" src="gene plots/Zbp1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_ZBP1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_ZBP1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Cfh
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000026365
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Regulates complement activation and innate immunity; potential role in tumor immune evasion.</td>
+<td>
+<img alt="Cfh" height="200" src="gene plots/Cfh.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_CFH.png" height="190" src="TCGA/survival_curves/significant\survival_curve_CFH.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Rhox5
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000095180
+        </td>
+<td>None</td>
+<td>Homeobox gene involved in reproductive development; no known statin-related role.</td>
+<td>
+<img alt="Rhox5" height="200" src="gene plots/Rhox5.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Gm7592
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000118607
+        </td>
+<td>None</td>
+<td>Uncharacterized non-coding RNA with no direct links to statin-relevant pathways.</td>
+<td>
+<img alt="Gm7592" height="200" src="gene plots/Gm7592.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Rtp4
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000033355
+        </td>
+<td>Membrane Proteins &amp; Endocytosis</td>
+<td>Receptor transporter protein involved in GPCR trafficking; may affect receptor sensitivity.</td>
+<td>
+<img alt="Rtp4" height="200" src="gene plots/Rtp4.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_RTP4.png" height="190" src="TCGA/survival_curves/significant\survival_curve_RTP4.png" width="220"/>
+</td>
+<td>0.0001</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Pla2g4a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000056220
+        </td>
+<td>Metabolism</td>
+<td>Phospholipase A2 enzyme involved in lipid metabolism and eicosanoid production; impacts inflammation.</td>
+<td>
+<img alt="Pla2g4a" height="200" src="gene plots/Pla2g4a.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_PLA2G4A.png" height="190" src="TCGA/survival_curves/significant\survival_curve_PLA2G4A.png" width="220"/>
+</td>
+<td>0.0010</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Heph
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000031209
+        </td>
+<td>Metabolism</td>
+<td>Ferroxidase involved in iron transport and homeostasis; linked to oxidative metabolism.</td>
+<td>
+<img alt="Heph" height="200" src="gene plots/Heph.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_HEPH.png" height="190" src="TCGA/survival_curves/significant\survival_curve_HEPH.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Fmo2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000040170
+        </td>
+<td>Metabolism</td>
+<td>Flavin-containing monooxygenase involved in drug metabolism and xenobiotic detoxification.</td>
+<td>
+<img alt="Fmo2" height="200" src="gene plots/Fmo2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_FMO2.png" height="190" src="TCGA/survival_curves/significant\survival_curve_FMO2.png" width="220"/>
+</td>
+<td>0.0070</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Tshr
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000020963
+        </td>
+<td>Gene expression</td>
+<td>Thyroid-stimulating hormone receptor involved in endocrine signaling and transcriptional control.</td>
+<td>
+<img alt="Tshr" height="200" src="gene plots/Tshr.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_TSHR.png" height="190" src="TCGA/survival_curves/significant\survival_curve_TSHR.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Trim30a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000030921
+        </td>
+<td>Ubiquitination &amp; Protein Stability</td>
+<td>Tripartite motif protein functioning in protein ubiquitination and regulation of immune signaling.</td>
+<td>
+<img alt="Trim30a" height="200" src="gene plots/Trim30a.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Bank1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000037922
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Adaptor protein involved in B-cell receptor signaling; regulates immune activation pathways.</td>
+<td>
+<img alt="Bank1" height="200" src="gene plots/Bank1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_BANK1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_BANK1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Rorb
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000036192
+        </td>
+<td>Gene expression</td>
+<td>Nuclear receptor involved in gene transcription regulation, circadian rhythm, and neurodevelopment.</td>
+<td>
+<img alt="Rorb" height="200" src="gene plots/Rorb.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_RORB.png" height="190" src="TCGA/survival_curves/significant\survival_curve_RORB.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Hspa1a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000091971
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Hspa1a" height="200" src="gene plots/Hspa1a.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_HSPA1A.png" height="190" src="TCGA/survival_curves/significant\survival_curve_HSPA1A.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Clec11a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000004473
+        </td>
+<td>Cell Survival/Proliferation</td>
+<td>C-type lectin promoting hematopoietic cell growth and survival.</td>
+<td>
+<img alt="Clec11a" height="200" src="gene plots/Clec11a.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_CLEC11A.png" height="190" src="TCGA/survival_curves/significant\survival_curve_CLEC11A.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Gbp3
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000028268
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Guanylate-binding protein in interferon-induced defense; modulates immune cell signaling.</td>
+<td>
+<img alt="Gbp3" height="200" src="gene plots/Gbp3.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_GBP3.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_GBP3.png" width="220"/>
+</td>
+<td>0.2138</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Spats2l
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000038305
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Spats2l" height="200" src="gene plots/Spats2l.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_SPATS2L.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_SPATS2L.png" width="220"/>
+</td>
+<td>0.1419</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Oasl2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000029561
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Oasl2" height="200" src="gene plots/Oasl2.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Arhgef3
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000021895
+        </td>
+<td>Cytoskeleton &amp; Microtubules</td>
+<td>Rho guanine nucleotide exchange factor; regulates actin dynamics and cell shape.</td>
+<td>
+<img alt="Arhgef3" height="200" src="gene plots/Arhgef3.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_ARHGEF3.png" height="190" src="TCGA/survival_curves/significant\survival_curve_ARHGEF3.png" width="220"/>
+</td>
+<td>0.0046</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Krt20
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000035775
+        </td>
+<td>Cytoskeleton &amp; Microtubules</td>
+<td>Intermediate filament protein involved in structural integrity and cellular differentiation.</td>
+<td>
+<img alt="Krt20" height="200" src="gene plots/Krt20.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_KRT20.png" height="190" src="TCGA/survival_curves/significant\survival_curve_KRT20.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Slamf8
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000053318
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Slamf8" height="200" src="gene plots/Slamf8.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_SLAMF8.png" height="190" src="TCGA/survival_curves/significant\survival_curve_SLAMF8.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Aqp5
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000044217
+        </td>
+<td>Membrane Proteins &amp; Endocytosis</td>
+<td>Aquaporin water channel regulating fluid transport across epithelial membranes.</td>
+<td>
+<img alt="Aqp5" height="200" src="gene plots/Aqp5.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_AQP5.png" height="190" src="TCGA/survival_curves/significant\survival_curve_AQP5.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Phf11d
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000068245
+        </td>
+<td>Gene expression</td>
+<td>PHD finger protein associated with transcriptional regulation and immune-related gene expression.</td>
+<td>
+<img alt="Phf11d" height="200" src="gene plots/Phf11d.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Ripk3
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000022221
+        </td>
+<td>Apoptosis / Cell Cycle Regulation</td>
+<td>Regulator of necroptosis and apoptosis; may enhance statin-induced cell death mechanisms.</td>
+<td>
+<img alt="Ripk3" height="200" src="gene plots/Ripk3.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_RIPK3.png" height="190" src="TCGA/survival_curves/significant\survival_curve_RIPK3.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Gfra1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000025089
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Gfra1" height="200" src="gene plots/Gfra1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_GFRA1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_GFRA1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Iigp1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000054072
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Immunity-related GTPase induced by interferons; contributes to host defense.</td>
+<td>
+<img alt="Iigp1" height="200" src="gene plots/Iigp1.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Bco1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000031845
+        </td>
+<td>Metabolism</td>
+<td>Beta-carotene oxygenase involved in vitamin A biosynthesis; part of cellular metabolic processes.</td>
+<td>
+<img alt="Bco1" height="200" src="gene plots/Bco1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_BCO1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_BCO1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Ptgis
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000017969
+        </td>
+<td>Metabolism</td>
+<td>Enzyme catalyzing prostaglandin I2 synthesis; regulates vascular tone and inflammatory responses.</td>
+<td>
+<img alt="Ptgis" height="200" src="gene plots/Ptgis.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_PTGIS.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_PTGIS.png" width="220"/>
+</td>
+<td>0.0548</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Serpinb9d
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000054266
+        </td>
+<td>Ubiquitination &amp; Protein Stability</td>
+<td>Intracellular serpin regulating protease activity and cell death pathways.</td>
+<td>
+<img alt="Serpinb9d" height="200" src="gene plots/Serpinb9d.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Gbp2b
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000040264
+        </td>
+<td>Inflammation &amp; Immune Modulation</td>
+<td>Guanylate-binding protein family member induced by interferons; involved in innate immune defense.</td>
+<td>
+<img alt="Gbp2b" height="200" src="gene plots/Gbp2b.png" width="225"/>
+</td>
+<td>
+         NA
+        </td>
+<td></td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Nrp1
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000025810
+        </td>
+<td>Cell Adhesion &amp; Signaling</td>
+<td>Receptor involved in VEGF signaling, angiogenesis, and tumor microenvironment regulation.</td>
+<td>
+<img alt="Nrp1" height="200" src="gene plots/Nrp1.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_NRP1.png" height="190" src="TCGA/survival_curves/significant\survival_curve_NRP1.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Lox
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000024529
+        </td>
+<td>None</td>
+<td></td>
+<td>
+<img alt="Lox" height="200" src="gene plots/Lox.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_LOX.png" height="190" src="TCGA/survival_curves/significant\survival_curve_LOX.png" width="220"/>
+</td>
+<td>0.0303</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Fxyd2
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000059412
+        </td>
+<td>Membrane Proteins &amp; Endocytosis</td>
+<td>Ion transport regulator that modulates sodium-potassium ATPase activity in epithelial cells.</td>
+<td>
+<img alt="Fxyd2" height="200" src="gene plots/Fxyd2.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/non-significant\survival_curve_FXYD2.png" height="190" src="TCGA/survival_curves/non-significant\survival_curve_FXYD2.png" width="220"/>
+</td>
+<td>0.4203</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Gtpbp10
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000040464
+        </td>
+<td>Metabolism</td>
+<td>GTP-binding protein associated with mitochondrial function; potentially modulates energy homeostasis.</td>
+<td>
+<img alt="Gtpbp10" height="200" src="gene plots/Gtpbp10.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_GTPBP10.png" height="190" src="TCGA/survival_curves/significant\survival_curve_GTPBP10.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Snca
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000025889
+        </td>
+<td>Cytoskeleton &amp; Microtubules</td>
+<td>Alpha-synuclein; involved in synaptic vesicle trafficking and cytoskeletal dynamics.</td>
+<td>
+<img alt="Snca" height="200" src="gene plots/Snca.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_SNCA.png" height="190" src="TCGA/survival_curves/significant\survival_curve_SNCA.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Islr
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000037206
+        </td>
+<td>Cell Adhesion &amp; Signaling</td>
+<td>Immunoglobulin superfamily member involved in cell signaling and tumor microenvironment interactions.</td>
+<td>
+<img alt="Islr" height="200" src="gene plots/Islr.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_ISLR.png" height="190" src="TCGA/survival_curves/significant\survival_curve_ISLR.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Slc7a3
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000031297
+        </td>
+<td>Metabolism</td>
+<td>Cationic amino acid transporter involved in nutrient uptake and metabolic signaling.</td>
+<td>
+<img alt="Slc7a3" height="200" src="gene plots/Slc7a3.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_SLC7A3.png" height="190" src="TCGA/survival_curves/significant\survival_curve_SLC7A3.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+         Thsd7a
+        </td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+         ENSMUSG00000032625
+        </td>
+<td>Cell Adhesion &amp; Signaling</td>
+<td>Thrombospondin domain-containing protein influencing angiogenesis and cell adhesion.</td>
+<td>
+<img alt="Thsd7a" height="200" src="gene plots/Thsd7a.png" width="225"/>
+</td>
+<td>
+<img class="thumbnail modal-trigger" data-img-src="TCGA/survival_curves/significant\survival_curve_THSD7A.png" height="190" src="TCGA/survival_curves/significant\survival_curve_THSD7A.png" width="220"/>
+</td>
+<td>0.0000</td>
+<td></td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+<!-- The Close Button -->
+<span class="close">
+       ×
+      </span>
+<!-- Modal Content (The Image) -->
+<img class="modal-content" height="190" id="img01" width="220"/>
+<!-- Modal Caption (Image Title) -->
+<div id="caption">
+</div>
+</div>
+<script src="scripts/script.js">
+</script>
+</a>
+</p>
+</header>
+</body>
+<footer>
+<br/>
+<!-- Link to GitHub repository -->
+<br/>
+<br/>
+<br/>
+<a href="https://github.com/ebowen19/LW15-Functional-Screening" target="_blank">
+   LW15 Functional Screening Github Repository
+  </a>
+  with html &amp; gene plot PNGs
+  <br/>
+<br/>
+</footer>
+</html>
